@@ -14,6 +14,7 @@ extension UIStoryboard {
         case Main = "Main"
         case Authentication = "Authentication"
         case Dashboard = "Dashboard"
+        case Tools = "Tools"
     }
     
     enum Controller: String {
@@ -24,6 +25,7 @@ extension UIStoryboard {
         case CurrencyListVC = "CurrencyListVC"
         case IntroductionVC = "IntroductionVC"
         case ToolsVC = "ToolsVC"
+        case TimeZoneExchangeVC = "TimeZoneExchangeVC"
         
         
         case DashboardVC = "DashboardVC"

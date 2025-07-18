@@ -10,15 +10,14 @@ import Foundation
 
 struct TimeZoneExchangeModel {
     
-    var currentTimeZone: String?
-    
+//    var currentTimeZone: String?
     var selectedFromTimeZone: String?
     var selectedToTimeZone: String?
     
-    var selectedDate: String?
-    var selectedTime: String?
-    
-    var resultDate: String?
-    var resultTime: String?
+//    var selectedDate: Date?
+//    var selectedTime: Date?
+//    
+//    var resultDate: Date?
+//    var resultTime: Date?
     
 }

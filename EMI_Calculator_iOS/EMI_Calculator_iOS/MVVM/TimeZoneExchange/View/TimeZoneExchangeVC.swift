@@ -20,6 +20,9 @@ class TimeZoneExchangeVC: UIViewController {
     
     @IBOutlet weak var btnOfGetResult: UIButton!
     
+    
+    var zoneExchangeModel = TimeZoneExchangeModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,34 +42,54 @@ class TimeZoneExchangeVC: UIViewController {
 
 }
 
+extension TimeZoneExchangeVC {
+    
+    func setViewFormate() {
+        
+    }
+    
+}
 
 extension TimeZoneExchangeVC {
     
-    func btnOfSelectTimeAction() {
-        self.show
+    @IBAction func btnOfSelectTimeAction() {
+        self.showDatePicker(fromSourceView: self.btnOfSelectTime,
+                            currentDate: Date(),
+                            maxDate: nil,
+                            datePickerMode: .time,
+                            datePickerStyle: .wheels) { isSuccess, selectedDate in
+            debugPrint("is Success: \(isSuccess), selected Date: \(selectedDate)")
+        }
     }
     
-    func btnOfSelectDateAction() {
+    @IBAction func btnOfSelectDateAction() {
         
     }
     
-    func btnOfSelectFromTimeZoneAction() {
+    @IBAction func btnOfSelectFromTimeZoneAction() {
+        let arrayOfItems = ["a", "b", "c", "d"]
+        let selectedItem = "d"
+        
+        self.showDataPicker(fromSourceView: self.btnOfSelectFromTimeZone,
+                            items: arrayOfItems,
+                            item: selectedItem) { isSuccess, selectedValue, selectedIndex in
+            debugPrint("isSuccess: \(isSuccess)\nselectedValue: \(selectedValue)\nselectedIndex: \(selectedIndex)")
+        }
+    }
+    
+    @IBAction func btnOfSelectToTimeZoneAction() {
         
     }
     
-    func btnOfSelectToTimeZoneAction() {
+    @IBAction func btnOfTimeResultAction() {
         
     }
     
-    func btnOfTimeResultAction() {
+    @IBAction func btnOfDateResultAction() {
         
     }
     
-    func btnOfDateResultAction() {
-        
-    }
-    
-    func btnOfGetResultAction() {
+    @IBAction func btnOfGetResultAction() {
         
     }
     
