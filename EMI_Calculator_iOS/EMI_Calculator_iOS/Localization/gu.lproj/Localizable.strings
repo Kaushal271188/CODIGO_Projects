@@ -1,0 +1,172 @@
+/* 
+ Localizable.strings
+  RockStar-iOS_SHRIMAY
+
+  Created by Kaushal Prajapati on 20/05/25.
+  
+*/
+
+"APP_FULL_NAME" = "EMI કેલ્ક્યુલેટર";
+"APP_SHORT_NAME" = "EMI કેલ્ક્યુલેટર અને રોકાણ યોજનાઓ";
+
+"ALERT_TITLE" = "EMI કેલ્ક્યુલેટર";
+
+"MSG_INTERNET_CONNECTION" = "કૃપા કરીને તમારી ઈન્ટરનેટ કનેક્શન ચકાસો";
+"MSG_ENABLE_LOCATION_SERVICE" = "સ્થાન સેવા નિષ્ક્રિય છે, ફરીથી ચાલુ કરવા માટે, સેટિંગ્સમાં જઈને આ એપ્લિકેશન માટે સ્થાન સેવા ચાલુ કરો";
+"MSG_FORCE_UPDATE_APP" = "એપસ્ટોર પર નવા સંસ્કરણ ઉપલબ્ધ છે, કૃપા કરીને નવી વર્ઝન અપગ્રેડ કરો અને નવા ફીચર્સનો આનંદ માણો";
+
+"MSG_ENTER_EMAIL" = "કૃપા કરીને તમારું ઈમેઈલ સરનામું દાખલ કરો";
+"MSG_REGISTERED_EMAIL" = "કૃપા કરીને તમારું નોંધાયેલ ઈમેઈલ સરનામું દાખલ કરો";
+
+"MSG_ENTER_VALID_EMAIL" = "કૃપા કરીને માન્ય ઈમેઈલ સરનામું દાખલ કરો";
+"MSG_ENTER_VALID_PASSWORD" = "પાસવર્ડ ઓછામાં ઓછા 8 અક્ષરનો હોવો જોઈએ અને તેમાં 1 મોટી અક્ષર, 1 નાની અક્ષર, 1 નંબર અને 1 ખાસ અક્ષર હોવો જરૂરી છે";
+"MSG_ENTER_PASSWORD" = "કૃપા કરીને પાસવર્ડ દાખલ કરો!";
+
+"MSG_ENTER_YOUR_NAME" = "કૃપા કરીને તમારું નામ દાખલ કરો";
+"MSG_ENTER_FIRST_NAME" = "કૃપા કરીને પ્રથમ નામ દાખલ કરો";
+"MSG_ENTER_LAST_NAME" = "કૃપા કરીને છેલ્લું નામ દાખલ કરો";
+"MSG_ENTER_REGISTERED_PHONE_NUMBER" = "કૃપા કરીને તમારું નોંધાયેલ ફોન નંબર દાખલ કરો";
+"MSG_ENTER_PHONE_NUMBER" = "કૃપા કરીને ફોન નંબર દાખલ કરો";
+"MSG_INVALID_PHONE_NUMBER" = "કૃપા કરીને માન્ય ફોન નંબર દાખલ કરો";
+
+"MSG_ENTER_OLD_PASSWORD" = "કૃપા કરીને જૂનો પાસવર્ડ દાખલ કરો";
+"MSG_ENTER_NEW_PASSWORD" = "કૃપા કરીને નવો પાસવર્ડ દાખલ કરો";
+"MSG_ENTER_CONFIRM_PASSWORD" = "કૃપા કરીને પુષ્ટિ પાસવર્ડ દાખલ કરો";
+"MSG_CHECK_NEW_AND_CONFIRM_PASSWORD" = "નવો અને પુષ્ટિ પાસવર્ડ મેળ ખાતો નથી";
+
+"MSG_ENTER_OTP" = "કૃપા કરીને OTP દાખલ કરો";
+"MSG_ENTER_VALID_OTP" = "કૃપા કરીને માન્ય OTP દાખલ કરો";
+
+"MSG_NO_CAMERA_ACCESS_PERMISSION" = "કૅમેરા પરમીશન બંધ છે, ફરીથી ચાલુ કરવા માટે સેટિંગ્સમાં જઈને પરમીશન ચાલુ કરો";
+"MSG_NO_PHOTO_LIBRARY_ACCESS_PERMISSION" = "ફોટો લાઇબ્રેરી પરમીશન બંધ છે, ફરીથી ચાલુ કરવા માટે સેટિંગ્સમાં જઈને પરમીશન ચાલુ કરો";
+
+"MSG_ENTER_ANYTHING" = "કૃપા કરીને # દાખલ કરો";
+"MSG_SELECT_ANYTHING" = "કૃપા કરીને # પસંદ કરો";
+
+"OK" = "બરાબર";
+"YES_" = "હા";
+"NO_" = "ના";
+"DONE" = "પૂર્ણ";
+"CANCEL" = "રદ કરો";
+"SETTINGS" = "સેટિંગ્સ";
+"DELETE" = "કાઢી નાંખો";
+"ALLOW" = "મંજૂર કરો";
+"DONT_ALLOW" = "મંજૂર ના કરો";
+"LOGOUT" = "લૉગ આઉટ";
+"CALL" = "કૉલ કરો";
+"TOLL_FREE_NUMBER" = "ટોલ ફ્રી નંબર";
+
+"UPDATE" = "અપડેટ કરો";
+"EXIT" = "બહાર નીકળો";
+
+"TAKE_PHOTO" = "ફોટો લો";
+"CAMERA_ROLL" = "કૅમેરા રોલ";
+"PHOTO_LIBRARY" = "ફોટો લાઇબ્રેરી";
+"VIDEO_LIBRARY" = "વિડિઓ લાઇબ્રેરી";
+
+"PLACEHOLDER_LOAN_AMOUNT" = "લોનની રકમ";
+"PLACEHOLDER_INTEREST_RATE" = "વ્યાજ દર";
+"PLACEHOLDER_TENURE_IN_YEAR" = "કાળગાળ (વર્ષ)";
+"PLACEHOLDER_TENURE_IN_MONTH" = "કાળગાળ (મહિના)";
+
+"MSG_IS_REQUIRE" = "જરૂરી છે.";
+"MSG_MUST_VALID" = "માન્ય નંબર હોવો જરૂરી છે.";
+"MSG_NOT_VALID" = "માન્ય મૂલ્ય નથી.";
+"MSG_CAN_NOT_BE_NEGATIVE" = "નકારાત્મક હોઈ શકતું નથી.";
+
+"MSG_ENTER_VALID_MOBILE_NUMBER" = "કૃપા કરીને માન્ય મોબાઇલ નંબર દાખલ કરો";
+"MSG_ENTER_VALID_MOBILE_NO" = "કૃપા કરીને માન્ય મોબાઇલ નંબર દાખલ કરો!";
+"MSG_ENTER_FEEDBACK_TYPE" = "કૃપા કરીને પ્રતિસાદ પ્રકાર પસંદ કરો!";
+
+"LANGUAGE_TITLE" = "ભાષા";
+"LANGUAGE_SUBTITLE" = "કૃપા કરીને આગળ વધવા માટે ભાષા પસંદ કરો";
+
+"CURRENCY_TITLE" = "ચલણ એકમ";
+"CURRENCY_SUBTITLE" = "આગળ વધવા માટે ચલણ પસંદ કરો";
+
+"REMOVEADS_TITLE" = "જાહેરાતો દૂર કરો";
+"ABOUTUS_TITLE" = "અમારા વિશે";
+"RATEUS_TITLE" = "અમને રેટ કરો";
+"SHARE" = "શેર કરો";
+
+"HOME_TAB_TITLE" = "મુખ્ય પૃષ્ઠ";
+"TOOLS_TAB_TITLE" = "ઉપયોગી સાધનો";
+"HISTORY_TAB_TITLE" = "ઇતિહાસ";
+"SETTING_TAB_TITLE" = "સેટિંગ્સ";
+
+"HOME_VIEW_TITLE" = "મુખ્ય પૃષ્ઠ";
+
+"SECTION_TITLE_OF_EMI_CALCULATOR" = "EMI કેલ્ક્યુલેટર";
+"OPTION_TITLE_OF_LOAN_EMI" = "લોન EMI";
+"OPTION_TITLE_OF_LOAN_COMPARE" = "લોન તુલના";
+"OPTION_TITLE_OF_VEHICLE_LOAN" = "વાહન લોન";
+"OPTION_TITLE_OF_HOME_LOAN" = "હોમ લોન વ્યાજ દર";
+
+"SECTION_TITLE_OF_MUTUAL_FUND_CALCULATOR" = "મ્યુચ્યુઅલ ફંડ કેલ્ક્યુલેટર";
+"OPTION_TITLE_OF_SIP_CALCULATOR" = "SIP કેલ્ક્યુલેટર";
+"OPTION_TITLE_OF_SWP_CALCULATOR" = "SWP કેલ્ક્યુલેટર";
+"OPTION_TITLE_OF_LUMPSUM_CALCULATOR" = "લમસમ કેલ્ક્યુલેટર";
+"OPTION_TITLE_OF_GOAL_CALCULATOR" = "લક્ષ્ય કેલ્ક્યુલેટર";
+
+"SECTION_TITLE_OF_BANK_CALCULATOR" = "બેંક કેલ્ક્યુલેટર";
+"OPTION_TITLE_OF_FIXED_DEPOSIT" = "સ્થિર થાપણ";
+"OPTION_TITLE_OF_RD_CALCULATOR" = "આરડી કેલ્ક્યુલેટર";
+
+"SECTION_TITLE_OF_USEFUL_TOOLS" = "ઉપયોગી સાધનો";
+"OPTION_TITLE_OF_GST_CALCULATOR" = "GST કેલ્ક્યુલેટર";
+"OPTION_TITLE_OF_AGE_CALCULATOR" = "ઉંમર કેલ્ક્યુલેટર";
+"OPTION_TITLE_OF_CASH_COUNTER" = "કેશ કાઉન્ટર";
+"OPTION_TITLE_OF_COMPOUND_INTERECT" = "સંપૂર્ણ વ્યાજ";
+"OPTION_TITLE_OF_AMOUNT_TO_WORD" = "રકમ શબ્દોમાં";
+
+"SECTION_TITLE_OF_POST_OFFICE_CALCULATOR" = "પોસ્ટ ઓફિસ કેલ્ક્યુલેટર";
+"OPTION_TITLE_OF_PUBLIC_PROVIDENT_FUND" = "જાહેર ભંડોળ યોજના";
+"OPTION_TITLE_OF_SENIOR_CITIZEN_SAVING_SCHEME" = "વૃદ્ધ બચત યોજના";
+"OPTION_TITLE_OF_SUKANYA_SAMRIDDHI" = "સુકન્યા સમૃદ્ધિ યોજના";
+"OPTION_TITLE_OF_KISHAN_VIKAS_PATRA" = "કિસાન વિકાસ પત્ર";
+"OPTION_TITLE_OF_NATIONAL_SAVING_CERTIFICATE" = "રાષ્ટ્રીય બચત પ્રમાણપત્ર";
+
+"SECTION_TITLE_OF_INSURANCE_CALCULATOR" = "વીમો કેલ્ક્યુલેટર";
+"OPTION_TITLE_OF_PM_JEEVAN_JYOTI_BIMA" = "પીએમ જીવન જ્યોતી બીમા";
+"OPTION_TITLE_OF_PM_SURAKSHA_BIMA" = "પીએમ સુરક્ષા બીમા";
+
+"TOOLS_VIEW_TITLE" = "સાધનો";
+"CURRENCY_EXCHAGE_TITLE" = "ચલણ વિનિમય";
+"CURRENCY_EXCHAGE_DESCRIPTION" = "વાસ્તવિક સમય વિનિમય દરનો ઉપયોગ કરીને તરત ઘણા ચલણોનું રૂપાંતરણ કરો.";
+
+"TIMEZONE_EXCHAGE_TITLE" = "સમય વિસ્તાર વિનિમય";
+"TIMEZONE_EXCHAGE_DESCRIPTION" = "વિશ્વભરના ઇવેન્ટ્સને સુનિયોજિત કરવા માટે વિવિધ સમય વિસ્તારોમાં સરળતાથી બદલાવો.";
+
+"GST_CALCULATOR_TITLE" = "GST કેલ્ક્યુલેટર";
+"GST_CALCULATOR_DESCRIPTION" = "વ્યવહારો માટે માલ અને સેવા કરની રકમો ગણવા માટેનું સાધન.";
+
+"VAT_CALCULATOR_TITLE" = "VAT કેલ્ક્યુલેટર";
+"VAT_CALCULATOR_DESCRIPTION" = "વ્યવહારો માટે મૂલ્ય વધારાનો કર (VAT) ગણવા માટેનું સાધન.";
+
+"INFLATION_CALCULATOR_TITLE" = "મહંગાઈ કેલ્ક્યુલેટર";
+"INFLATION_CALCULATOR_DESCRIPTION" = "મહંગાઈ માટે નાણાકીય રકમને સમાયોજિત કરો જેથી સાચી ખરીદી શક્તિમાં ફેરફાર દર્શાય.";
+
+"DISCOUNT_CALCULATOR_TITLE" = "ડિસ્કાઉન્ટ કેલ્ક્યુલેટર";
+"DISCOUNT_CALCULATOR_DESCRIPTION" = "યૂઝર દ્વારા દાખલ કરેલા ડિસ્કાઉન્ટ દરના આધારે ડિસ્કાઉન્ટ કિંમત અને બચત ગણે છે.";
+
+"PERCENTAGE_CALCULATOR_TITLE" = "ટકા કેલ્ક્યુલેટર";
+"PERCENTAGE_CALCULATOR_DESCRIPTION" = "બે સંખ્યાઓ વચ્ચેનું ટકા તફાવત ગણવામાં સહાય કરે છે.";
+
+"PERCENTAGE_DIFFERENCE_CALCULATOR_TITLE" = "ટકા તફાવત કેલ્ક્યુલેટર";
+"PERCENTAGE_DIFFERENCE_CALCULATOR_DESCRIPTION" = "બે સંખ્યાઓ વચ્ચેનો ટકા તફાવત ગણવામાં સહાય કરે છે.";
+
+"PERCENTAGE_CHANGE_CALCULATOR_TITLE" = "ટકા ફેરફાર કેલ્ક્યુલેટર";
+"PERCENTAGE_CHANGE_CALCULATOR_DESCRIPTION" = "પ્રારંભિક અને અંતિમ સંખ્યાત્મક મૂલ્ય વચ્ચેના ટકા ફેરફારની ગણતરી કરે છે.";
+
+// Introduction view
+"INTRO_PAGE_1_TITLE" = "તમારા બધા લોનનો સમાવેશ થાય છે";
+"INTRO_PAGE_1_DESCRIPTION" = "વ્યક્તિગત થી વેપાર લોન સુધી, ચુકવણીને સરળતાથી એક જગ્યાએ ગણો.";
+
+"INTRO_PAGE_2_TITLE" = "ઉપયોગી રૂપાંતરણ સાધનો";
+"INTRO_PAGE_2_DESCRIPTION" = "અમારા બિલ્ટ-ઇન ટૂલ્સથી ચલણોને સરળતાથી રૂપાંતરિત કરો.";
+
+"INTRO_PAGE_3_TITLE" = "ઉપયોગી રૂપાંતરણ સાધનો";
+"INTRO_PAGE_3_DESCRIPTION" = "ચાલુ સમયવિસ્તારો અને ચલણોને સરળતાથી રૂપાંતરિત કરો અમારા બિલ્ટ-ઇન ટૂલ્સથી.";
+
+"INTRO_PAGE_4_TITLE" = "તમારું સરળ નાણાકીય સહાયક";
+"INTRO_PAGE_4_DESCRIPTION" = "તમારી નાણાકીય યોજનાઓ માટે ઝડપી ગણતરીઓ સાથે જીવનને સરળ બનાવો.";

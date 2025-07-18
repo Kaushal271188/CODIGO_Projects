@@ -90,6 +90,8 @@
 
 /* Begin PBXFileReference section */
 		1A30D034ADD2BA4D0C2B3603 /* Pods-EMI_Calculator_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMI_Calculator_iOS.debug.xcconfig"; path = "Target Support Files/Pods-EMI_Calculator_iOS/Pods-EMI_Calculator_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		CD8E4C632E2ABA1F002BECED /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CD8E4C642E2ABA37002BECED /* gu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = gu; path = gu.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CDC7688D2E2A377E0099DCC5 /* TimeZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZone.swift; sourceTree = "<group>"; };
 		CDC7688F2E2A39300099DCC5 /* DateTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTime.swift; sourceTree = "<group>"; };
 		CDC768912E2A44690099DCC5 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
@@ -734,6 +736,8 @@
 				en,
 				Base,
 				"en-IN",
+				hi,
+				gu,
 			);
 			mainGroup = D83F84552E16D7D300CC18F4;
 			productRefGroup = D83F845F2E16D7D300CC18F4 /* Products */;
@@ -932,6 +936,8 @@
 			children = (
 				D83F848E2E16D8AF00CC18F4 /* en */,
 				D83F848F2E16D8AF00CC18F4 /* en-IN */,
+				CD8E4C632E2ABA1F002BECED /* hi */,
+				CD8E4C642E2ABA37002BECED /* gu */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

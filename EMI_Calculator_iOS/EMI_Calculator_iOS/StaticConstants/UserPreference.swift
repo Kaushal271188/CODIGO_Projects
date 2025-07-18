@@ -12,6 +12,7 @@ class UserPreference {
     enum PreferenceName: String {
         case SelectedCountryInfo = "SelectedCountryInfo"
         case SelectedLanguageInfo = "SelectedLanguageInfo"
+        case SelectedLanguageCode = "SelectedLanguageCode"
         case SelectedCurrencyInfo = "SelectedCurrencyInfo"
     }
     

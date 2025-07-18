@@ -135,6 +135,9 @@ class LanguageListViewModel {
         
         do {
             try UserPreference.setObject(selectedLanguage, forKey: .SelectedLanguageInfo)
+            
+            Localizable.shared.setLanguage(languageCode: selectedLanguage.code)
+            
         } catch {
             print("1.2 : Error while trying to get default selected country")
         }
@@ -147,10 +150,6 @@ class LanguageListViewModel {
         } catch {
             print("1.2 : Error while trying to get default selected country")
         }
-        
-        
-        
-        
     }
     
 }

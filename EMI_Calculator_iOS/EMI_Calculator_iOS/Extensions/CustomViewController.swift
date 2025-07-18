@@ -216,7 +216,7 @@ extension UIViewController {
     
     func showDataPicker(fromSourceView: UIView? = nil,
                         title: String? = nil,
-                        message: String? = "\n\n\n\n\n\n\n",
+                        message: String? = "\n\n\n\n\n\n\n\n\n\n",
                         items: [String]? = nil,
                         item: String? = nil,
                         completionHandler: @escaping(_ isSuccess: Bool,_ selectedValue: String?,_ selectedIndex: Int?) -> Void) {
@@ -225,7 +225,7 @@ extension UIViewController {
         
         
         if let items = items {
-            var pickerView: UIPickerView!
+            var pickerView = UIPickerView()
             pickerView.frame = CGRect(x: 0, y: 15, width: alert.view.bounds.width - 20, height: 200)
             
             let preselectedIndex: Int = (item != nil ? items.firstIndex(of: item!) : 0)!

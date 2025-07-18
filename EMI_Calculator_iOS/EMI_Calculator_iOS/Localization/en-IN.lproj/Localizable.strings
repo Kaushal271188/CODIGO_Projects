@@ -87,8 +87,8 @@
 
 //View wise content
 //Language selection view
-"LANGUAGE_TITLE"                = "Language";
-"LANGUAGE_SUBTITLE"             = "Please select language to continue";
+"LANGUAGE_TITLE"                = "Language1";
+"LANGUAGE_SUBTITLE"             = "Please select language to continue1";
 
 //Currency selection view
 "CURRENCY_TITLE"                = "Currency Unit";

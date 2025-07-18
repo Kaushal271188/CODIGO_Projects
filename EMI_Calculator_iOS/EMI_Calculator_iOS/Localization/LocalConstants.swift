@@ -7,9 +7,55 @@
 
 import Foundation
 
-struct Localizable {
-    static func value(for localValue: LocalConstant) -> String {
-        NSLocalizedString(localValue.rawValue, comment: "")
+class Localizable {
+    static let shared = Localizable()
+    
+    private var bundle: Bundle?
+
+    private init() {
+        // Default language
+        setLanguage(languageCode: getSavedLanguage() ?? Locale.current.languageCode ?? "en")
+    }
+
+    func setLanguage(languageCode: String) {
+        if let path = Bundle.main.path(forResource: languageCode, ofType: "lproj"),
+           let langBundle = Bundle(path: path) {
+            bundle = langBundle
+            saveLanguage(languageCode)
+        } else {
+            bundle = Bundle.main // fallback
+        }
+    }
+
+    func localizedString(forKey key: String) -> String {
+        return bundle?.localizedString(forKey: key, value: nil, table: nil) ?? key
+    }
+
+    private func saveLanguage(_ code: String) {
+        do {
+            return try UserPreference.setObject(code, forKey: .SelectedLanguageCode)
+        } catch {
+            print("3.1 : Error while trying to get default selected country code for language selection")
+        }
+        
+    }
+
+    private func getSavedLanguage() -> String? {
+        do {
+            return try UserPreference.getObject(forKey: .SelectedLanguageCode, castTo: String.self)
+        } catch {
+            print("1.2 : Error while trying to get default selected country")
+            return nil
+        }
+    }
+
+    func getCurrentLanguage() -> String {
+        return getSavedLanguage() ?? Locale.current.languageCode ?? "en"
+    }
+    
+    func value(for localValue: LocalConstant) -> String {
+        self.localizedString(forKey: localValue.rawValue)
+//        return NSLocalizedString(localValue.rawValue, comment: "")
     }
 }
 

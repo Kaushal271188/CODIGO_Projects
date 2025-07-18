@@ -70,7 +70,7 @@ extension TimeZoneExchangeVC {
         let arrayOfItems = ["a", "b", "c", "d"]
         let selectedItem = "d"
         
-        self.showDataPicker(fromSourceView: self.btnOfSelectFromTimeZone,
+        self.showDataPicker(fromSourceView: nil,
                             items: arrayOfItems,
                             item: selectedItem) { isSuccess, selectedValue, selectedIndex in
             debugPrint("isSuccess: \(isSuccess)\nselectedValue: \(selectedValue)\nselectedIndex: \(selectedIndex)")
