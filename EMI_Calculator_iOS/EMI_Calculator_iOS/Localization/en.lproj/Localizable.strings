@@ -1,0 +1,193 @@
+/* 
+ Localizable.strings
+  RockStar-iOS_SHRIMAY
+
+  Created by Kaushal Prajapati on 20/05/25.
+  
+*/
+
+"APP_FULL_NAME" = "EMI Calculator";
+"APP_SHORT_NAME" = "EMI Calculator and Investment plans";
+
+"ALERT_TITLE" = "EMI Calculator";
+
+"MSG_INTERNET_CONNECTION"       = "Please check your Internet connection";
+"MSG_ENABLE_LOCATION_SERVICE"   = "Location services disabled, to re-enable, please go to Settings and turn on Location Service for this app";
+"MSG_FORCE_UPDATE_APP"          = "New application version is available on AppStore, please upgrade with new version and enjoy the new features";
+
+"MSG_ENTER_EMAIL"               = "Please enter your Email Address";
+"MSG_REGISTERED_EMAIL"          = "Please enter your registered Email Address";
+
+"MSG_ENTER_VALID_EMAIL"         = "Please enter valid Email Address";
+"MSG_ENTER_VALID_PASSWORD"      = "Password must be minimum 8 characters long and must contain 1 uppercase, 1 lowercase, 1 number and 1 special character";
+"MSG_ENTER_PASSWORD"            = "Please Enter Password!";
+
+"MSG_ENTER_YOUR_NAME"           = "Please Enter Your Name";
+"MSG_ENTER_FIRST_NAME"          = "Please enter First Name";
+"MSG_ENTER_LAST_NAME"           = "Please enter Last Name";
+"MSG_ENTER_REGISTERED_PHONE_NUMBER"        = "Please enter your registered Phone Number";
+"MSG_ENTER_PHONE_NUMBER"        = "Please enter Phone Number";
+"MSG_INVALID_PHONE_NUMBER"      = "Please enter valid Phone Number";
+
+"MSG_ENTER_OLD_PASSWORD"        = "Please enter old password";
+"MSG_ENTER_NEW_PASSWORD"        = "Please enter new password";
+"MSG_ENTER_CONFIRM_PASSWORD"    = "Please enter confirm password";
+"MSG_CHECK_NEW_AND_CONFIRM_PASSWORD" = "New and confirm password does not match";
+
+"MSG_ENTER_OTP"                 = "Please enter OTP";
+"MSG_ENTER_VALID_OTP"           = "Please enter valid OTP";
+
+
+
+"MSG_NO_CAMERA_ACCESS_PERMISSION"           = "Camera permission is disabled, to re-enable, please go to Settings and turn on Camera permission";
+"MSG_NO_PHOTO_LIBRARY_ACCESS_PERMISSION"    = "Photo library permission is disabled, to re-enable, please go to Settings and turn on Photos permission";
+
+"MSG_ENTER_ANYTHING"            = "Please enter #";
+"MSG_SELECT_ANYTHING"           = "Please select #";
+
+"OK"                            = "OK";
+"YES_"                          = "Yes";
+"NO_"                           = "No";
+"DONE"                          = "Done";
+"CANCEL"                        = "CANCEL";
+"SETTINGS"                      = "Settings";
+"DELETE"                        = "Delete";
+"ALLOW"                         = "Allow";
+"DONT_ALLOW"                    = "Don't Allows";
+"LOGOUT"                        = "LOGOUT";
+"CALL"                          = "Call";
+"TOLL_FREE_NUMBER"              = "Toll free number";
+
+"UPDATE"                        = "Update";
+"EXIT"                          = "Exit";
+
+"TAKE_PHOTO"                    = "Take Photo";
+"CAMERA_ROLL"                   = "Camera Roll";
+"PHOTO_LIBRARY"                 = "Photo Library";
+"VIDEO_LIBRARY"                 = "Video Library";
+
+//Static constats and validation messages use in application
+"PLACEHOLDER_LOAN_AMOUNT"       = "Loan Amount";
+"PLACEHOLDER_INTEREST_RATE"     = "Interest Rate";
+"PLACEHOLDER_TENURE_IN_YEAR"    = "Tenure (Years)";
+"PLACEHOLDER_TENURE_IN_MONTH"   = "Tenure (Months)";
+
+"MSG_IS_REQUIRE"                = "is required.";
+"MSG_MUST_VALID"                = "must be a valid number.";
+"MSG_NOT_VALID"                 = "is not a valid value.";
+"MSG_CAN_NOT_BE_NEGATIVE"       = "cannot be negative.";
+
+
+
+"MSG_ENTER_VALID_MOBILE_NUMBER" = "Please Enter Valid Mobile Number";
+"MSG_ENTER_VALID_MOBILE_NO"     = "Please Enter Valid Mobile No!";
+"MSG_ENTER_FEEDBACK_TYPE"       = "Please Select Feedback Type!";
+
+
+//View wise content
+//Language selection view
+"LANGUAGE_TITLE"                = "Language";
+"LANGUAGE_SUBTITLE"             = "Please select language to continue";
+
+//Currency selection view
+"CURRENCY_TITLE"                = "Currency Unit";
+"CURRENCY_SUBTITLE"             = "Please select currency to continue";
+
+//Left menu
+"REMOVEADS_TITLE"               = "Remove Ads";
+"ABOUTUS_TITLE"                 = "About Us";
+"RATEUS_TITLE"                  = "Rate Us";
+"SHARE"                         = "Share";
+
+"HOME_TAB_TITLE"                =   "Home";
+"TOOLS_TAB_TITLE"               =   "Tools";
+"HISTORY_TAB_TITLE"             =   "History";
+"SETTING_TAB_TITLE"             =   "Settings";
+
+//Home view
+"HOME_VIEW_TITLE"               = "Home";
+
+//Sections and it's Options
+//EMI Calculator
+"SECTION_TITLE_OF_EMI_CALCULATOR" = "EMI Calculator";
+"OPTION_TITLE_OF_LOAN_EMI" = "Loan EMI";
+"OPTION_TITLE_OF_LOAN_COMPARE" = "Loan Compare";
+"OPTION_TITLE_OF_VEHICLE_LOAN" = "Vehicle Loan";
+"OPTION_TITLE_OF_HOME_LOAN" = "Home Loan Interest Rates";
+
+//Mutual Fund Calculator
+"SECTION_TITLE_OF_MUTUAL_FUND_CALCULATOR" = "Mutual Fund Calculator";
+"OPTION_TITLE_OF_SIP_CALCULATOR" = "SIP Calculator";
+"OPTION_TITLE_OF_SWP_CALCULATOR" = "SWP Calculator";
+"OPTION_TITLE_OF_LUMPSUM_CALCULATOR" = "LumpSum Calculator";
+"OPTION_TITLE_OF_GOAL_CALCULATOR" = "Goal Calculator";
+
+//Bank Calculator
+"SECTION_TITLE_OF_BANK_CALCULATOR" = "Bank Calculator";
+"OPTION_TITLE_OF_FIXED_DEPOSIT" = "Fixed Deposit";
+"OPTION_TITLE_OF_RD_CALCULATOR" = "RD Calculator";
+
+//Useful Tools
+"SECTION_TITLE_OF_USEFUL_TOOLS" = "Useful Tools";
+"OPTION_TITLE_OF_GST_CALCULATOR" = "GST Calculator";
+"OPTION_TITLE_OF_AGE_CALCULATOR" = "Age Calculator";
+"OPTION_TITLE_OF_CASH_COUNTER" = "Cash Counter";
+"OPTION_TITLE_OF_COMPOUND_INTERECT" = "Compund Interest";
+"OPTION_TITLE_OF_AMOUNT_TO_WORD" = "Amount To Word";
+
+//Post office Calculator
+"SECTION_TITLE_OF_POST_OFFICE_CALCULATOR" = "Post Office Calculator";
+"OPTION_TITLE_OF_PUBLIC_PROVIDENT_FUND" = "Public Provident Fund";
+"OPTION_TITLE_OF_SENIOR_CITIZEN_SAVING_SCHEME" = "Senior Citizen Saving Scheme";
+"OPTION_TITLE_OF_SUKANYA_SAMRIDDHI" = "Sukanya Samriddhi";
+"OPTION_TITLE_OF_KISHAN_VIKAS_PATRA" = "Kishan Vikas Patra";
+"OPTION_TITLE_OF_NATIONAL_SAVING_CERTIFICATE" = "National Saving Certificate";
+
+//Insurance Calculator
+"SECTION_TITLE_OF_INSURANCE_CALCULATOR" = "Insurance Calculator";
+"OPTION_TITLE_OF_PM_JEEVAN_JYOTI_BIMA" = "PM Jeevan Jyoti Bima";
+"OPTION_TITLE_OF_PM_SURAKSHA_BIMA" = "PM Suraksha Bima";
+
+
+//Tools tab calculator list
+"TOOLS_VIEW_TITLE" = "TOOLS";
+"CURRENCY_EXCHAGE_TITLE" = "Currency Exchange";
+"CURRENCY_EXCHAGE_DESCRIPTION" = "Instantly convert multiple currencies using real time exchange rates for accurate transactions.";
+
+"TIMEZONE_EXCHAGE_TITLE" = "Timezone Exchange";
+"TIMEZONE_EXCHAGE_DESCRIPTION" = "Seamlessly switch between different time zones to schedule and manage global events.";
+
+"GST_CALCULATOR_TITLE" = "GST Calculator";
+"GST_CALCULATOR_DESCRIPTION" = "A tool to calculate Goods and Services Tax amounts for transactions.";
+
+"VAT_CALCULATOR_TITLE" = "VAT Calculator";
+"VAT_CALCULATOR_DESCRIPTION" = "A tool to calculate Value Added Tax amounts for transactions.";
+
+"INFLATION_CALCULATOR_TITLE" = "Inflation Calculator";
+"INFLATION_CALCULATOR_DESCRIPTION" = "Adjust fincial amount for inflation to show real purchasing power changes.";
+
+"DISCOUNT_CALCULATOR_TITLE" = "Discount Calculator";
+"DISCOUNT_CALCULATOR_DESCRIPTION" = "Calculates discount prices and savings based on user-entered discount rates.";
+
+"PERCENTAGE_CALCULATOR_TITLE" = "Percentage Calculator";
+"PERCENTAGE_CALCULATOR_DESCRIPTION" = "Calculates the percentage difference between two numbers to aid in comparisons";
+
+"PERCENTAGE_DIFFERENCE_CALCULATOR_TITLE" = "Percentage Defference Calculator";
+"PERCENTAGE_DIFFERENCE_CALCULATOR_DESCRIPTION" = "Calculates the percentage difference between two numbers aid in comparisons.";
+
+"PERCENTAGE_CHANGE_CALCULATOR_TITLE" = "Percentage Change Calculator";
+"PERCENTAGE_CHANGE_CALCULATOR_DESCRIPTION" = "Calculates the percentage change between initial and final numerical values.";
+
+
+//Introduction view
+"INTRO_PAGE_1_TITLE"            = "All Your Loan Covered";
+"INTRO_PAGE_1_DESCRIPTION"      = "From personal to business loans, calcuate payments easily in opne place.";
+
+"INTRO_PAGE_2_TITLE"            = "Handy Conversion Tools";
+"INTRO_PAGE_2_DESCRIPTION"      = "Convert currencies effortlessly with our built-in tools";
+
+"INTRO_PAGE_3_TITLE"            = "Handy Conversion Tools";
+"INTRO_PAGE_3_DESCRIPTION"      = "Convert currencies and time zones effortlessly with our built-in tools";
+
+"INTRO_PAGE_4_TITLE"            = "Your Easy Finance Buddy";
+"INTRO_PAGE_4_DESCRIPTION"      = "Make life simpler with quick calculations for all your financial plans";

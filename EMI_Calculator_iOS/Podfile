@@ -1,0 +1,29 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '12.0'
+
+target 'EMI_Calculator_iOS' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for EMI_Calculator_iOS
+  pod 'ZKProgressHUD'
+  pod 'ReachabilitySwift'
+  pod 'SDWebImage', '5.14.2'
+  pod 'RefreshControl'
+  pod 'SVGKit'
+  
+#  pod "SAStickyHeader"
+  
+  pod 'SROTPView'
+  pod 'Google-Mobile-Ads-SDK', '10.0.0'
+  pod 'SlideMenuController'
+  
+  post_install do |installer|
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
+      end
+    end
+  end
+  
+end

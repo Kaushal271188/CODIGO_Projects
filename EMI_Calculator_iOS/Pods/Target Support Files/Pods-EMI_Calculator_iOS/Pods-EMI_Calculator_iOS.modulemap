@@ -1,0 +1,6 @@
+framework module Pods_EMI_Calculator_iOS {
+  umbrella header "Pods-EMI_Calculator_iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
