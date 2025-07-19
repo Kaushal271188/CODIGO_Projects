@@ -9,14 +9,19 @@ import Foundation
 import UIKit
 import SlideMenuController
 
-protocol SlidemenuDelegate {
-    
-    func didOpenLeftMenu()
-    func didCloseLeftMenu()
-    
-    func didOpenRightMenu()
-    func didCloseRightMenu()
-    
+//protocol SlidemenuDelegate {
+//    
+//    func didOpenLeftMenu()
+//    func didCloseLeftMenu()
+//    
+//    func didOpenRightMenu()
+//    func didCloseRightMenu()
+//    
+//}
+
+private var languageDelegateKey: UInt8 = 0
+protocol LanguageDelegate {
+    func didChangeLanguage(languageCode: String)
 }
 
 var isAppLoaded: Bool = false
@@ -31,8 +36,17 @@ extension UIViewController {
         case CloseRightMenu = "CloseRightMenu"
     }
     
-    var slidemenuDelegate: SlidemenuDelegate? {
-        nil
+//    var slidemenuDelegate: SlidemenuDelegate? {
+//        nil
+//    }
+    
+    var languageDelegate: LanguageDelegate? {
+        get {
+            return objc_getAssociatedObject(self, &languageDelegateKey) as? LanguageDelegate
+        }
+        set {
+            objc_setAssociatedObject(self, &languageDelegateKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
     }
     
     //For Interstitial advertisement
@@ -267,10 +281,15 @@ extension UIViewController {
             present(alert, animated: true, completion: nil)
             
         }
-        
-        
-        
-        
     }
     
+}
+
+extension UIViewController {
+    func changeLanguageCode(languageCode: String) {
+        APPDELEGATE.setApplicationFlow()
+        if let languageDelegate = self.languageDelegate {
+            languageDelegate.didChangeLanguage(languageCode: languageCode)
+        }
+    }
 }

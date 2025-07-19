@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.setApplicationFlow()
         return true
     }
 
@@ -77,5 +78,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+}
+
+
+extension AppDelegate {
+    
+    
+    func setApplicationFlow() {
+        
+        do {
+            let languageCode = try UserPreference.getObject(forKey: .SelectedLanguageCode, castTo: String.self)
+//            Bundle.setLanguage(languageCode) { (isSucess, newBundle) in
+//                //Do some logic here
+//            }
+        } catch {
+            print("3.3 : Error while trying to get default selected country")
+        }
+    }
+    
 }
 

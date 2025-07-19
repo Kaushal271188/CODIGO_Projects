@@ -127,29 +127,36 @@ class LanguageListViewModel {
     }
     
     func saveLanguageInfo(selectedLanguage: LanguageListModel?,
-                          isSelected: Bool = true) {
+                          isSelected: Bool = true,
+                          completionHandler: @escaping(_ isSuccess: Bool) -> Void) {
         
         guard var selectedLanguage = selectedLanguage else {
+            completionHandler(false)
             return
         }
         
         do {
             try UserPreference.setObject(selectedLanguage, forKey: .SelectedLanguageInfo)
             
-            Localizable.shared.setLanguage(languageCode: selectedLanguage.code)
+            Localizable.shared.setLanguage(languageCode: selectedLanguage.code) { isSuccess in
+                completionHandler(isSuccess)
+            }
             
         } catch {
             print("1.2 : Error while trying to get default selected country")
+            completionHandler(false)
         }
         
-        do {
+        /*do {
             let currentLanguageInfo = try UserPreference.getObject(forKey: .SelectedLanguageInfo,
                                                                    castTo: LanguageListModel.self)
             print("JSON of selected Language Name: \(currentLanguageInfo.name)")
             print("JSON of selected Language is Selected: \(currentLanguageInfo.code)")
+            completionHandler(true)
         } catch {
             print("1.2 : Error while trying to get default selected country")
-        }
+            completionHandler(false)
+        }*/
     }
     
 }

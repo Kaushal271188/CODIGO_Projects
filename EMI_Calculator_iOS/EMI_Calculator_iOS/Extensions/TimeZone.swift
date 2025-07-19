@@ -9,6 +9,16 @@ import Foundation
 
 extension TimeZone {
     
+    static let CurrentTimeZone: TimeZone = {
+        TimeZone.current
+    }()
     
+    static let UTCTimeZone: TimeZone = {
+        TimeZone(identifier: "UTC")
+    }() ?? CurrentTimeZone
+    
+    static func customTimeZone(identifier: String) -> TimeZone {
+        TimeZone(identifier: identifier) ?? TimeZone.UTCTimeZone
+    }
     
 }

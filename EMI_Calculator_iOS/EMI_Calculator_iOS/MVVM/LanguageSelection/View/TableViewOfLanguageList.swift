@@ -83,14 +83,23 @@ extension TableViewOfLanguageList: UITableViewDelegate, UITableViewDataSource {
             
             
             if isAlreadySelected == false {
-                self.viewModel.saveLanguageInfo(selectedLanguage: languageInfo)
+                self.viewModel.saveLanguageInfo(selectedLanguage: languageInfo) { isSuccess in
+                    //Do some logic here
+                    if let didSelectLanguage = self.didSelectLanguage {
+                        didSelectLanguage(languageInfo)
+                        self.reloadCurrentData()
+                    }else {
+                        self.reloadCurrentData()
+                    }
+                }
+            }else {
+                if let didSelectLanguage = self.didSelectLanguage {
+                    didSelectLanguage(languageInfo)
+                    self.reloadCurrentData()
+                }else {
+                    self.reloadCurrentData()
+                }
             }
-            
-            if let didSelectLanguage = self.didSelectLanguage {
-                didSelectLanguage(languageInfo)
-            }
-            
-            self.reloadCurrentData()
         }
     }
     

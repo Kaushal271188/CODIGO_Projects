@@ -17,4 +17,19 @@ class TimeZoneExchangeViewModel {
         self.arrayOfTimezone = TimeZone.knownTimeZoneIdentifiers
     }
     
+    func getDate(timeZoneModel: TimeZoneExchangeModel) -> String? {
+        var finalResult: String? = nil
+        
+        
+        
+        return finalResult
+    }
+    
+    func getTime(timeZoneModel: TimeZoneExchangeModel) -> String? {
+        var finalResult: String? = nil
+        
+        
+        
+        return finalResult
+    }
 }

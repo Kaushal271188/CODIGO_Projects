@@ -14,16 +14,28 @@ class Localizable {
 
     private init() {
         // Default language
-        setLanguage(languageCode: getSavedLanguage() ?? Locale.current.languageCode ?? "en")
+        
+        setLanguage(languageCode: getSavedLanguage() ?? Locale.current.languageCode ?? "en") { iSuccess in
+            //Do some action here.
+        }
     }
 
-    func setLanguage(languageCode: String) {
-        if let path = Bundle.main.path(forResource: languageCode, ofType: "lproj"),
-           let langBundle = Bundle(path: path) {
-            bundle = langBundle
-            saveLanguage(languageCode)
-        } else {
-            bundle = Bundle.main // fallback
+    func setLanguage(languageCode: String,
+                     completioHandler:@escaping(_ isSucess: Bool) -> Void) {
+//        if let path = Bundle.main.path(forResource: languageCode, ofType: "lproj"),
+//           let langBundle = Bundle(path: path) {
+//            bundle = langBundle
+//            saveLanguage(languageCode)
+//        } else {
+//            bundle = Bundle.main // fallback
+//        }
+        
+        self.saveLanguage(languageCode)
+        Bundle.setLanguage(languageCode) { (isSuccess, newBundle) in
+            // Send notification to update UI
+            self.bundle = newBundle
+            NotificationCenter.default.post(name: .LanguageChanged, object: nil)
+            completioHandler(isSuccess)
         }
     }
 
@@ -45,7 +57,7 @@ class Localizable {
             return try UserPreference.getObject(forKey: .SelectedLanguageCode, castTo: String.self)
         } catch {
             print("1.2 : Error while trying to get default selected country")
-            return nil
+            return "en"
         }
     }
 
