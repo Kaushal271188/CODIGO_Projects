@@ -19,4 +19,8 @@ extension UIColor {
     static let UnselectedTabColor = UIColor(named: "UnselectedTabColor")
     static let TabbarBGColor = UIColor(named: "TabbarBGColor")
     
+    static let DarkGrayColor = UIColor.darkGray
+    static let LightGrayColor = UIColor.lightGray
+    static let GrayColor = UIColor.gray
+    
 }

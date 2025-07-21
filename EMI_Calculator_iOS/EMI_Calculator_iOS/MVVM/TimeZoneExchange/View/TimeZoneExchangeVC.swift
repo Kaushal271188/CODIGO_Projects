@@ -68,18 +68,31 @@ extension TimeZoneExchangeVC {
                             datePickerStyle: .wheels) { isSuccess, selectedDate in
             if let selectedDate = selectedDate {
                 self.viewModel.selectedDate = selectedDate
+                self.btnOfSelectTime?.setTitle(self.viewModel.currentTime, for: .normal)
+                self.btnOfSelectDate?.setTitle(self.viewModel.currentDate, for: .normal)
             }
-            debugPrint("is Success: \(isSuccess), selected Date: \(selectedDate)")
+//            debugPrint("is Success: \(isSuccess), selected Date: \(selectedDate)")
         }
     }
     
     @IBAction func btnOfSelectDateAction() {
-        
+        self.showDatePicker(fromSourceView: self.btnOfSelectDate,
+                            currentDate: self.viewModel.selectedDate,
+                            maxDate: nil,
+                            datePickerMode: .date,
+                            datePickerStyle: .wheels) { isSuccess, selectedDate in
+            if let selectedDate = selectedDate {
+                self.viewModel.selectedDate = selectedDate
+                self.btnOfSelectTime?.setTitle(self.viewModel.currentTime, for: .normal)
+                self.btnOfSelectDate?.setTitle(self.viewModel.currentDate, for: .normal)
+            }
+//            debugPrint("is Success: \(isSuccess), selected Date: \(selectedDate)")
+        }
     }
     
     @IBAction func btnOfSelectFromTimeZoneAction() {
         let arrayOfItems = viewModel.arrayOfTimezone
-        let selectedItem = self.btnOfSelectFromTimeZone.currentTitle
+        let selectedItem = (self.btnOfSelectFromTimeZone.currentTitle?.trimmed.count ?? 0) > 0 ? self.btnOfSelectFromTimeZone.currentTitle : nil
         
         self.showDataPicker(fromSourceView: nil,
                             items: arrayOfItems,
@@ -92,7 +105,7 @@ extension TimeZoneExchangeVC {
     
     @IBAction func btnOfSelectToTimeZoneAction() {
         let arrayOfItems = viewModel.arrayOfTimezone
-        let selectedItem = self.btnOfSelectToTimeZone.currentTitle
+        let selectedItem = (self.btnOfSelectToTimeZone.currentTitle?.trimmed.count ?? 0) > 0 ? self.btnOfSelectToTimeZone.currentTitle : nil
         
         self.showDataPicker(fromSourceView: nil,
                             items: arrayOfItems,

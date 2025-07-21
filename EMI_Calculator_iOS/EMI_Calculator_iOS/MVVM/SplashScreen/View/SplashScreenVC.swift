@@ -13,8 +13,8 @@ class SplashScreenVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        let mainViewController = UIStoryboard.instantiateViewController(storyBorad: .Dashboard, controller: .DashboardVC)
-        let leftViewController = UIStoryboard.instantiateViewController(storyBorad: .Dashboard, controller: .LeftMenuVC)
+        let mainViewController = UIStoryboard.instantiateViewController(storyBorad: .Central, controller: .DashboardVC)
+        let leftViewController = UIStoryboard.instantiateViewController(storyBorad: .Central, controller: .LeftMenuVC)
         self.setSlideMenuViewController(mainViewController: mainViewController,
                                         leftViewController: leftViewController)
         

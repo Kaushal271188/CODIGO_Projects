@@ -8,13 +8,13 @@
 import Foundation
 import UIKit
 
-struct DashboardModel {
+/*struct DashboardModel {
     var sectionTitle: String
     var optionInfo: DashboardOption
-}
+}*/
 
-struct DashboardOption {
+//struct DashboardOption {
+struct DashboardModel {
     var optionTitle: String
     var optionIcon: UIImage?
 }
-

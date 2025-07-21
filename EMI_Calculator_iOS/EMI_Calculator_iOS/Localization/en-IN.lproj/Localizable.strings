@@ -178,6 +178,17 @@
 "PERCENTAGE_CHANGE_CALCULATOR_TITLE" = "Percentage Change Calculator";
 "PERCENTAGE_CHANGE_CALCULATOR_DESCRIPTION" = "Calculates the percentage change between initial and final numerical values.";
 
+"PERSONAL_LOAN_TITLE" = "Personal Loan";
+"MORTGAGE_LOAN_TITLE" = "Mortgage Loan";
+"CAR_LOAN_TITLE" = "Car Loan";
+"BUSINESS_LOAN_TITLE" = "Business Loan";
+"AI_VISION_CASH_COUNTER_TITLE" = "AI Vision Cash Counter";
+"FIXED_DEPOSIT_TITLE" = "Fixed Deposite";
+"RECURRING_DEPOSITE_TITLE" = "Recurring Deposite";
+"SIP_CALCULATOR_TITLE" = "SIP Calculator";
+"SIMPLE_INTEREST_TITLE" = "Simple Interest";
+"PUBLIC_PROVIDENT_FUND_TITLE" = "Public Provident Fund";
+"POST_OFFICE_MIS_CALCULATOR_TITLE" = "Post Office MIS Calculator";
 
 //Introduction view
 "INTRO_PAGE_1_TITLE"            = "All Your Loan Covered";

@@ -14,6 +14,7 @@ extension UIStoryboard {
         case Main = "Main"
         case Authentication = "Authentication"
         case Dashboard = "Dashboard"
+        case Central = "Central"
         case Tools = "Tools"
     }
     

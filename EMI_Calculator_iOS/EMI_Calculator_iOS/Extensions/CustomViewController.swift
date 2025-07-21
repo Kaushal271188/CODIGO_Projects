@@ -147,10 +147,10 @@ extension UIViewController {
     func setTabbarController() {
         UIViewController.tabBatVC = UITabBarController()
         
-        let homeVC = UIStoryboard.instantiateViewController(storyBorad: .Dashboard, controller: .DashboardVC)
-        let toolsVC = UIStoryboard.instantiateViewController(storyBorad: .Dashboard, controller: .ToolsVC)
+        let homeVC = UIStoryboard.instantiateViewController(storyBorad: .Central, controller: .DashboardVC)
+        let toolsVC = UIStoryboard.instantiateViewController(storyBorad: .Central, controller: .ToolsVC)
         let historyVC = UIStoryboard.instantiateViewController(storyBorad: .Authentication, controller: .LanguageListVC)
-        let settingVC = UIStoryboard.instantiateViewController(storyBorad: .Dashboard, controller: .LeftMenuVC)
+        let settingVC = UIStoryboard.instantiateViewController(storyBorad: .Central, controller: .LeftMenuVC)
         
         homeVC.tabBarItem = UITabBarItem(title: StaticContents.Constants.HomeTitle,
                                          image: UIImage.getSystemImage(image: .HomeTabUnselectedIcon),
@@ -181,7 +181,7 @@ extension UIViewController {
     
     @objc func showDatePicker(fromSourceView: UIView? = nil,
                               title: String? = nil,
-                              message: String? = "\n\n\n\n\n\n\n",
+                              message: String? = "\n\n\n\n\n\n\n\n\n\n",
                               currentDate: Date,
                               minDate: Date? = nil,
                               maxDate: Date? = nil,
@@ -192,6 +192,11 @@ extension UIViewController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
         
         let datePicker = UIDatePicker()
+        
+        // Force 24-hour format
+        datePicker.locale = Locale(identifier: "en_GB") // en_GB uses 24-hour format
+        datePicker.calendar = Calendar(identifier: .gregorian)
+        
         datePicker.date = currentDate
         datePicker.minimumDate = minDate
         datePicker.maximumDate = maxDate

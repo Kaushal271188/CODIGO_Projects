@@ -129,6 +129,19 @@ class StaticContents {
         static let OptionTitleOfPMSurakshaBima = Localizable.shared.value(for: .SECTION_TITLE_OF_USEFUL_TOOLS)
         
         
+        static let PersonalLoanTitle = Localizable.shared.value(for: .PERSONAL_LOAN_TITLE)
+        static let MortgageLocanTitle = Localizable.shared.value(for: .MORTGAGE_LOAN_TITLE)
+        static let CarLoanTitle = Localizable.shared.value(for: .CAR_LOAN_TITLE)
+        static let BusinessLoanTitle = Localizable.shared.value(for: .BUSINESS_LOAN_TITLE)
+        static let AIVisionCashCounterTitle = Localizable.shared.value(for: .AI_VISION_CASH_COUNTER_TITLE)
+        static let FixedDepositTitle = Localizable.shared.value(for: .FIXED_DEPOSIT_TITLE)
+        static let RecurringDepositTitle = Localizable.shared.value(for: .RECURRING_DEPOSITE_TITLE)
+        static let SIPCalculatorTitle = Localizable.shared.value(for: .SIP_CALCULATOR_TITLE)
+        static let SimpleInterestTitle = Localizable.shared.value(for: .SIMPLE_INTEREST_TITLE)
+        static let PublicProvidentFundTitle  = Localizable.shared.value(for: .PUBLIC_PROVIDENT_FUND_TITLE)
+        static let PostOfficeMISCalculatorTitle = Localizable.shared.value(for: .POST_OFFICE_MIS_CALCULATOR_TITLE)
+        
+        
         //Introduction view
         static let IntroPage1Title = Localizable.shared.value(for: .INTRO_PAGE_1_TITLE)
         static let IntroPage1Description = Localizable.shared.value(for: .INTRO_PAGE_1_DESCRIPTION)

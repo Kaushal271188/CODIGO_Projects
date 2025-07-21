@@ -6,11 +6,15 @@
 //
 
 import Foundation
+import UIKit
 
 class DashboardViewModel {
     
-    var arrayOfOptions: [DashboardModel] {
-        self.getDashboardOptions()
+    var arrayOfOptions = [DashboardModel]()
+    
+    
+    init() {
+        self.arrayOfOptions = self.getDashboardOptions()
     }
     
     
@@ -18,28 +22,39 @@ class DashboardViewModel {
         
         var arrayOfOptions = [DashboardModel]()
         
-        /*var sectionTitle = StaticContents.Constants.RemoveAds
+        var optionTitle = StaticContents.Constants.PersonalLoanTitle
         var icon = UIImage.getSystemImage(image: .RemoveAds)
+        arrayOfOptions.append(DashboardModel(optionTitle: optionTitle, optionIcon: icon))
         
+        optionTitle = StaticContents.Constants.MortgageLocanTitle
+        arrayOfOptions.append(DashboardModel(optionTitle: optionTitle, optionIcon: icon))
         
-        sectionTitle = StaticContents.Constants.RemoveAds
-        icon = UIImage.getSystemImage(image: .RemoveAds)
-        arrayOfOptions.append(LeftMenuModel(optionTitle: sectionTitle, optionIcon: icon))
+        optionTitle = StaticContents.Constants.CarLoanTitle
+        arrayOfOptions.append(DashboardModel(optionTitle: optionTitle, optionIcon: icon))
         
-        sectionTitle = StaticContents.Constants.AboutUs
-        icon = UIImage.getSystemImage(image: .AboutUs)
-        arrayOfOptions.append(LeftMenuModel(optionTitle: sectionTitle, optionIcon: icon))
+        optionTitle = StaticContents.Constants.BusinessLoanTitle
+        arrayOfOptions.append(DashboardModel(optionTitle: optionTitle, optionIcon: icon))
         
+        optionTitle = StaticContents.Constants.AIVisionCashCounterTitle
+        arrayOfOptions.append(DashboardModel(optionTitle: optionTitle, optionIcon: icon))
         
-        sectionTitle = StaticContents.Constants.RateUs
-        icon = UIImage.getSystemImage(image: .RateUs)
-        arrayOfOptions.append(LeftMenuModel(optionTitle: sectionTitle, optionIcon: icon))
+        optionTitle = StaticContents.Constants.FixedDepositTitle
+        arrayOfOptions.append(DashboardModel(optionTitle: optionTitle, optionIcon: icon))
         
+        optionTitle = StaticContents.Constants.RecurringDepositTitle
+        arrayOfOptions.append(DashboardModel(optionTitle: optionTitle, optionIcon: icon))
         
-        sectionTitle = StaticContents.Constants.Share
-        icon = UIImage.getSystemImage(image: .Share)
-        arrayOfOptions.append(LeftMenuModel(optionTitle: sectionTitle, optionIcon: icon))*/
+        optionTitle = StaticContents.Constants.SIPCalculatorTitle
+        arrayOfOptions.append(DashboardModel(optionTitle: optionTitle, optionIcon: icon))
         
+        optionTitle = StaticContents.Constants.SimpleInterestTitle
+        arrayOfOptions.append(DashboardModel(optionTitle: optionTitle, optionIcon: icon))
+        
+        optionTitle = StaticContents.Constants.PublicProvidentFundTitle
+        arrayOfOptions.append(DashboardModel(optionTitle: optionTitle, optionIcon: icon))
+        
+        optionTitle = StaticContents.Constants.PostOfficeMISCalculatorTitle
+        arrayOfOptions.append(DashboardModel(optionTitle: optionTitle, optionIcon: icon))
         
         return arrayOfOptions
         

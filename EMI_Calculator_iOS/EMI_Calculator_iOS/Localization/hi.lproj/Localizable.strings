@@ -165,6 +165,17 @@
 "PERCENTAGE_CHANGE_CALCULATOR_TITLE" = "प्रतिशत परिवर्तन कैलकुलेटर";
 "PERCENTAGE_CHANGE_CALCULATOR_DESCRIPTION" = "प्रारंभिक और अंतिम संख्यात्मक मानों के बीच प्रतिशत परिवर्तन की गणना करता है।";
 
+"PERSONAL_LOAN_TITLE" = "पर्सनल लोन";
+"MORTGAGE_LOAN_TITLE" = "बंधक ऋण";
+"CAR_LOAN_TITLE" = "कार लोन";
+"BUSINESS_LOAN_TITLE" = "बिज़नेस लोन";
+"AI_VISION_CASH_COUNTER_TITLE" = "एआई विज़न कैश काउंटर";
+"FIXED_DEPOSIT_TITLE" = "स्थायी जमा";
+"RECURRING_DEPOSITE_TITLE" = "आवर्ती जमा";
+"SIP_CALCULATOR_TITLE" = "एसआईपी कैलकुलेटर";
+"SIMPLE_INTEREST_TITLE" = "साधारण ब्याज";
+"PUBLIC_PROVIDENT_FUND_TITLE" = "सार्वजनिक भविष्य निधि";
+"POST_OFFICE_MIS_CALCULATOR_TITLE" = "पोस्ट ऑफिस एमआईएस कैलकुलेटर";
 
 //Introduction view
 "INTRO_PAGE_1_TITLE" = "आपके सभी ऋण शामिल";

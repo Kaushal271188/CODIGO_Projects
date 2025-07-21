@@ -34,17 +34,11 @@ extension TableViewOfLanguageList: UITableViewDelegate, UITableViewDataSource {
     
     private func setupTableViewFormate() {
         
-//        self.register(UINib(nibName: CountryLanguageInfoCell.cellId,
-//                            bundle: nil),
-//                      forCellReuseIdentifier: CountryLanguageInfoCell.cellId)
-//
         self.setupView(arrayOfCellIDs: [CountryLanguageInfoCell.cellId])
         self.delegate = self
         self.dataSource = self
         
         self.separatorStyle = .none
-        
-//        self.viewModel.selectedLanguage
         
         self.languageList = self.viewModel.languageList
         

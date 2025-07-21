@@ -158,6 +158,18 @@
 "PERCENTAGE_CHANGE_CALCULATOR_TITLE" = "ટકા ફેરફાર કેલ્ક્યુલેટર";
 "PERCENTAGE_CHANGE_CALCULATOR_DESCRIPTION" = "પ્રારંભિક અને અંતિમ સંખ્યાત્મક મૂલ્ય વચ્ચેના ટકા ફેરફારની ગણતરી કરે છે.";
 
+"PERSONAL_LOAN_TITLE" = "વ્યક્તિગત લોન";
+"MORTGAGE_LOAN_TITLE" = "મોર્ગેજ લોન";
+"CAR_LOAN_TITLE" = "કાર લોન";
+"BUSINESS_LOAN_TITLE" = "વ્યાપાર લોન";
+"AI_VISION_CASH_COUNTER_TITLE" = "AI વિઝન કેશ કાઉન્ટર";
+"FIXED_DEPOSIT_TITLE" = "ફિક્સ્ડ ડિપોઝિટ";
+"RECURRING_DEPOSITE_TITLE" = "આવૃત્તિ ડિપોઝિટ";
+"SIP_CALCULATOR_TITLE" = "SIP કેલ્ક્યુલેટર";
+"SIMPLE_INTEREST_TITLE" = "સરળ વ્યાજ";
+"PUBLIC_PROVIDENT_FUND_TITLE" = "પબ્લિક પ્રોવિડન્ટ ફંડ";
+"POST_OFFICE_MIS_CALCULATOR_TITLE" = "પોસ્ટ ઓફિસ MIS કેલ્ક્યુલેટર";
+
 // Introduction view
 "INTRO_PAGE_1_TITLE" = "તમારા બધા લોનનો સમાવેશ થાય છે";
 "INTRO_PAGE_1_DESCRIPTION" = "વ્યક્તિગત થી વેપાર લોન સુધી, ચુકવણીને સરળતાથી એક જગ્યાએ ગણો.";

@@ -15,6 +15,7 @@ class DashboardVC: UIViewController {
     @IBOutlet weak var lblOfNavSubTitle: UILabel!
     
     @IBOutlet weak var collectionViewOfOptions: CollectionViewOfDashboardOptions!
+    @IBOutlet weak var tableViewOfDashboardOptions: TableViewOfDashboardOptions!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -59,6 +59,7 @@
 		D8BFF7BF2E238EB9009B7206 /* IntroductionInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BFF7BE2E238EB9009B7206 /* IntroductionInfoModel.swift */; };
 		D8BFF7C12E238F49009B7206 /* IntroductionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BFF7C02E238F49009B7206 /* IntroductionViewModel.swift */; };
 		D8BFF7C32E23AEEC009B7206 /* PageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BFF7C22E23AEEC009B7206 /* PageController.swift */; };
+		D8C173882E2E1890005E8734 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C173872E2E1890005E8734 /* StringExtension.swift */; };
 		D8D497D92E210124008EABCB /* CollectionViewOfDashboardOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D497D82E210124008EABCB /* CollectionViewOfDashboardOptions.swift */; };
 		D8D497DD2E21015B008EABCB /* DashboardOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D497DB2E21015B008EABCB /* DashboardOptionCell.swift */; };
 		D8D497DE2E21015B008EABCB /* DashboardOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8D497DC2E21015B008EABCB /* DashboardOptionCell.xib */; };
@@ -85,8 +86,18 @@
 		D8D74EE22E1FBA8900A7F70B /* LeftMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D74EE12E1FBA8900A7F70B /* LeftMenuViewModel.swift */; };
 		D8D74EE62E1FC6B900A7F70B /* LeftMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D74EE42E1FC6B900A7F70B /* LeftMenuCell.swift */; };
 		D8D74EE72E1FC6B900A7F70B /* LeftMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8D74EE52E1FC6B900A7F70B /* LeftMenuCell.xib */; };
+		D8E1795E2E2E76E2005529E7 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E1795D2E2E76E2005529E7 /* CustomTextField.swift */; };
+		D8E179602E2E76F3005529E7 /* CustomTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8E1795F2E2E76F3005529E7 /* CustomTextField.xib */; };
+		D8E179622E2E8183005529E7 /* PersonalLoanVCNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E179612E2E8183005529E7 /* PersonalLoanVCNew.swift */; };
 		D8EADCF72E1829FE00207E5C /* EMICalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EADCF62E1829FE00207E5C /* EMICalculation.swift */; };
-		D8F0BDC32E203899001F7A57 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8F0BDC22E203899001F7A57 /* Dashboard.storyboard */; };
+		D8ED81EF2E2E2D89001521D1 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8ED81EE2E2E2D89001521D1 /* Dashboard.storyboard */; };
+		D8ED81F62E2E2E9C001521D1 /* PersonalLoanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ED81F52E2E2E9C001521D1 /* PersonalLoanVC.swift */; };
+		D8ED81F82E2E2ECA001521D1 /* PersonalLoanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ED81F72E2E2ECA001521D1 /* PersonalLoanViewModel.swift */; };
+		D8ED81FA2E2E2EDC001521D1 /* PersonalLoanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ED81F92E2E2EDC001521D1 /* PersonalLoanModel.swift */; };
+		D8ED81FC2E2E2F56001521D1 /* TableViewOfDashboardOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ED81FB2E2E2F56001521D1 /* TableViewOfDashboardOptions.swift */; };
+		D8ED81FF2E2E2FA0001521D1 /* DashboardOptionInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ED81FD2E2E2FA0001521D1 /* DashboardOptionInfoCell.swift */; };
+		D8ED82002E2E2FA0001521D1 /* DashboardOptionInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8ED81FE2E2E2FA0001521D1 /* DashboardOptionInfoCell.xib */; };
+		D8F0BDC32E203899001F7A57 /* Central.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8F0BDC22E203899001F7A57 /* Central.storyboard */; };
 		D8F88A922E1ADC6700727E99 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F88A912E1ADC6700727E99 /* CustomViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -151,6 +162,7 @@
 		D8BFF7BE2E238EB9009B7206 /* IntroductionInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionInfoModel.swift; sourceTree = "<group>"; };
 		D8BFF7C02E238F49009B7206 /* IntroductionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewModel.swift; sourceTree = "<group>"; };
 		D8BFF7C22E23AEEC009B7206 /* PageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageController.swift; sourceTree = "<group>"; };
+		D8C173872E2E1890005E8734 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		D8D497D82E210124008EABCB /* CollectionViewOfDashboardOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewOfDashboardOptions.swift; sourceTree = "<group>"; };
 		D8D497DB2E21015B008EABCB /* DashboardOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardOptionCell.swift; sourceTree = "<group>"; };
 		D8D497DC2E21015B008EABCB /* DashboardOptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardOptionCell.xib; sourceTree = "<group>"; };
@@ -177,8 +189,18 @@
 		D8D74EE12E1FBA8900A7F70B /* LeftMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuViewModel.swift; sourceTree = "<group>"; };
 		D8D74EE42E1FC6B900A7F70B /* LeftMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuCell.swift; sourceTree = "<group>"; };
 		D8D74EE52E1FC6B900A7F70B /* LeftMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftMenuCell.xib; sourceTree = "<group>"; };
+		D8E1795D2E2E76E2005529E7 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		D8E1795F2E2E76F3005529E7 /* CustomTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextField.xib; sourceTree = "<group>"; };
+		D8E179612E2E8183005529E7 /* PersonalLoanVCNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalLoanVCNew.swift; sourceTree = "<group>"; };
 		D8EADCF62E1829FE00207E5C /* EMICalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMICalculation.swift; sourceTree = "<group>"; };
-		D8F0BDC22E203899001F7A57 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		D8ED81EE2E2E2D89001521D1 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		D8ED81F52E2E2E9C001521D1 /* PersonalLoanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalLoanVC.swift; sourceTree = "<group>"; };
+		D8ED81F72E2E2ECA001521D1 /* PersonalLoanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalLoanViewModel.swift; sourceTree = "<group>"; };
+		D8ED81F92E2E2EDC001521D1 /* PersonalLoanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalLoanModel.swift; sourceTree = "<group>"; };
+		D8ED81FB2E2E2F56001521D1 /* TableViewOfDashboardOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewOfDashboardOptions.swift; sourceTree = "<group>"; };
+		D8ED81FD2E2E2FA0001521D1 /* DashboardOptionInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardOptionInfoCell.swift; sourceTree = "<group>"; };
+		D8ED81FE2E2E2FA0001521D1 /* DashboardOptionInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardOptionInfoCell.xib; sourceTree = "<group>"; };
+		D8F0BDC22E203899001F7A57 /* Central.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Central.storyboard; sourceTree = "<group>"; };
 		D8F88A912E1ADC6700727E99 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		ED9BD11DD279F46A110D4DFC /* Pods_EMI_Calculator_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EMI_Calculator_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -257,6 +279,7 @@
 		D83F84602E16D7D300CC18F4 /* EMI_Calculator_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				D8E1795B2E2E76B4005529E7 /* CommonViews */,
 				D83F847B2E16D8AE00CC18F4 /* Extensions */,
 				D83F84782E16D8AE00CC18F4 /* External */,
 				D83F848B2E16D8AF00CC18F4 /* Localization */,
@@ -267,7 +290,8 @@
 				D83F84652E16D7D300CC18F4 /* ViewController.swift */,
 				D83F84672E16D7D300CC18F4 /* Main.storyboard */,
 				D8BE4A3F2E19037B0012166C /* Authentication.storyboard */,
-				D8F0BDC22E203899001F7A57 /* Dashboard.storyboard */,
+				D8F0BDC22E203899001F7A57 /* Central.storyboard */,
+				D8ED81EE2E2E2D89001521D1 /* Dashboard.storyboard */,
 				D8D6442D2E253D4300B46F78 /* Tools.storyboard */,
 				D83F846D2E16D7D500CC18F4 /* Assets.xcassets */,
 				D83F846F2E16D7D500CC18F4 /* LaunchScreen.storyboard */,
@@ -311,6 +335,7 @@
 				CDC7688F2E2A39300099DCC5 /* DateTime.swift */,
 				CDAC17C22E2B699F005BA9EE /* Bundle.swift */,
 				CDAC17C42E2B8445005BA9EE /* Notification.swift */,
+				D8C173872E2E1890005E8734 /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -411,6 +436,7 @@
 			children = (
 				D85DD1DB2E1F809F006DC1F9 /* DashboardVC.swift */,
 				D8D497D82E210124008EABCB /* CollectionViewOfDashboardOptions.swift */,
+				D8ED81FB2E2E2F56001521D1 /* TableViewOfDashboardOptions.swift */,
 				D8D497DA2E21014A008EABCB /* DashboardOptionCell */,
 			);
 			path = View;
@@ -450,6 +476,7 @@
 		D8BE4A412E1904190012166C /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				D8ED81F02E2E2E45001521D1 /* LoanView */,
 				CDAC17C92E2B950F005BA9EE /* GSTCalculator */,
 				D8D644252E253ACA00B46F78 /* TimeZoneExchange */,
 				D8D644132E25286400B46F78 /* ToolsView */,
@@ -556,6 +583,8 @@
 		D8D497DA2E21014A008EABCB /* DashboardOptionCell */ = {
 			isa = PBXGroup;
 			children = (
+				D8ED81FD2E2E2FA0001521D1 /* DashboardOptionInfoCell.swift */,
+				D8ED81FE2E2E2FA0001521D1 /* DashboardOptionInfoCell.xib */,
 				D8D497DB2E21015B008EABCB /* DashboardOptionCell.swift */,
 				D8D497DC2E21015B008EABCB /* DashboardOptionCell.xib */,
 			);
@@ -719,6 +748,66 @@
 			path = LeftMenuCell;
 			sourceTree = "<group>";
 		};
+		D8E1795B2E2E76B4005529E7 /* CommonViews */ = {
+			isa = PBXGroup;
+			children = (
+				D8E1795C2E2E76B4005529E7 /* CustomTextField */,
+			);
+			path = CommonViews;
+			sourceTree = "<group>";
+		};
+		D8E1795C2E2E76B4005529E7 /* CustomTextField */ = {
+			isa = PBXGroup;
+			children = (
+				D8E1795D2E2E76E2005529E7 /* CustomTextField.swift */,
+				D8E1795F2E2E76F3005529E7 /* CustomTextField.xib */,
+			);
+			path = CustomTextField;
+			sourceTree = "<group>";
+		};
+		D8ED81F02E2E2E45001521D1 /* LoanView */ = {
+			isa = PBXGroup;
+			children = (
+				D8ED81F12E2E2E45001521D1 /* PersonalLoan */,
+			);
+			path = LoanView;
+			sourceTree = "<group>";
+		};
+		D8ED81F12E2E2E45001521D1 /* PersonalLoan */ = {
+			isa = PBXGroup;
+			children = (
+				D8ED81F42E2E2E45001521D1 /* View */,
+				D8ED81F32E2E2E45001521D1 /* Model */,
+				D8ED81F22E2E2E45001521D1 /* ViewModel */,
+			);
+			path = PersonalLoan;
+			sourceTree = "<group>";
+		};
+		D8ED81F22E2E2E45001521D1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D8ED81F72E2E2ECA001521D1 /* PersonalLoanViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D8ED81F32E2E2E45001521D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D8ED81F92E2E2EDC001521D1 /* PersonalLoanModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D8ED81F42E2E2E45001521D1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D8ED81F52E2E2E9C001521D1 /* PersonalLoanVC.swift */,
+				D8E179612E2E8183005529E7 /* PersonalLoanVCNew.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		EF77A1C70C27B71D05EF5733 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -794,16 +883,19 @@
 			files = (
 				D8D74EE72E1FC6B900A7F70B /* LeftMenuCell.xib in Resources */,
 				D8D73AAA2E19254B00C1B515 /* CountryLanguageInfoCell.xib in Resources */,
+				D8ED81EF2E2E2D89001521D1 /* Dashboard.storyboard in Resources */,
 				D8D644242E252FEF00B46F78 /* ToolOptionInfoCell.xib in Resources */,
 				D8BE4A402E19037B0012166C /* Authentication.storyboard in Resources */,
 				D8D497DE2E21015B008EABCB /* DashboardOptionCell.xib in Resources */,
 				D83F84712E16D7D500CC18F4 /* LaunchScreen.storyboard in Resources */,
+				D8ED82002E2E2FA0001521D1 /* DashboardOptionInfoCell.xib in Resources */,
 				D8BFF7BD2E2384DA009B7206 /* IntroductionInfoCell.xib in Resources */,
 				D83F84A12E16D8AF00CC18F4 /* Localizable.strings in Resources */,
+				D8E179602E2E76F3005529E7 /* CustomTextField.xib in Resources */,
 				D8D6442E2E253D4300B46F78 /* Tools.storyboard in Resources */,
 				D853F9C62E1BC21D00C5674E /* LanguageList.json in Resources */,
 				D83F846E2E16D7D500CC18F4 /* Assets.xcassets in Resources */,
-				D8F0BDC32E203899001F7A57 /* Dashboard.storyboard in Resources */,
+				D8F0BDC32E203899001F7A57 /* Central.storyboard in Resources */,
 				D8B279792E1EC0F500CE334F /* CurrencyLanguageInfoCell.xib in Resources */,
 				D83F84912E16D8AF00CC18F4 /* CountriesWithLanguage.json in Resources */,
 				D83F84902E16D8AF00CC18F4 /* Countries.json in Resources */,
@@ -914,16 +1006,21 @@
 				D8D497DD2E21015B008EABCB /* DashboardOptionCell.swift in Sources */,
 				D83F846C2E16D7D300CC18F4 /* EMI_Calculator_iOS.xcdatamodeld in Sources */,
 				D85DD1DC2E1F809F006DC1F9 /* DashboardVC.swift in Sources */,
+				D8ED81FF2E2E2FA0001521D1 /* DashboardOptionInfoCell.swift in Sources */,
 				D83F84922E16D8AF00CC18F4 /* View.swift in Sources */,
 				D8B2797C2E1EC76500CE334F /* CurrencyListVC.swift in Sources */,
 				D8D73AB32E1925D500C1B515 /* LanguageListViewModel.swift in Sources */,
 				D8BC99302E216E6600065B65 /* TabBarController.swift in Sources */,
 				D8D6442C2E253B4600B46F78 /* TimeZoneExchangeViewModel.swift in Sources */,
+				D8E179622E2E8183005529E7 /* PersonalLoanVCNew.swift in Sources */,
 				D8BFF7BF2E238EB9009B7206 /* IntroductionInfoModel.swift in Sources */,
 				D8D644232E252FEF00B46F78 /* ToolOptionInfoCell.swift in Sources */,
 				D8D74EE02E1FB9DC00A7F70B /* LeftMenuModel.swift in Sources */,
+				D8C173882E2E1890005E8734 /* StringExtension.swift in Sources */,
 				D8BE4A492E19041A0012166C /* SplashScreenVC.swift in Sources */,
 				D8D74EE22E1FBA8900A7F70B /* LeftMenuViewModel.swift in Sources */,
+				D8ED81F62E2E2E9C001521D1 /* PersonalLoanVC.swift in Sources */,
+				D8ED81FA2E2E2EDC001521D1 /* PersonalLoanModel.swift in Sources */,
 				D83F84952E16D8AF00CC18F4 /* StoryBoard.swift in Sources */,
 				D8D644302E2554AB00B46F78 /* TimeZoneExchangeModel.swift in Sources */,
 				D83F849E2E16D8AF00CC18F4 /* UserPreference.swift in Sources */,
@@ -936,6 +1033,7 @@
 				CDC768922E2A447A0099DCC5 /* PickerView.swift in Sources */,
 				D83F849B2E16D8AF00CC18F4 /* Color.swift in Sources */,
 				D8D644202E2529B100B46F78 /* ToolsOptionsModel.swift in Sources */,
+				D8ED81FC2E2E2F56001521D1 /* TableViewOfDashboardOptions.swift in Sources */,
 				D8BFF7C32E23AEEC009B7206 /* PageController.swift in Sources */,
 				D83F84942E16D8AF00CC18F4 /* CustomOTPView.swift in Sources */,
 				D83F84642E16D7D300CC18F4 /* SceneDelegate.swift in Sources */,
@@ -944,11 +1042,13 @@
 				D8EADCF72E1829FE00207E5C /* EMICalculation.swift in Sources */,
 				D8D74EE62E1FC6B900A7F70B /* LeftMenuCell.swift in Sources */,
 				CDC768902E2A39380099DCC5 /* DateTime.swift in Sources */,
+				D8E1795E2E2E76E2005529E7 /* CustomTextField.swift in Sources */,
 				D83F849F2E16D8AF00CC18F4 /* API.swift in Sources */,
 				D8D6441E2E25295A00B46F78 /* ToolsOptionsViewModel.swift in Sources */,
 				D8BFF7B52E2381F5009B7206 /* IntroductionVC.swift in Sources */,
 				D83F84962E16D8AF00CC18F4 /* ScrollView.swift in Sources */,
 				D8D6441C2E25292A00B46F78 /* TableOfToolOptions.swift in Sources */,
+				D8ED81F82E2E2ECA001521D1 /* PersonalLoanViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
