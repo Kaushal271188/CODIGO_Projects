@@ -112,7 +112,8 @@ extension TimeZoneExchangeVC {
     }
     
     @IBAction func btnOfGetResultAction() {
-        
+        self.btnOfDateResult?.setTitle(self.viewModel.fromDate, for: .normal)
+        self.btnOfTimeResult?.setTitle(self.viewModel.fromTime, for: .normal)
     }
     
     @IBAction func btnOfBackAction() {
