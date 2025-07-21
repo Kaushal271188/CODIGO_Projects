@@ -46,10 +46,10 @@ extension LanguageListVC {
     
     func setViewFormate() {
         
-        self.btnOfGoNextView?.isHidden = (self.tableViewOfLanguageList?.viewModel.selectedLanguage == nil)
+        self.languageDelegate = self
+        self.updateViewFormate()
         
-        self.lblOfNavTitle?.text = StaticContents.Constants.LanguageTitle
-        self.lblOfNavSubTitle?.text = StaticContents.Constants.LanguageSubtitle
+        self.btnOfGoNextView?.isHidden = (self.tableViewOfLanguageList?.viewModel.selectedLanguage == nil)
         
         self.tableViewOfLanguageList.didSelectLanguage = { languageInfo in
             //Do some action here.
@@ -59,13 +59,42 @@ extension LanguageListVC {
                 didSelectLanguage(languageInfo)
             }
             
+            self.changeLanguageCode(languageCode: languageInfo.code)
+            
             self.btnOfGoNextView?.isHidden = (self.tableViewOfLanguageList?.viewModel.selectedLanguage == nil)
         }
+        
+        NotificationCenter.default.addObserver(self,
+                selector: #selector(updateViewFormate),
+                name: .LanguageChanged,
+                object: nil)
+        
     }
     
     @IBAction func btnOfGoNextViewAction() {
         let vc = UIStoryboard.instantiateViewController(storyBorad: .Authentication, controller: .IntroductionVC)
         self.navigationController?.pushViewController(vc, animated: false)
+    }
+    
+}
+
+extension LanguageListVC: LanguageDelegate {
+    
+    func didChangeLanguage(languageCode: String) {
+        self.updateViewFormate()
+    }
+    
+    @objc func updateViewFormate() {
+        self.lblOfNavTitle?.text = StaticContents.Constants.LanguageTitle
+        self.lblOfNavSubTitle?.text = StaticContents.Constants.LanguageSubtitle
+        
+        debugPrint("Current Language Code: \(Localizable.shared.getCurrentLanguage())")
+        
+        debugPrint("Title: \(StaticContents.Constants.LanguageTitle)")
+        debugPrint("Sub Title: \(StaticContents.Constants.LanguageSubtitle)")
+        
+        
+        
     }
     
 }

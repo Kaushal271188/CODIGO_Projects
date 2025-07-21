@@ -17,172 +17,172 @@ class StaticContents {
     //Static messages
     struct Message {
         
-        static let CheckInternetConnection = Localizable.value(for: .MSG_INTERNET_CONNECTION)
+        static let CheckInternetConnection = Localizable.shared.value(for: .MSG_INTERNET_CONNECTION)
         
-        static let CheckLocationService = Localizable.value(for: .MSG_ENABLE_LOCATION_SERVICE)
-        static let AskToForceUpdate = Localizable.value(for: .MSG_FORCE_UPDATE_APP)
+        static let CheckLocationService = Localizable.shared.value(for: .MSG_ENABLE_LOCATION_SERVICE)
+        static let AskToForceUpdate = Localizable.shared.value(for: .MSG_FORCE_UPDATE_APP)
         
-        static let EnterEmailAddress = Localizable.value(for: .MSG_ENTER_EMAIL)
-        static let EnterRegisteredEmailAddress = Localizable.value(for: .MSG_REGISTERED_EMAIL)
-        static let EnterValidEmailAddress = Localizable.value(for: .MSG_ENTER_VALID_EMAIL)
+        static let EnterEmailAddress = Localizable.shared.value(for: .MSG_ENTER_EMAIL)
+        static let EnterRegisteredEmailAddress = Localizable.shared.value(for: .MSG_REGISTERED_EMAIL)
+        static let EnterValidEmailAddress = Localizable.shared.value(for: .MSG_ENTER_VALID_EMAIL)
         
-        static let EnterValidPassword = Localizable.value(for: .MSG_ENTER_VALID_PASSWORD)
-        static let EnterPassword = Localizable.value(for: .MSG_ENTER_PASSWORD)
-        static let EnterYourName = Localizable.value(for: .MSG_ENTER_YOUR_NAME)
-        static let EnterYourFirstName = Localizable.value(for: .MSG_ENTER_FIRST_NAME)
-        static let EnterYourLastName = Localizable.value(for: .MSG_ENTER_LAST_NAME)
+        static let EnterValidPassword = Localizable.shared.value(for: .MSG_ENTER_VALID_PASSWORD)
+        static let EnterPassword = Localizable.shared.value(for: .MSG_ENTER_PASSWORD)
+        static let EnterYourName = Localizable.shared.value(for: .MSG_ENTER_YOUR_NAME)
+        static let EnterYourFirstName = Localizable.shared.value(for: .MSG_ENTER_FIRST_NAME)
+        static let EnterYourLastName = Localizable.shared.value(for: .MSG_ENTER_LAST_NAME)
         
-        static let EnterRegisteredPhoneNumber = Localizable.value(for: .MSG_ENTER_REGISTERED_PHONE_NUMBER)
-        static let EnterPhoneNumber = Localizable.value(for: .MSG_ENTER_PHONE_NUMBER)
-        static let EnterValidPhoneNumber = Localizable.value(for: .MSG_INVALID_PHONE_NUMBER)
+        static let EnterRegisteredPhoneNumber = Localizable.shared.value(for: .MSG_ENTER_REGISTERED_PHONE_NUMBER)
+        static let EnterPhoneNumber = Localizable.shared.value(for: .MSG_ENTER_PHONE_NUMBER)
+        static let EnterValidPhoneNumber = Localizable.shared.value(for: .MSG_INVALID_PHONE_NUMBER)
         
-        static let EnterOldPassword = Localizable.value(for: .MSG_ENTER_OLD_PASSWORD)
-        static let EnterNewPassword = Localizable.value(for: .MSG_ENTER_NEW_PASSWORD)
-        static let EnterConfirmPassword = Localizable.value(for: .MSG_ENTER_CONFIRM_PASSWORD)
-        static let CheckOldAndConfirmPassword = Localizable.value(for: .MSG_CHECK_NEW_AND_CONFIRM_PASSWORD)
+        static let EnterOldPassword = Localizable.shared.value(for: .MSG_ENTER_OLD_PASSWORD)
+        static let EnterNewPassword = Localizable.shared.value(for: .MSG_ENTER_NEW_PASSWORD)
+        static let EnterConfirmPassword = Localizable.shared.value(for: .MSG_ENTER_CONFIRM_PASSWORD)
+        static let CheckOldAndConfirmPassword = Localizable.shared.value(for: .MSG_CHECK_NEW_AND_CONFIRM_PASSWORD)
         
-        static let EnterOTP = Localizable.value(for: .MSG_ENTER_OTP)
-        static let EnterValidOTP = Localizable.value(for: .MSG_ENTER_VALID_OTP)
+        static let EnterOTP = Localizable.shared.value(for: .MSG_ENTER_OTP)
+        static let EnterValidOTP = Localizable.shared.value(for: .MSG_ENTER_VALID_OTP)
         
-        static let CameraPermission = Localizable.value(for: .MSG_NO_CAMERA_ACCESS_PERMISSION)
-        static let PhotoLibraryPermission = Localizable.value(for: .MSG_NO_PHOTO_LIBRARY_ACCESS_PERMISSION)
+        static let CameraPermission = Localizable.shared.value(for: .MSG_NO_CAMERA_ACCESS_PERMISSION)
+        static let PhotoLibraryPermission = Localizable.shared.value(for: .MSG_NO_PHOTO_LIBRARY_ACCESS_PERMISSION)
         
-        static let EnterForAnything = Localizable.value(for: .MSG_ENTER_ANYTHING)
-        static let Select0ForAnything = Localizable.value(for: .MSG_SELECT_ANYTHING)
+        static let EnterForAnything = Localizable.shared.value(for: .MSG_ENTER_ANYTHING)
+        static let Select0ForAnything = Localizable.shared.value(for: .MSG_SELECT_ANYTHING)
         
     }
     
     //Static constants
     struct Constants {
         //Title of constant name UIs/Views.
-        static let OK = Localizable.value(for: .OK)
-        static let Cancel = Localizable.value(for: .CANCEL)
-        static let Done = Localizable.value(for: .DONE)
-        static let Yes = Localizable.value(for: .YES_)
-        static let No = Localizable.value(for: .NO_)
+        static let OK = Localizable.shared.value(for: .OK)
+        static let Cancel = Localizable.shared.value(for: .CANCEL)
+        static let Done = Localizable.shared.value(for: .DONE)
+        static let Yes = Localizable.shared.value(for: .YES_)
+        static let No = Localizable.shared.value(for: .NO_)
         
-        static let AppFullName = Localizable.value(for: .APP_FULL_NAME)
-        static let AppShortName = Localizable.value(for: .APP_SHORT_NAME)
-        static let AlertTitle = Localizable.value(for: .ALERT_TITLE)
+        static let AppFullName = Localizable.shared.value(for: .APP_FULL_NAME)
+        static let AppShortName = Localizable.shared.value(for: .APP_SHORT_NAME)
+        static let AlertTitle = Localizable.shared.value(for: .ALERT_TITLE)
         
         //Language view
-        static let LanguageTitle = Localizable.value(for: .LANGUAGE_TITLE)
-        static let LanguageSubtitle = Localizable.value(for: .LANGUAGE_SUBTITLE)
+        static let LanguageTitle = Localizable.shared.value(for: .LANGUAGE_TITLE)
+        static let LanguageSubtitle = Localizable.shared.value(for: .LANGUAGE_SUBTITLE)
         
         //Currency view
-        static let CurrencyTitle = Localizable.value(for: .CURRENCY_TITLE)
-        static let CurrencySubtitle = Localizable.value(for: .CURRENCY_SUBTITLE)
+        static let CurrencyTitle = Localizable.shared.value(for: .CURRENCY_TITLE)
+        static let CurrencySubtitle = Localizable.shared.value(for: .CURRENCY_SUBTITLE)
         
         //Left menu options
-        static let RemoveAds = Localizable.value(for: .REMOVEADS_TITLE)
-        static let AboutUs = Localizable.value(for: .ABOUTUS_TITLE)
-        static let RateUs = Localizable.value(for: .RATEUS_TITLE)
-        static let Share = Localizable.value(for: .SHARE)
+        static let RemoveAds = Localizable.shared.value(for: .REMOVEADS_TITLE)
+        static let AboutUs = Localizable.shared.value(for: .ABOUTUS_TITLE)
+        static let RateUs = Localizable.shared.value(for: .RATEUS_TITLE)
+        static let Share = Localizable.shared.value(for: .SHARE)
         
-        static let HomeTabTitle = Localizable.value(for: .HOME_TAB_TITLE)
-        static let ToolsTabTitle = Localizable.value(for: .TOOLS_TAB_TITLE)
-        static let HistoryTabTitle = Localizable.value(for: .HISTORY_TAB_TITLE)
-        static let SettingsTitle = Localizable.value(for: .SETTING_TAB_TITLE)
+        static let HomeTabTitle = Localizable.shared.value(for: .HOME_TAB_TITLE)
+        static let ToolsTabTitle = Localizable.shared.value(for: .TOOLS_TAB_TITLE)
+        static let HistoryTabTitle = Localizable.shared.value(for: .HISTORY_TAB_TITLE)
+        static let SettingsTitle = Localizable.shared.value(for: .SETTING_TAB_TITLE)
         
         //Home view
-        static let HomeTitle = Localizable.value(for: .HOME_VIEW_TITLE)
+        static let HomeTitle = Localizable.shared.value(for: .HOME_VIEW_TITLE)
         
         //Section and it's options title
         //EMI Calculator
-        static let SectionTitleOfEMICalculator = Localizable.value(for: .SECTION_TITLE_OF_EMI_CALCULATOR)
-        static let OptionTitleOfLoanEMI = Localizable.value(for: .SECTION_TITLE_OF_EMI_CALCULATOR)
-        static let OptionTitleOfLoanCompare = Localizable.value(for: .SECTION_TITLE_OF_MUTUAL_FUND_CALCULATOR)
-        static let OptionTitleOfVehicleLoan = Localizable.value(for: .SECTION_TITLE_OF_BANK_CALCULATOR)
-        static let OptionTitleOfHomeLoan = Localizable.value(for: .SECTION_TITLE_OF_USEFUL_TOOLS)
+        static let SectionTitleOfEMICalculator = Localizable.shared.value(for: .SECTION_TITLE_OF_EMI_CALCULATOR)
+        static let OptionTitleOfLoanEMI = Localizable.shared.value(for: .SECTION_TITLE_OF_EMI_CALCULATOR)
+        static let OptionTitleOfLoanCompare = Localizable.shared.value(for: .SECTION_TITLE_OF_MUTUAL_FUND_CALCULATOR)
+        static let OptionTitleOfVehicleLoan = Localizable.shared.value(for: .SECTION_TITLE_OF_BANK_CALCULATOR)
+        static let OptionTitleOfHomeLoan = Localizable.shared.value(for: .SECTION_TITLE_OF_USEFUL_TOOLS)
         
         //Mutual Fund Calculator
-        static let SectionTitleOfMutualFundCalculator = Localizable.value(for: .SECTION_TITLE_OF_MUTUAL_FUND_CALCULATOR)
-        static let OptionTitleOfSIPCalculator = Localizable.value(for: .SECTION_TITLE_OF_EMI_CALCULATOR)
-        static let OptionTitleOfSWPCalculator = Localizable.value(for: .SECTION_TITLE_OF_MUTUAL_FUND_CALCULATOR)
-        static let OptionTitleOfLumSumCalculator = Localizable.value(for: .SECTION_TITLE_OF_BANK_CALCULATOR)
-        static let OptionTitleOfGoalCalculator = Localizable.value(for: .SECTION_TITLE_OF_USEFUL_TOOLS)
+        static let SectionTitleOfMutualFundCalculator = Localizable.shared.value(for: .SECTION_TITLE_OF_MUTUAL_FUND_CALCULATOR)
+        static let OptionTitleOfSIPCalculator = Localizable.shared.value(for: .SECTION_TITLE_OF_EMI_CALCULATOR)
+        static let OptionTitleOfSWPCalculator = Localizable.shared.value(for: .SECTION_TITLE_OF_MUTUAL_FUND_CALCULATOR)
+        static let OptionTitleOfLumSumCalculator = Localizable.shared.value(for: .SECTION_TITLE_OF_BANK_CALCULATOR)
+        static let OptionTitleOfGoalCalculator = Localizable.shared.value(for: .SECTION_TITLE_OF_USEFUL_TOOLS)
         
         //Bank Calculator
-        static let SectionTitleOfBankCalculator = Localizable.value(for: .SECTION_TITLE_OF_BANK_CALCULATOR)
-        static let OptionTitleOfFixedDeposit = Localizable.value(for: .SECTION_TITLE_OF_EMI_CALCULATOR)
-        static let OptionTitleOfRDCalculator = Localizable.value(for: .SECTION_TITLE_OF_MUTUAL_FUND_CALCULATOR)
+        static let SectionTitleOfBankCalculator = Localizable.shared.value(for: .SECTION_TITLE_OF_BANK_CALCULATOR)
+        static let OptionTitleOfFixedDeposit = Localizable.shared.value(for: .SECTION_TITLE_OF_EMI_CALCULATOR)
+        static let OptionTitleOfRDCalculator = Localizable.shared.value(for: .SECTION_TITLE_OF_MUTUAL_FUND_CALCULATOR)
         
         //Useful Tools
-        static let SectionTitleOfUsefulTools = Localizable.value(for: .SECTION_TITLE_OF_USEFUL_TOOLS)
-        static let OptionTitleOfGSTCalculator = Localizable.value(for: .SECTION_TITLE_OF_EMI_CALCULATOR)
-        static let OptionTitleOfAgeCalculator = Localizable.value(for: .SECTION_TITLE_OF_MUTUAL_FUND_CALCULATOR)
-        static let OptionTitleOfCashCounter = Localizable.value(for: .SECTION_TITLE_OF_BANK_CALCULATOR)
-        static let OptionTitleOfCompoundInterect = Localizable.value(for: .SECTION_TITLE_OF_USEFUL_TOOLS)
-        static let OptionTitleOfAmountToWord = Localizable.value(for: .SECTION_TITLE_OF_USEFUL_TOOLS)
+        static let SectionTitleOfUsefulTools = Localizable.shared.value(for: .SECTION_TITLE_OF_USEFUL_TOOLS)
+        static let OptionTitleOfGSTCalculator = Localizable.shared.value(for: .SECTION_TITLE_OF_EMI_CALCULATOR)
+        static let OptionTitleOfAgeCalculator = Localizable.shared.value(for: .SECTION_TITLE_OF_MUTUAL_FUND_CALCULATOR)
+        static let OptionTitleOfCashCounter = Localizable.shared.value(for: .SECTION_TITLE_OF_BANK_CALCULATOR)
+        static let OptionTitleOfCompoundInterect = Localizable.shared.value(for: .SECTION_TITLE_OF_USEFUL_TOOLS)
+        static let OptionTitleOfAmountToWord = Localizable.shared.value(for: .SECTION_TITLE_OF_USEFUL_TOOLS)
         
         //Post office Calculator
-        static let SectionTitleOfPostOfficeCalculator = Localizable.value(for: .SECTION_TITLE_OF_POST_OFFICE_CALCULATOR)
-        static let OptionTitleOfPublicProvidentFund = Localizable.value(for: .SECTION_TITLE_OF_EMI_CALCULATOR)
-        static let OptionTitleOfSeniorCitizenSavingScheme = Localizable.value(for: .SECTION_TITLE_OF_MUTUAL_FUND_CALCULATOR)
-        static let OptionTitleOfSukanyaSamriddhi = Localizable.value(for: .SECTION_TITLE_OF_BANK_CALCULATOR)
-        static let OptionTitleOfKishanVikasPatra = Localizable.value(for: .SECTION_TITLE_OF_USEFUL_TOOLS)
-        static let OptionTitleOfNationalSavingCertificate = Localizable.value(for: .SECTION_TITLE_OF_USEFUL_TOOLS)
+        static let SectionTitleOfPostOfficeCalculator = Localizable.shared.value(for: .SECTION_TITLE_OF_POST_OFFICE_CALCULATOR)
+        static let OptionTitleOfPublicProvidentFund = Localizable.shared.value(for: .SECTION_TITLE_OF_EMI_CALCULATOR)
+        static let OptionTitleOfSeniorCitizenSavingScheme = Localizable.shared.value(for: .SECTION_TITLE_OF_MUTUAL_FUND_CALCULATOR)
+        static let OptionTitleOfSukanyaSamriddhi = Localizable.shared.value(for: .SECTION_TITLE_OF_BANK_CALCULATOR)
+        static let OptionTitleOfKishanVikasPatra = Localizable.shared.value(for: .SECTION_TITLE_OF_USEFUL_TOOLS)
+        static let OptionTitleOfNationalSavingCertificate = Localizable.shared.value(for: .SECTION_TITLE_OF_USEFUL_TOOLS)
         
         //Insurance Calculator
-        static let SectionTitleOfInsuranceCalculator = Localizable.value(for: .SECTION_TITLE_OF_INSURANCE_CALCULATOR)
-        static let OptionTitleOfPMJeevanJyotiBima = Localizable.value(for: .SECTION_TITLE_OF_USEFUL_TOOLS)
-        static let OptionTitleOfPMSurakshaBima = Localizable.value(for: .SECTION_TITLE_OF_USEFUL_TOOLS)
+        static let SectionTitleOfInsuranceCalculator = Localizable.shared.value(for: .SECTION_TITLE_OF_INSURANCE_CALCULATOR)
+        static let OptionTitleOfPMJeevanJyotiBima = Localizable.shared.value(for: .SECTION_TITLE_OF_USEFUL_TOOLS)
+        static let OptionTitleOfPMSurakshaBima = Localizable.shared.value(for: .SECTION_TITLE_OF_USEFUL_TOOLS)
         
         
         //Introduction view
-        static let IntroPage1Title = Localizable.value(for: .INTRO_PAGE_1_TITLE)
-        static let IntroPage1Description = Localizable.value(for: .INTRO_PAGE_1_DESCRIPTION)
+        static let IntroPage1Title = Localizable.shared.value(for: .INTRO_PAGE_1_TITLE)
+        static let IntroPage1Description = Localizable.shared.value(for: .INTRO_PAGE_1_DESCRIPTION)
         
-        static let IntroPage2Title = Localizable.value(for: .INTRO_PAGE_2_TITLE)
-        static let IntroPage2Description = Localizable.value(for: .INTRO_PAGE_2_DESCRIPTION)
+        static let IntroPage2Title = Localizable.shared.value(for: .INTRO_PAGE_2_TITLE)
+        static let IntroPage2Description = Localizable.shared.value(for: .INTRO_PAGE_2_DESCRIPTION)
         
-        static let IntroPage3Title = Localizable.value(for: .INTRO_PAGE_3_TITLE)
-        static let IntroPage3Description = Localizable.value(for: .INTRO_PAGE_3_DESCRIPTION)
+        static let IntroPage3Title = Localizable.shared.value(for: .INTRO_PAGE_3_TITLE)
+        static let IntroPage3Description = Localizable.shared.value(for: .INTRO_PAGE_3_DESCRIPTION)
         
-        static let IntroPage4Title = Localizable.value(for: .INTRO_PAGE_4_TITLE)
-        static let IntroPage4Description = Localizable.value(for: .INTRO_PAGE_4_DESCRIPTION)
+        static let IntroPage4Title = Localizable.shared.value(for: .INTRO_PAGE_4_TITLE)
+        static let IntroPage4Description = Localizable.shared.value(for: .INTRO_PAGE_4_DESCRIPTION)
         
         //Place holder
-        static let PlaceHolderOfLoanAmount = Localizable.value(for: .PLACEHOLDER_LOAN_AMOUNT)
-        static let PlaceHolderOfInterestRate = Localizable.value(for: .PLACEHOLDER_INTEREST_RATE)
-        static let PlaceHolderOfTenureInYears = Localizable.value(for: .PLACEHOLDER_TENURE_IN_YEAR)
-        static let PlaceHolderOfTenureInMonths = Localizable.value(for: .PLACEHOLDER_TENURE_IN_MONTH)
+        static let PlaceHolderOfLoanAmount = Localizable.shared.value(for: .PLACEHOLDER_LOAN_AMOUNT)
+        static let PlaceHolderOfInterestRate = Localizable.shared.value(for: .PLACEHOLDER_INTEREST_RATE)
+        static let PlaceHolderOfTenureInYears = Localizable.shared.value(for: .PLACEHOLDER_TENURE_IN_YEAR)
+        static let PlaceHolderOfTenureInMonths = Localizable.shared.value(for: .PLACEHOLDER_TENURE_IN_MONTH)
         
         //General validation message
-        static let GeneralMessageForRequire = Localizable.value(for: .MSG_IS_REQUIRE)
-        static let GeneralMessageForMustRequire = Localizable.value(for: .MSG_MUST_VALID)
-        static let GeneralMessageForNotValid = Localizable.value(for: .MSG_NOT_VALID)
-        static let GeneralMessageForNotBeNegative = Localizable.value(for: .MSG_CAN_NOT_BE_NEGATIVE)
+        static let GeneralMessageForRequire = Localizable.shared.value(for: .MSG_IS_REQUIRE)
+        static let GeneralMessageForMustRequire = Localizable.shared.value(for: .MSG_MUST_VALID)
+        static let GeneralMessageForNotValid = Localizable.shared.value(for: .MSG_NOT_VALID)
+        static let GeneralMessageForNotBeNegative = Localizable.shared.value(for: .MSG_CAN_NOT_BE_NEGATIVE)
         
         
         //Tools tabs
-        static let ToolsViewTitle = Localizable.value(for: .TOOLS_VIEW_TITLE)
-        static let CurrencyExchangeTitle = Localizable.value(for: .CURRENCY_EXCHAGE_TITLE)
-        static let CurrencyExchangeDescripion = Localizable.value(for: .CURRENCY_EXCHAGE_DESCRIPTION)
+        static let ToolsViewTitle = Localizable.shared.value(for: .TOOLS_VIEW_TITLE)
+        static let CurrencyExchangeTitle = Localizable.shared.value(for: .CURRENCY_EXCHAGE_TITLE)
+        static let CurrencyExchangeDescripion = Localizable.shared.value(for: .CURRENCY_EXCHAGE_DESCRIPTION)
         
-        static let TimezoneExchangeTitle = Localizable.value(for: .TIMEZONE_EXCHAGE_TITLE)
-        static let TimezoneExchangeDesciption = Localizable.value(for: .TIMEZONE_EXCHAGE_DESCRIPTION)
+        static let TimezoneExchangeTitle = Localizable.shared.value(for: .TIMEZONE_EXCHAGE_TITLE)
+        static let TimezoneExchangeDesciption = Localizable.shared.value(for: .TIMEZONE_EXCHAGE_DESCRIPTION)
         
-        static let GSTCalculatorTitle = Localizable.value(for: .GST_CALCULATOR_TITLE)
-        static let GSTCalculatorDescripion = Localizable.value(for: .GST_CALCULATOR_DESCRIPTION)
+        static let GSTCalculatorTitle = Localizable.shared.value(for: .GST_CALCULATOR_TITLE)
+        static let GSTCalculatorDescripion = Localizable.shared.value(for: .GST_CALCULATOR_DESCRIPTION)
         
-        static let VATCalculatorTitle = Localizable.value(for: .VAT_CALCULATOR_TITLE)
-        static let VATCalculatorDescripion = Localizable.value(for: .VAT_CALCULATOR_DESCRIPTION)
+        static let VATCalculatorTitle = Localizable.shared.value(for: .VAT_CALCULATOR_TITLE)
+        static let VATCalculatorDescripion = Localizable.shared.value(for: .VAT_CALCULATOR_DESCRIPTION)
         
-        static let InflationCalculatorTitle = Localizable.value(for: .INFLATION_CALCULATOR_TITLE)
-        static let InflationCalculatorDescripion = Localizable.value(for: .INFLATION_CALCULATOR_DESCRIPTION)
+        static let InflationCalculatorTitle = Localizable.shared.value(for: .INFLATION_CALCULATOR_TITLE)
+        static let InflationCalculatorDescripion = Localizable.shared.value(for: .INFLATION_CALCULATOR_DESCRIPTION)
         
-        static let DiscountCalculatorTitle = Localizable.value(for: .DISCOUNT_CALCULATOR_TITLE)
-        static let DiscountCalculatorDescripion = Localizable.value(for: .DISCOUNT_CALCULATOR_DESCRIPTION)
+        static let DiscountCalculatorTitle = Localizable.shared.value(for: .DISCOUNT_CALCULATOR_TITLE)
+        static let DiscountCalculatorDescripion = Localizable.shared.value(for: .DISCOUNT_CALCULATOR_DESCRIPTION)
         
-        static let PercentageCalculatorTitle = Localizable.value(for: .PERCENTAGE_CALCULATOR_TITLE)
-        static let PercentageCalculatorDescripion = Localizable.value(for: .PERCENTAGE_CALCULATOR_DESCRIPTION)
+        static let PercentageCalculatorTitle = Localizable.shared.value(for: .PERCENTAGE_CALCULATOR_TITLE)
+        static let PercentageCalculatorDescripion = Localizable.shared.value(for: .PERCENTAGE_CALCULATOR_DESCRIPTION)
         
-        static let PercentageChangeCalculatorTitle = Localizable.value(for: .PERCENTAGE_CHANGE_CALCULATOR_TITLE)
-        static let PercentageChangeCalculatorDescripion = Localizable.value(for: .PERCENTAGE_CHANGE_CALCULATOR_DESCRIPTION)
+        static let PercentageChangeCalculatorTitle = Localizable.shared.value(for: .PERCENTAGE_CHANGE_CALCULATOR_TITLE)
+        static let PercentageChangeCalculatorDescripion = Localizable.shared.value(for: .PERCENTAGE_CHANGE_CALCULATOR_DESCRIPTION)
         
-        static let PercentageDefferenceCalculatorTitle = Localizable.value(for: .PERCENTAGE_DIFFERENCE_CALCULATOR_TITLE)
-        static let PercentageDefferenceCalculatorDescripion = Localizable.value(for: .PERCENTAGE_DIFFERENCE_CALCULATOR_DESCRIPTION)
+        static let PercentageDefferenceCalculatorTitle = Localizable.shared.value(for: .PERCENTAGE_DIFFERENCE_CALCULATOR_TITLE)
+        static let PercentageDefferenceCalculatorDescripion = Localizable.shared.value(for: .PERCENTAGE_DIFFERENCE_CALCULATOR_DESCRIPTION)
         
         
         

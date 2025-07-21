@@ -8,7 +8,7 @@
 import UIKit
 
 class SplashScreenVC: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -20,35 +20,39 @@ class SplashScreenVC: UIViewController {
         
         self.setTabbarController()
         
-        AdsManager.shared.adsCustomDelegate = self
-        self.showInterstitial(from: self)
+//        AdsManager.shared.adsCustomDelegate = self
+//        self.showInterstitial(from: self)
         
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        self.startApplication()
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
+    func startApplication() {
+        let vc = UIStoryboard.instantiateViewController(storyBorad: .Authentication, controller: .LanguageListVC)
+        self.navigationController?.pushViewController(vc, animated: false)
     }
-    */
-
+    
 }
 
 
 extension SplashScreenVC: AdsCustomDelegate {
     func didAdsDismiss() {
-        let vc = UIStoryboard.instantiateViewController(storyBorad: .Authentication, controller: .LanguageListVC)
-        self.navigationController?.pushViewController(vc, animated: false)
+        self.startApplication()
     }
     
     

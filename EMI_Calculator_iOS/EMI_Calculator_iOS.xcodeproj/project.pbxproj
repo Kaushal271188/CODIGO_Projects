@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		687E8DF09A82D4DF3B3820D6 /* Pods_EMI_Calculator_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9BD11DD279F46A110D4DFC /* Pods_EMI_Calculator_iOS.framework */; };
+		CDAC17C32E2B69A6005BA9EE /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC17C22E2B699F005BA9EE /* Bundle.swift */; };
+		CDAC17C52E2B844B005BA9EE /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAC17C42E2B8445005BA9EE /* Notification.swift */; };
+		CDC7688E2E2A378F0099DCC5 /* TimeZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC7688D2E2A377E0099DCC5 /* TimeZone.swift */; };
+		CDC768902E2A39380099DCC5 /* DateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC7688F2E2A39300099DCC5 /* DateTime.swift */; };
+		CDC768922E2A447A0099DCC5 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC768912E2A44690099DCC5 /* PickerView.swift */; };
 		D83F84622E16D7D300CC18F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83F84612E16D7D300CC18F4 /* AppDelegate.swift */; };
 		D83F84642E16D7D300CC18F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83F84632E16D7D300CC18F4 /* SceneDelegate.swift */; };
 		D83F84662E16D7D300CC18F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83F84652E16D7D300CC18F4 /* ViewController.swift */; };
@@ -87,6 +92,13 @@
 
 /* Begin PBXFileReference section */
 		1A30D034ADD2BA4D0C2B3603 /* Pods-EMI_Calculator_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMI_Calculator_iOS.debug.xcconfig"; path = "Target Support Files/Pods-EMI_Calculator_iOS/Pods-EMI_Calculator_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		CD8E4C632E2ABA1F002BECED /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CD8E4C642E2ABA37002BECED /* gu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = gu; path = gu.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CDAC17C22E2B699F005BA9EE /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		CDAC17C42E2B8445005BA9EE /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		CDC7688D2E2A377E0099DCC5 /* TimeZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZone.swift; sourceTree = "<group>"; };
+		CDC7688F2E2A39300099DCC5 /* DateTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTime.swift; sourceTree = "<group>"; };
+		CDC768912E2A44690099DCC5 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		D52379020D0293CDC8C008DC /* Pods-EMI_Calculator_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMI_Calculator_iOS.release.xcconfig"; path = "Target Support Files/Pods-EMI_Calculator_iOS/Pods-EMI_Calculator_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		D83F845E2E16D7D300CC18F4 /* EMI_Calculator_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EMI_Calculator_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D83F84612E16D7D300CC18F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -193,6 +205,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CDAC17C62E2B950F005BA9EE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CDAC17C72E2B950F005BA9EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CDAC17C82E2B950F005BA9EE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CDAC17C92E2B950F005BA9EE /* GSTCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				CDAC17C62E2B950F005BA9EE /* Model */,
+				CDAC17C72E2B950F005BA9EE /* View */,
+				CDAC17C82E2B950F005BA9EE /* ViewModel */,
+			);
+			path = GSTCalculator;
+			sourceTree = "<group>";
+		};
 		D83F84552E16D7D300CC18F4 = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +296,7 @@
 				D896F6022E195B1D00DCEFFE /* BaseViewController.swift */,
 				D83F847D2E16D8AE00CC18F4 /* CollectionView.swift */,
 				D8F88A912E1ADC6700727E99 /* CustomViewController.swift */,
+				CDC768912E2A44690099DCC5 /* PickerView.swift */,
 				D83F847E2E16D8AE00CC18F4 /* CustomOTPView.swift */,
 				D83F847F2E16D8AE00CC18F4 /* StoryBoard.swift */,
 				D83F84802E16D8AE00CC18F4 /* ScrollView.swift */,
@@ -263,6 +307,10 @@
 				D83F84852E16D8AE00CC18F4 /* Color.swift */,
 				D8EADCF62E1829FE00207E5C /* EMICalculation.swift */,
 				D896F6002E19511200DCEFFE /* AdsManager.swift */,
+				CDC7688D2E2A377E0099DCC5 /* TimeZone.swift */,
+				CDC7688F2E2A39300099DCC5 /* DateTime.swift */,
+				CDAC17C22E2B699F005BA9EE /* Bundle.swift */,
+				CDAC17C42E2B8445005BA9EE /* Notification.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -402,6 +450,7 @@
 		D8BE4A412E1904190012166C /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				CDAC17C92E2B950F005BA9EE /* GSTCalculator */,
 				D8D644252E253ACA00B46F78 /* TimeZoneExchange */,
 				D8D644132E25286400B46F78 /* ToolsView */,
 				D8BFF7B02E2381C2009B7206 /* IntroductionView */,
@@ -725,6 +774,8 @@
 				en,
 				Base,
 				"en-IN",
+				hi,
+				gu,
 			);
 			mainGroup = D83F84552E16D7D300CC18F4;
 			productRefGroup = D83F845F2E16D7D300CC18F4 /* Products */;
@@ -771,9 +822,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-EMI_Calculator_iOS/Pods-EMI_Calculator_iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-EMI_Calculator_iOS/Pods-EMI_Calculator_iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -810,9 +865,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-EMI_Calculator_iOS/Pods-EMI_Calculator_iOS-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-EMI_Calculator_iOS/Pods-EMI_Calculator_iOS-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -827,6 +886,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8D6442A2E253AFE00B46F78 /* TimeZoneExchangeVC.swift in Sources */,
+				CDAC17C32E2B69A6005BA9EE /* Bundle.swift in Sources */,
+				CDC7688E2E2A378F0099DCC5 /* TimeZone.swift in Sources */,
 				D8B279752E1EBD3A00CE334F /* CurrencyListTableView.swift in Sources */,
 				D8D497D92E210124008EABCB /* CollectionViewOfDashboardOptions.swift in Sources */,
 				D8D73AA62E191DA900C1B515 /* TableViewOfLanguageList.swift in Sources */,
@@ -844,6 +905,7 @@
 				D8D644182E25288D00B46F78 /* ToolsVC.swift in Sources */,
 				D8BFF7C12E238F49009B7206 /* IntroductionViewModel.swift in Sources */,
 				D896F6012E19511200DCEFFE /* AdsManager.swift in Sources */,
+				CDAC17C52E2B844B005BA9EE /* Notification.swift in Sources */,
 				D8D497E22E2102E8008EABCB /* DashboardViewModel.swift in Sources */,
 				D83F849D2E16D8AF00CC18F4 /* StaticContents.swift in Sources */,
 				D83F84982E16D8AF00CC18F4 /* AlertView.swift in Sources */,
@@ -871,6 +933,7 @@
 				D8F88A922E1ADC6700727E99 /* CustomViewController.swift in Sources */,
 				D83F84A02E16D8AF00CC18F4 /* LocalConstants.swift in Sources */,
 				D8B279732E1EAC8800CE334F /* CurrencyListModel.swift in Sources */,
+				CDC768922E2A447A0099DCC5 /* PickerView.swift in Sources */,
 				D83F849B2E16D8AF00CC18F4 /* Color.swift in Sources */,
 				D8D644202E2529B100B46F78 /* ToolsOptionsModel.swift in Sources */,
 				D8BFF7C32E23AEEC009B7206 /* PageController.swift in Sources */,
@@ -880,6 +943,7 @@
 				D8D74EDE2E1FB9BA00A7F70B /* TableViewOfLeftMenu.swift in Sources */,
 				D8EADCF72E1829FE00207E5C /* EMICalculation.swift in Sources */,
 				D8D74EE62E1FC6B900A7F70B /* LeftMenuCell.swift in Sources */,
+				CDC768902E2A39380099DCC5 /* DateTime.swift in Sources */,
 				D83F849F2E16D8AF00CC18F4 /* API.swift in Sources */,
 				D8D6441E2E25295A00B46F78 /* ToolsOptionsViewModel.swift in Sources */,
 				D8BFF7B52E2381F5009B7206 /* IntroductionVC.swift in Sources */,
@@ -912,6 +976,8 @@
 			children = (
 				D83F848E2E16D8AF00CC18F4 /* en */,
 				D83F848F2E16D8AF00CC18F4 /* en-IN */,
+				CD8E4C632E2ABA1F002BECED /* hi */,
+				CD8E4C642E2ABA37002BECED /* gu */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

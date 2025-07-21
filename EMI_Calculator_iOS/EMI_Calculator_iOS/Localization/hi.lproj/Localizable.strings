@@ -1,0 +1,180 @@
+/* 
+ Localizable.strings
+  RockStar-iOS_SHRIMAY
+
+  Created by Kaushal Prajapati on 20/05/25.
+  
+*/
+
+"APP_FULL_NAME" = "ईएमआई कैलकुलेटर";
+"APP_SHORT_NAME" = "ईएमआई कैलकुलेटर और निवेश योजनाएं";
+
+"ALERT_TITLE" = "ईएमआई कैलकुलेटर";
+
+"MSG_INTERNET_CONNECTION" = "कृपया अपना इंटरनेट कनेक्शन जांचें";
+"MSG_ENABLE_LOCATION_SERVICE" = "स्थान सेवाएं अक्षम हैं, फिर से सक्षम करने के लिए कृपया सेटिंग्स में जाकर इस ऐप के लिए स्थान सेवा चालू करें";
+"MSG_FORCE_UPDATE_APP" = "ऐप स्टोर पर ऐप का नया संस्करण उपलब्ध है, कृपया नया संस्करण अपडेट करें और नए फ़ीचर्स का आनंद लें";
+
+"MSG_ENTER_EMAIL" = "कृपया अपना ईमेल पता दर्ज करें";
+"MSG_REGISTERED_EMAIL" = "कृपया अपना पंजीकृत ईमेल पता दर्ज करें";
+
+"MSG_ENTER_VALID_EMAIL" = "कृपया एक मान्य ईमेल पता दर्ज करें";
+"MSG_ENTER_VALID_PASSWORD" = "पासवर्ड कम से कम 8 अक्षरों का होना चाहिए और इसमें 1 अपरकेस, 1 लोअरकेस, 1 संख्या और 1 विशेष अक्षर होना आवश्यक है";
+"MSG_ENTER_PASSWORD" = "कृपया पासवर्ड दर्ज करें!";
+
+"MSG_ENTER_YOUR_NAME" = "कृपया अपना नाम दर्ज करें";
+"MSG_ENTER_FIRST_NAME" = "कृपया पहला नाम दर्ज करें";
+"MSG_ENTER_LAST_NAME" = "कृपया अंतिम नाम दर्ज करें";
+"MSG_ENTER_REGISTERED_PHONE_NUMBER" = "कृपया अपना पंजीकृत फ़ोन नंबर दर्ज करें";
+"MSG_ENTER_PHONE_NUMBER" = "कृपया फ़ोन नंबर दर्ज करें";
+"MSG_INVALID_PHONE_NUMBER" = "कृपया एक मान्य फ़ोन नंबर दर्ज करें";
+
+"MSG_ENTER_OLD_PASSWORD" = "कृपया पुराना पासवर्ड दर्ज करें";
+"MSG_ENTER_NEW_PASSWORD" = "कृपया नया पासवर्ड दर्ज करें";
+"MSG_ENTER_CONFIRM_PASSWORD" = "कृपया पासवर्ड की पुष्टि करें";
+"MSG_CHECK_NEW_AND_CONFIRM_PASSWORD" = "नया और पुष्टि पासवर्ड मेल नहीं खाते";
+
+"MSG_ENTER_OTP" = "कृपया ओटीपी दर्ज करें";
+"MSG_ENTER_VALID_OTP" = "कृपया मान्य ओटीपी दर्ज करें";
+
+"MSG_NO_CAMERA_ACCESS_PERMISSION" = "कैमरा अनुमति अक्षम है, पुनः सक्षम करने के लिए कृपया सेटिंग्स में जाकर कैमरा अनुमति चालू करें";
+"MSG_NO_PHOTO_LIBRARY_ACCESS_PERMISSION" = "फ़ोटो लाइब्रेरी की अनुमति अक्षम है, पुनः सक्षम करने के लिए कृपया सेटिंग्स में जाकर फ़ोटो अनुमति चालू करें";
+
+"MSG_ENTER_ANYTHING" = "कृपया # दर्ज करें";
+"MSG_SELECT_ANYTHING" = "कृपया # चुनें";
+
+"OK" = "ठीक है";
+"YES_" = "हाँ";
+"NO_" = "नहीं";
+"DONE" = "पूरा हुआ";
+"CANCEL" = "रद्द करें";
+"SETTINGS" = "सेटिंग्स";
+"DELETE" = "हटाएं";
+"ALLOW" = "अनुमति दें";
+"DONT_ALLOW" = "अनुमति न दें";
+"LOGOUT" = "लॉगआउट";
+"CALL" = "कॉल करें";
+"TOLL_FREE_NUMBER" = "टोल फ्री नंबर";
+
+"UPDATE" = "अपडेट करें";
+"EXIT" = "बाहर निकलें";
+
+"TAKE_PHOTO" = "फोटो लें";
+"CAMERA_ROLL" = "कैमरा रोल";
+"PHOTO_LIBRARY" = "फ़ोटो लाइब्रेरी";
+"VIDEO_LIBRARY" = "वीडियो लाइब्रेरी";
+
+// Static constants and validation messages
+"PLACEHOLDER_LOAN_AMOUNT" = "ऋण राशि";
+"PLACEHOLDER_INTEREST_RATE" = "ब्याज दर";
+"PLACEHOLDER_TENURE_IN_YEAR" = "कार्यकाल (वर्षों में)";
+"PLACEHOLDER_TENURE_IN_MONTH" = "कार्यकाल (महीनों में)";
+
+"MSG_IS_REQUIRE" = "आवश्यक है।";
+"MSG_MUST_VALID" = "एक मान्य संख्या होनी चाहिए।";
+"MSG_NOT_VALID" = "एक मान्य मान नहीं है।";
+"MSG_CAN_NOT_BE_NEGATIVE" = "ऋणात्मक नहीं हो सकता।";
+
+"MSG_ENTER_VALID_MOBILE_NUMBER" = "कृपया मान्य मोबाइल नंबर दर्ज करें";
+"MSG_ENTER_VALID_MOBILE_NO" = "कृपया मान्य मोबाइल नंबर दर्ज करें!";
+"MSG_ENTER_FEEDBACK_TYPE" = "कृपया फीडबैक प्रकार चुनें!";
+
+// Language selection view
+"LANGUAGE_TITLE" = "भाषा";
+"LANGUAGE_SUBTITLE" = "जारी रखने के लिए कृपया भाषा चुनें";
+
+// Currency selection view
+"CURRENCY_TITLE" = "मुद्रा इकाई";
+"CURRENCY_SUBTITLE" = "जारी रखने के लिए कृपया मुद्रा चुनें";
+
+// Left menu
+"REMOVEADS_TITLE" = "विज्ञापन हटाएं";
+"ABOUTUS_TITLE" = "हमारे बारे में";
+"RATEUS_TITLE" = "हमें रेट करें";
+"SHARE" = "साझा करें";
+
+"HOME_TAB_TITLE" = "होम";
+"TOOLS_TAB_TITLE" = "उपकरण";
+"HISTORY_TAB_TITLE" = "इतिहास";
+"SETTING_TAB_TITLE" = "सेटिंग्स";
+
+// Home view
+"HOME_VIEW_TITLE" = "होम";
+
+// Sections and options
+"SECTION_TITLE_OF_EMI_CALCULATOR" = "ईएमआई कैलकुलेटर";
+"OPTION_TITLE_OF_LOAN_EMI" = "ऋण ईएमआई";
+"OPTION_TITLE_OF_LOAN_COMPARE" = "ऋण तुलना";
+"OPTION_TITLE_OF_VEHICLE_LOAN" = "वाहन ऋण";
+"OPTION_TITLE_OF_HOME_LOAN" = "गृह ऋण ब्याज दरें";
+
+"SECTION_TITLE_OF_MUTUAL_FUND_CALCULATOR" = "म्यूचुअल फंड कैलकुलेटर";
+"OPTION_TITLE_OF_SIP_CALCULATOR" = "एसआईपी कैलकुलेटर";
+"OPTION_TITLE_OF_SWP_CALCULATOR" = "एसडब्ल्यूपी कैलकुलेटर";
+"OPTION_TITLE_OF_LUMPSUM_CALCULATOR" = "लंपसम कैलकुलेटर";
+"OPTION_TITLE_OF_GOAL_CALCULATOR" = "लक्ष्य कैलकुलेटर";
+
+"SECTION_TITLE_OF_BANK_CALCULATOR" = "बैंक कैलकुलेटर";
+"OPTION_TITLE_OF_FIXED_DEPOSIT" = "फिक्स्ड डिपॉजिट";
+"OPTION_TITLE_OF_RD_CALCULATOR" = "आरडी कैलकुलेटर";
+
+"SECTION_TITLE_OF_USEFUL_TOOLS" = "उपयोगी उपकरण";
+"OPTION_TITLE_OF_GST_CALCULATOR" = "जीएसटी कैलकुलेटर";
+"OPTION_TITLE_OF_AGE_CALCULATOR" = "आयु कैलकुलेटर";
+"OPTION_TITLE_OF_CASH_COUNTER" = "नकद गणना";
+"OPTION_TITLE_OF_COMPOUND_INTERECT" = "चक्रवृद्धि ब्याज";
+"OPTION_TITLE_OF_AMOUNT_TO_WORD" = "राशि को शब्दों में";
+
+"SECTION_TITLE_OF_POST_OFFICE_CALCULATOR" = "डाकघर कैलकुलेटर";
+"OPTION_TITLE_OF_PUBLIC_PROVIDENT_FUND" = "पब्लिक प्रोविडेंट फंड";
+"OPTION_TITLE_OF_SENIOR_CITIZEN_SAVING_SCHEME" = "वरिष्ठ नागरिक बचत योजना";
+"OPTION_TITLE_OF_SUKANYA_SAMRIDDHI" = "सुकन्या समृद्धि योजना";
+"OPTION_TITLE_OF_KISHAN_VIKAS_PATRA" = "किसान विकास पत्र";
+"OPTION_TITLE_OF_NATIONAL_SAVING_CERTIFICATE" = "राष्ट्रीय बचत प्रमाणपत्र";
+
+"SECTION_TITLE_OF_INSURANCE_CALCULATOR" = "बीमा कैलकुलेटर";
+"OPTION_TITLE_OF_PM_JEEVAN_JYOTI_BIMA" = "प्रधानमंत्री जीवन ज्योति बीमा";
+"OPTION_TITLE_OF_PM_SURAKSHA_BIMA" = "प्रधानमंत्री सुरक्षा बीमा";
+
+//Tools tab calculator list
+"TOOLS_VIEW_TITLE" = "उपकरण";
+"CURRENCY_EXCHAGE_TITLE" = "मुद्रा विनिमय";
+"CURRENCY_EXCHAGE_DESCRIPTION" = "सटीक लेन-देन के लिए वास्तविक समय की विनिमय दरों का उपयोग करके तुरंत कई मुद्राओं को परिवर्तित करें।";
+
+"TIMEZONE_EXCHAGE_TITLE" = "समय क्षेत्र विनिमय";
+"TIMEZONE_EXCHAGE_DESCRIPTION" = "वैश्विक घटनाओं की योजना और प्रबंधन के लिए विभिन्न समय क्षेत्रों के बीच सहज रूप से स्विच करें।";
+
+"GST_CALCULATOR_TITLE" = "जीएसटी कैलकुलेटर";
+"GST_CALCULATOR_DESCRIPTION" = "लेन-देन के लिए वस्तु एवं सेवा कर (GST) की राशि की गणना करने का एक उपकरण।";
+
+"VAT_CALCULATOR_TITLE" = "वैट कैलकुलेटर";
+"VAT_CALCULATOR_DESCRIPTION" = "लेन-देन के लिए मूल्य वर्धित कर (VAT) की राशि की गणना करने का एक उपकरण।";
+
+"INFLATION_CALCULATOR_TITLE" = "मुद्रास्फीति कैलकुलेटर";
+"INFLATION_CALCULATOR_DESCRIPTION" = "वास्तविक क्रय शक्ति में बदलाव दिखाने के लिए मुद्रास्फीति के अनुसार वित्तीय राशि को समायोजित करें।";
+
+"DISCOUNT_CALCULATOR_TITLE" = "छूट कैलकुलेटर";
+"DISCOUNT_CALCULATOR_DESCRIPTION" = "उपयोगकर्ता द्वारा दर्ज की गई छूट दर के आधार पर छूट मूल्य और बचत की गणना करता है।";
+
+"PERCENTAGE_CALCULATOR_TITLE" = "प्रतिशत कैलकुलेटर";
+"PERCENTAGE_CALCULATOR_DESCRIPTION" = "दो संख्याओं के बीच प्रतिशत अंतर की गणना करता है ताकि तुलना में सहायता मिल सके।";
+
+"PERCENTAGE_DIFFERENCE_CALCULATOR_TITLE" = "प्रतिशत अंतर कैलकुलेटर";
+"PERCENTAGE_DIFFERENCE_CALCULATOR_DESCRIPTION" = "दो संख्याओं के बीच प्रतिशत अंतर की गणना करता है ताकि तुलना में सहायता मिल सके।";
+
+"PERCENTAGE_CHANGE_CALCULATOR_TITLE" = "प्रतिशत परिवर्तन कैलकुलेटर";
+"PERCENTAGE_CHANGE_CALCULATOR_DESCRIPTION" = "प्रारंभिक और अंतिम संख्यात्मक मानों के बीच प्रतिशत परिवर्तन की गणना करता है।";
+
+
+//Introduction view
+"INTRO_PAGE_1_TITLE" = "आपके सभी ऋण शामिल";
+"INTRO_PAGE_1_DESCRIPTION" = "व्यक्तिगत से व्यापार ऋण तक, एक ही स्थान पर भुगतान की गणना आसानी से करें।";
+
+"INTRO_PAGE_2_TITLE" = "सुविधाजनक रूपांतरण उपकरण";
+"INTRO_PAGE_2_DESCRIPTION" = "हमारे अंतर्निहित उपकरणों से मुद्राओं को बिना किसी कठिनाई के रूपांतरित करें।";
+
+"INTRO_PAGE_3_TITLE" = "सुविधाजनक रूपांतरण उपकरण";
+"INTRO_PAGE_3_DESCRIPTION" = "हमारे अंतर्निहित उपकरणों से मुद्राओं और समय क्षेत्रों को बिना किसी कठिनाई के रूपांतरित करें।";
+
+"INTRO_PAGE_4_TITLE" = "आपका आसान वित्तीय साथी";
+"INTRO_PAGE_4_DESCRIPTION" = "अपने सभी वित्तीय योजनाओं के लिए त्वरित गणनाओं के साथ जीवन को सरल बनाएं।";

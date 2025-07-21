@@ -10,15 +10,12 @@ import Foundation
 
 struct TimeZoneExchangeModel {
     
-    var currentTimeZone: String?
+    var selectedDate = Date()
     
-    var selectedFromTimeZone: String?
-    var selectedToTimeZone: String?
+    let currentTimeZone = TimeZone.CurrentTimeZone
+    let utcTimeZone = TimeZone.UTCTimeZone
     
-    var selectedDate: String?
-    var selectedTime: String?
-    
-    var resultDate: String?
-    var resultTime: String?
+    var fromTimeZone: TimeZone? = nil
+    var toTimeZone: TimeZone? = nil
     
 }

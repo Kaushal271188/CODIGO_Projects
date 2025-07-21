@@ -9,14 +9,19 @@ import Foundation
 import UIKit
 import SlideMenuController
 
-protocol SlidemenuDelegate {
-    
-    func didOpenLeftMenu()
-    func didCloseLeftMenu()
-    
-    func didOpenRightMenu()
-    func didCloseRightMenu()
-    
+//protocol SlidemenuDelegate {
+//    
+//    func didOpenLeftMenu()
+//    func didCloseLeftMenu()
+//    
+//    func didOpenRightMenu()
+//    func didCloseRightMenu()
+//    
+//}
+
+private var languageDelegateKey: UInt8 = 0
+protocol LanguageDelegate {
+    func didChangeLanguage(languageCode: String)
 }
 
 var isAppLoaded: Bool = false
@@ -31,8 +36,17 @@ extension UIViewController {
         case CloseRightMenu = "CloseRightMenu"
     }
     
-    var slidemenuDelegate: SlidemenuDelegate? {
-        nil
+//    var slidemenuDelegate: SlidemenuDelegate? {
+//        nil
+//    }
+    
+    var languageDelegate: LanguageDelegate? {
+        get {
+            return objc_getAssociatedObject(self, &languageDelegateKey) as? LanguageDelegate
+        }
+        set {
+            objc_setAssociatedObject(self, &languageDelegateKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
     }
     
     //For Interstitial advertisement
@@ -175,7 +189,7 @@ extension UIViewController {
                               datePickerStyle: UIDatePickerStyle = .wheels,
                               completionHandler: @escaping(_ isSuccess: Bool,_ selectedDate: Date?) -> Void) {
         
-        let alert = UIAlertController(title: title, message: "\n\n\n\n\n\n\n", preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
         
         let datePicker = UIDatePicker()
         datePicker.date = currentDate
@@ -214,6 +228,68 @@ extension UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    func showDataPicker(fromSourceView: UIView? = nil,
+                        title: String? = nil,
+                        message: String? = "\n\n\n\n\n\n\n\n\n\n",
+                        items: [String]? = nil,
+                        item: String? = nil,
+                        completionHandler: @escaping(_ isSuccess: Bool,_ selectedValue: String?,_ selectedIndex: Int?) -> Void) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+        
+        
+        if let items = items {
+            var pickerView = UIPickerView()
+            pickerView.frame = CGRect(x: 0, y: 15, width: alert.view.bounds.width - 20, height: 200)
+            
+            let preselectedIndex: Int = (item != nil ? items.firstIndex(of: item!) : 0)!
+            
+            let singlePicker = SingleComponentPicker(pickerView: pickerView, items: items, preselectedIndex: preselectedIndex)
+
+            alert.view.addSubview(pickerView)
+            
+            let selectAction = UIAlertAction(title: StaticContents.Constants.Done, style: .default) { _ in
+    //            let formatter = DateFormatter()
+    //            formatter.dateStyle = .medium
+    //            self.selectedDateLabel.text = "Selected: \(formatter.string(from: datePicker.date))"
+                
+                if let selectedItem = singlePicker.getSelectedValue() {
+                    let selectedIndex = items.firstIndex(of: selectedItem)
+                    completionHandler(true, selectedItem, selectedIndex)
+                }else {
+                    completionHandler(false, nil, nil)
+                }
+                
+            }
+            
+            let cancelAction = UIAlertAction(title: StaticContents.Constants.Cancel, style: .cancel) { _ in
+                completionHandler(false, nil, nil)
+            }
+            
+            alert.addAction(selectAction)
+            alert.addAction(cancelAction)
+            
+            // For iPad compatibility
+            
+            if let fromSourceView = fromSourceView {
+                if let popoverController = alert.popoverPresentationController {
+                    popoverController.sourceView = fromSourceView
+                    popoverController.sourceRect = fromSourceView.bounds
+                }
+            }
+            
+            present(alert, animated: true, completion: nil)
+            
+        }
+    }
+    
 }
 
-
+extension UIViewController {
+    func changeLanguageCode(languageCode: String) {
+        APPDELEGATE.setApplicationFlow()
+        if let languageDelegate = self.languageDelegate {
+            languageDelegate.didChangeLanguage(languageCode: languageCode)
+        }
+    }
+}
