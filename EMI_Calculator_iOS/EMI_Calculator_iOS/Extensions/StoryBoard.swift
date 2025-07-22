@@ -28,6 +28,7 @@ extension UIStoryboard {
         case ToolsVC = "ToolsVC"
         case TimeZoneExchangeVC = "TimeZoneExchangeVC"
         
+        case PersonalLoanVC = "PersonalLoanVC"
         
         case DashboardVC = "DashboardVC"
         case LeftMenuVC = "LeftMenuVC"

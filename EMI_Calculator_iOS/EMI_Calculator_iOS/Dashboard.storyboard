@@ -95,8 +95,29 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="Wwq-Gf-gjc">
                                                 <rect key="frame" x="15" y="15" width="363" height="644"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qxk-zv-zfv">
-                                                        <rect key="frame" x="0.0" y="0.0" width="363" height="109"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qxk-zv-zfv">
+                                                        <rect key="frame" x="0.0" y="0.0" width="363" height="460"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tPb-Cn-Ggh" customClass="CustomTextField" customModule="EMI_Calculator_iOS" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="363" height="100"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="100" id="T7F-Kb-XS9"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u3j-pc-c8A" customClass="CustomTextField" customModule="EMI_Calculator_iOS" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="120" width="363" height="100"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="91h-8d-Zq0" customClass="CustomTextField" customModule="EMI_Calculator_iOS" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="240" width="363" height="100"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gnf-ra-kaN" customClass="CustomTextField" customModule="EMI_Calculator_iOS" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="360" width="363" height="100"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </view>
+                                                        </subviews>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iif-sK-KD3">
                                                         <rect key="frame" x="0.0" y="594" width="363" height="50"/>
@@ -151,9 +172,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="btnOfGetResult" destination="Iif-sK-KD3" id="Phe-VV-t67"/>
-                        <outlet property="lblOfNavSubTitle" destination="Orn-Fg-VLJ" id="GkI-SS-K0e"/>
-                        <outlet property="lblOfNavTitle" destination="MFk-pS-z9M" id="aFv-WU-nUA"/>
+                        <outlet property="txtOfAmount" destination="tPb-Cn-Ggh" id="bZK-e2-c4A"/>
+                        <outlet property="txtOfInterestRate" destination="u3j-pc-c8A" id="lbl-uj-qm4"/>
+                        <outlet property="txtOfStartLoanDate" destination="gnf-ra-kaN" id="kuK-2r-rCp"/>
+                        <outlet property="txtOfTenure" destination="91h-8d-Zq0" id="c2z-cs-auQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0L-Tv-yMj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

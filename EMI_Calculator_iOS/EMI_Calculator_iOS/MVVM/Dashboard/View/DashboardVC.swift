@@ -44,6 +44,12 @@ extension DashboardVC {
         self.lblOfNavTitle?.text = StaticContents.Constants.HomeTitle
         self.lblOfNavSubTitle?.text = StaticContents.Constants.HomeTitle
         self.lblOfNavSubTitle?.isHidden = true
+        
+        self.tableViewOfDashboardOptions?.didSelectOption = { optionInfo in
+            let vc = UIStoryboard.instantiateViewController(storyBorad: .Dashboard, controller: .PersonalLoanVC)
+            UIViewController.tabBatVC?.navigationController?.pushViewController(vc, animated: true)
+        }
+        
     }
     
     @IBAction func btnOfMenuAction() {

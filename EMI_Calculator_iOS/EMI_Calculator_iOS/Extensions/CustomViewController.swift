@@ -40,6 +40,24 @@ extension UIViewController {
 //        nil
 //    }
     
+    var homeVC: UIViewController {
+        get { UIStoryboard.instantiateViewController(storyBorad: .Central, controller: .DashboardVC) }
+        set { }
+    }
+    var toolsVC: UIViewController {
+        get { UIStoryboard.instantiateViewController(storyBorad: .Central, controller: .ToolsVC) }
+        set { }
+    }
+    var historyVC: UIViewController {
+        get { UIStoryboard.instantiateViewController(storyBorad: .Authentication, controller: .LanguageListVC) }
+        set { }
+    }
+    
+    var settingVC: UIViewController {
+        get { UIStoryboard.instantiateViewController(storyBorad: .Central, controller: .LeftMenuVC) }
+        set { }
+    }
+    
     var languageDelegate: LanguageDelegate? {
         get {
             return objc_getAssociatedObject(self, &languageDelegateKey) as? LanguageDelegate
@@ -147,26 +165,27 @@ extension UIViewController {
     func setTabbarController() {
         UIViewController.tabBatVC = UITabBarController()
         
-        let homeVC = UIStoryboard.instantiateViewController(storyBorad: .Central, controller: .DashboardVC)
-        let toolsVC = UIStoryboard.instantiateViewController(storyBorad: .Central, controller: .ToolsVC)
-        let historyVC = UIStoryboard.instantiateViewController(storyBorad: .Authentication, controller: .LanguageListVC)
-        let settingVC = UIStoryboard.instantiateViewController(storyBorad: .Central, controller: .LeftMenuVC)
+        self.homeVC = UIStoryboard.instantiateViewController(storyBorad: .Central, controller: .DashboardVC)
+        self.toolsVC = UIStoryboard.instantiateViewController(storyBorad: .Central, controller: .ToolsVC)
+        self.historyVC = UIStoryboard.instantiateViewController(storyBorad: .Authentication, controller: .LanguageListVC)
+        self.settingVC = UIStoryboard.instantiateViewController(storyBorad: .Central, controller: .LeftMenuVC)
         
-        homeVC.tabBarItem = UITabBarItem(title: StaticContents.Constants.HomeTitle,
-                                         image: UIImage.getSystemImage(image: .HomeTabUnselectedIcon),
-                                         selectedImage: UIImage.getSystemImage(image: .HomeTabSelectedIcon))
         
-        toolsVC.tabBarItem = UITabBarItem(title: StaticContents.Constants.ToolsTabTitle,
-                                          image: UIImage.getSystemImage(image: .ToolsTabUnselectedIcon),
-                                          selectedImage: UIImage.getSystemImage(image: .ToolsTabSelectedIcon))
-        
-        historyVC.tabBarItem = UITabBarItem(title: StaticContents.Constants.HistoryTabTitle,
-                                            image: UIImage.getSystemImage(image: .HistoryTabUnselectedIcon),
-                                            selectedImage: UIImage.getSystemImage(image: .HistoryTabSelectedIcon))
-        
-        settingVC.tabBarItem = UITabBarItem(title: StaticContents.Constants.SettingsTitle,
-                                            image: UIImage.getSystemImage(image: .SettingsTabUnselectedIcon),
-                                            selectedImage: UIImage.getSystemImage(image: .SettingsTabSelectedIcon))
+//        self.homeVC.tabBarItem = UITabBarItem(title: StaticContents.Constants.HomeTitle,
+//                                              image: UIImage.getSystemImage(image: .HomeTabUnselectedIcon),
+//                                              selectedImage: UIImage.getSystemImage(image: .HomeTabSelectedIcon))
+//
+//        self.toolsVC.tabBarItem = UITabBarItem(title: StaticContents.Constants.ToolsTabTitle,
+//                                               image: UIImage.getSystemImage(image: .ToolsTabUnselectedIcon),
+//                                               selectedImage: UIImage.getSystemImage(image: .ToolsTabSelectedIcon))
+//
+//        self.historyVC.tabBarItem = UITabBarItem(title: StaticContents.Constants.HistoryTabTitle,
+//                                                 image: UIImage.getSystemImage(image: .HistoryTabUnselectedIcon),
+//                                                 selectedImage: UIImage.getSystemImage(image: .HistoryTabSelectedIcon))
+//
+//        self.settingVC.tabBarItem = UITabBarItem(title: StaticContents.Constants.SettingsTitle,
+//                                                 image: UIImage.getSystemImage(image: .SettingsTabUnselectedIcon),
+//                                                 selectedImage: UIImage.getSystemImage(image: .SettingsTabSelectedIcon))
         
         
         UIViewController.tabBatVC?.tabBar.tintColor = UIColor.PrimaryTheme
@@ -176,7 +195,27 @@ extension UIViewController {
         
         UIViewController.tabBatVC?.viewControllers = [homeVC, toolsVC, historyVC, settingVC]
         
+        self.changeTabTitle()
 
+    }
+    
+    func changeTabTitle() {
+        UIViewController.tabBatVC?.viewControllers?[0].tabBarItem = UITabBarItem(title: StaticContents.Constants.HomeTitle,
+                                                                                       image: UIImage.getSystemImage(image: .HomeTabUnselectedIcon),
+                                                                                       selectedImage: UIImage.getSystemImage(image: .HomeTabSelectedIcon))
+        
+        UIViewController.tabBatVC?.viewControllers?[1].tabBarItem = UITabBarItem(title: StaticContents.Constants.ToolsTabTitle,
+                                                                                 image: UIImage.getSystemImage(image: .ToolsTabUnselectedIcon),
+                                                                                 selectedImage: UIImage.getSystemImage(image: .ToolsTabSelectedIcon))
+        
+        UIViewController.tabBatVC?.viewControllers?[2].tabBarItem = UITabBarItem(title: StaticContents.Constants.HistoryTabTitle,
+                                                                                 image: UIImage.getSystemImage(image: .HistoryTabUnselectedIcon),
+                                                                                 selectedImage: UIImage.getSystemImage(image: .HistoryTabSelectedIcon))
+        
+        UIViewController.tabBatVC?.viewControllers?[3].tabBarItem = UITabBarItem(title: StaticContents.Constants.SettingsTitle,
+                                                                                 image: UIImage.getSystemImage(image: .SettingsTabUnselectedIcon),
+                                                                                 selectedImage: UIImage.getSystemImage(image: .SettingsTabSelectedIcon))
+        
     }
     
     @objc func showDatePicker(fromSourceView: UIView? = nil,

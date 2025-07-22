@@ -170,6 +170,16 @@
 "PUBLIC_PROVIDENT_FUND_TITLE" = "પબ્લિક પ્રોવિડન્ટ ફંડ";
 "POST_OFFICE_MIS_CALCULATOR_TITLE" = "પોસ્ટ ઓફિસ MIS કેલ્ક્યુલેટર";
 
+"AMOUNT_TITLE" = "રકમ";
+"INTERESTRATE_TITLE" = "વ્યાજ દર";
+"TENURE_TITLE" = "અવધિ (મહિનાઓમાં)";
+"STARTDATE_TITLE" = "શરૂઆતની તારીખ";
+
+"AMOUNT_PLACEHOLDER" = "રકમ દાખલ કરો";
+"INTERESTRATE_PLACEHOLDER" = "વ્યાજ દર દાખલ કરો";
+"TENURE_PLACEHOLDER" = "અવધિ દાખલ કરો (મહિનાઓમાં)";
+"STARTDATE_PLACEHOLDER" = "શરૂઆતની તારીખ";
+
 // Introduction view
 "INTRO_PAGE_1_TITLE" = "તમારા બધા લોનનો સમાવેશ થાય છે";
 "INTRO_PAGE_1_DESCRIPTION" = "વ્યક્તિગત થી વેપાર લોન સુધી, ચુકવણીને સરળતાથી એક જગ્યાએ ગણો.";

@@ -7,15 +7,47 @@
 
 import UIKit
 
-class CustomTextField: UIView {
+protocol CustomTextFieldDelegate {
+    func didGetFocused(textField: CustomTextField)
+    func didLostFocused(textField: CustomTextField)
+    func didChangeValue(textField: CustomTextField)
+}
 
+class CustomTextField: UIView {
+    
+    var customTextFieldDelegate: CustomTextFieldDelegate?
+    
+    private let nibName = "CustomTextField"
+
+    private let minAmount = 1000
+    private let maxAmount = 100000000000
+    
+    private let minPercentage = 0
+    private let maxPercentage = 100
+    
+    private let minMonths = 1
+    private let maxMonths = 360
+    
+    enum TextFieldType: Int {
+        case Default = 0
+        case Amount = 1
+        case Percentage = 2
+        case Tenure = 3
+        case DropDown = 4
+        case Date = 5
+        case Time = 6
+    }
+    
     struct CustomTextFieldInfo {
         var title: String? = nil
         var placeHolder: String? = nil
         var rightValue: String? = nil
+        var textFieldType: TextFieldType = .Default
     }
     
-    @IBOutlet var contentView: UIStackView!
+    var textFieldInfo: CustomTextFieldInfo? = nil
+    
+    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var lblOfTitle: UILabel!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var btnOfRightValue: UIButton!
@@ -28,51 +60,175 @@ class CustomTextField: UIView {
     }
     */
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-//        self.setViewFormate()
-    }
-    
-    init(textFieldInfo : CustomTextFieldInfo) {
-        self.setViewFormate(textFieldInfo: textFieldInfo)
-    }
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.commonInit()
     }
-    
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         self.commonInit()
 //        fatalError("init(coder:) has not been implemented")
     }
     
-    func setViewFormate(textFieldInfo : CustomTextFieldInfo) {
+    
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.setViewFormate()
+    }
+    
+    
+    func setViewFormate() {
         
-        self.btnOfRightValue?.setTitle(textFieldInfo.rightValue, for: .normal)
+        guard let textFieldInfo = textFieldInfo else {
+            return
+        }
         
-        self.btnOfRightValue?.isHidden = (textFieldInfo.rightValue == nil)
+        if let value = textFieldInfo.rightValue {
+            self.btnOfRightValue?.setTitle(value, for: .normal)
+        }else {
+            self.btnOfRightValue?.isHidden = true
+        }
         
-        self.textField?.keyboardType = .numberPad
-//        self.textField?.delegate = self
+        self.btnOfRightValue?.isHidden = true
+        
+        if let value = textFieldInfo.title {
+            self.lblOfTitle?.text = value
+        }else {
+            self.lblOfTitle?.isHidden = true
+        }
+        
+        switch textFieldInfo.textFieldType {
+        case .Amount, .Percentage:
+            self.textField?.keyboardType = .decimalPad
+        default:
+            self.textField?.keyboardType = .default
+        }
+        
+        self.textField?.delegate = self
         self.textField?.placeholder = textFieldInfo.placeHolder
         
-        self.layer.borderColor = UIColor.DarkGrayColor.cgColor
-        self.layer.borderWidth = 1.5
-        self.layer.cornerRadius = 5.0
+//        self.layer.borderColor = UIColor.DarkGrayColor.cgColor
+//        self.layer.borderWidth = 1.0
+//        self.layer.cornerRadius = 8.0
     }
     
     // MARK: - Setup
     private func commonInit() {
-        Bundle.main.loadNibNamed("PhoneNumberView", owner: self, options: nil)
-        contentView.fixInView(self)
+        Bundle.main.loadNibNamed(self.nibName, owner: self, options: nil)
+        contentView?.fixInView(self)
     }
     
 }
 
-extension CustomTextField {
+extension CustomTextField: UITextFieldDelegate {
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        var textFieldType: TextFieldType = .Default
+        
+        return self.isValidValue(textFieldType: textFieldType,
+                                 textField: textField,
+                                 range: range,
+                                 string: string)
+    }
     
+    func isValidValue(textFieldType: TextFieldType,
+                      textField: UITextField,
+                      range: NSRange,
+                      string: String) -> Bool {
+        
+        self.customTextFieldDelegate?.didChangeValue(textField: self)
+        
+        // Handle paste or multi-character input
+        let currentText = textField.text ?? ""
+        guard let textRange = Range(range, in: currentText) else { return false }
+        let updatedText = currentText.replacingCharacters(in: textRange, with: string)
+        
+        switch textFieldType {
+        case .Amount:
+            
+            // Remove any non-digit characters
+            let filteredText = updatedText.filter { $0.isWholeNumber }
+            
+            // Block leading zero
+            if filteredText.first == "0" {
+                return false
+            }
+            
+            // Check numeric value limit
+            if let value = UInt64(filteredText), value <= self.maxAmount {
+                return true
+            }
+            
+            // Block if not valid or exceeds max value
+            return false
+            
+        case .Percentage:
+            // Allow empty string
+            if updatedText.isEmpty {
+                return true
+            }
+            
+            // Allow only digits and one decimal point
+            let allowedCharacters = CharacterSet(charactersIn: "0123456789.")
+            if string.rangeOfCharacter(from: allowedCharacters.inverted) != nil {
+                return false
+            }
+            
+            // Prevent multiple dots
+            let dotCount = updatedText.filter { $0 == "." }.count
+            if dotCount > 1 {
+                return false
+            }
+            
+            // Validate as float and within range 0...100
+            if let value = Float(updatedText), value >= 0, value <= 100 {
+                return true
+            }
+            
+            return false
+            
+        case .Tenure, .Date, .Time, .DropDown:
+            return false
+            
+        default:
+            return true
+        }
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        
+        self.customTextFieldDelegate?.didGetFocused(textField: self)
+        
+        switch self.textFieldInfo?.textFieldType {
+            case .Amount,.Percentage:
+                return true
+            
+            case .Tenure, .Date, .Time, .DropDown:
+                return false
+            
+            default:
+                return true
+        }
+        
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        
+        self.customTextFieldDelegate?.didLostFocused(textField: self)
+        
+        switch self.textFieldInfo?.textFieldType {
+            case .Amount,.Percentage:
+                return true
+            
+            case .Tenure, .Date, .Time, .DropDown:
+                return false
+            
+            default:
+                return true
+        }
+    }
     
 }

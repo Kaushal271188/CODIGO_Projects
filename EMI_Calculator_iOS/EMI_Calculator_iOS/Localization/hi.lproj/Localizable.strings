@@ -177,6 +177,18 @@
 "PUBLIC_PROVIDENT_FUND_TITLE" = "सार्वजनिक भविष्य निधि";
 "POST_OFFICE_MIS_CALCULATOR_TITLE" = "पोस्ट ऑफिस एमआईएस कैलकुलेटर";
 
+"AMOUNT_TITLE" = "राशि";
+"INTERESTRATE_TITLE" = "ब्याज दर";
+"TENURE_TITLE" = "कार्यकाल (महीनों में)";
+"STARTDATE_TITLE" = "प्रारंभ तिथि";
+
+
+"AMOUNT_PLACEHOLDER" = "राशि दर्ज करें";
+"INTERESTRATE_PLACEHOLDER" = "ब्याज दर दर्ज करें";
+"TENURE_PLACEHOLDER" = "कार्यकाल दर्ज करें (महीनों में)";
+"STARTDATE_PLACEHOLDER" = "प्रारंभ तिथि";
+
+
 //Introduction view
 "INTRO_PAGE_1_TITLE" = "आपके सभी ऋण शामिल";
 "INTRO_PAGE_1_DESCRIPTION" = "व्यक्तिगत से व्यापार ऋण तक, एक ही स्थान पर भुगतान की गणना आसानी से करें।";

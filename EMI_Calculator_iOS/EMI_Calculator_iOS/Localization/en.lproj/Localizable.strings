@@ -190,6 +190,16 @@
 "PUBLIC_PROVIDENT_FUND_TITLE" = "Public Provident Fund";
 "POST_OFFICE_MIS_CALCULATOR_TITLE" = "Post Office MIS Calculator";
 
+"AMOUNT_TITLE" = "Amount";
+"INTERESTRATE_TITLE" = "Interest Rate";
+"TENURE_TITLE" = "Tenure(in months)";
+"STARTDATE_TITLE" = "Start Date";
+
+"AMOUNT_PLACEHOLDER" = "Enter Amount";
+"INTERESTRATE_PLACEHOLDER" = "Enter Interest Rate";
+"TENURE_PLACEHOLDER" = "Enter Tenure(in months)";
+"STARTDATE_PLACEHOLDER" = "Start Date";
+
 //Introduction view
 "INTRO_PAGE_1_TITLE"            = "All Your Loan Covered";
 "INTRO_PAGE_1_DESCRIPTION"      = "From personal to business loans, calcuate payments easily in opne place.";

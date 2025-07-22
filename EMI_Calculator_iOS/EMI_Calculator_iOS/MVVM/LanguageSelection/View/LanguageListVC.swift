@@ -58,9 +58,7 @@ extension LanguageListVC {
             if let didSelectLanguage = self.didSelectLanguage {
                 didSelectLanguage(languageInfo)
             }
-            
             self.changeLanguageCode(languageCode: languageInfo.code)
-            
             self.btnOfGoNextView?.isHidden = (self.tableViewOfLanguageList?.viewModel.selectedLanguage == nil)
         }
         
@@ -82,6 +80,7 @@ extension LanguageListVC: LanguageDelegate {
     
     func didChangeLanguage(languageCode: String) {
         self.updateViewFormate()
+        self.changeTabTitle()
     }
     
     @objc func updateViewFormate() {

@@ -141,6 +141,16 @@ class StaticContents {
         static let PublicProvidentFundTitle  = Localizable.shared.value(for: .PUBLIC_PROVIDENT_FUND_TITLE)
         static let PostOfficeMISCalculatorTitle = Localizable.shared.value(for: .POST_OFFICE_MIS_CALCULATOR_TITLE)
         
+        static let AmountTitle = Localizable.shared.value(for: .AMOUNT_TITLE)
+        static let InterestRateTitle = Localizable.shared.value(for: .INTERESTRATE_TITLE)
+        static let TenureTitle = Localizable.shared.value(for: .TENURE_TITLE)
+        static let StartDateTitle = Localizable.shared.value(for: .STARTDATE_TITLE)
+        
+        static let AmountPlaceHolder = Localizable.shared.value(for: .AMOUNT_PLACEHOLDER)
+        static let InterestRatePlaceHolder = Localizable.shared.value(for: .INTERESTRATE_PLACEHOLDER)
+        static let TenurePlaceHolder = Localizable.shared.value(for: .TENURE_PLACEHOLDER)
+        static let StartDatePlaceHolder = Localizable.shared.value(for: .STARTDATE_PLACEHOLDER)
+        
         
         //Introduction view
         static let IntroPage1Title = Localizable.shared.value(for: .INTRO_PAGE_1_TITLE)

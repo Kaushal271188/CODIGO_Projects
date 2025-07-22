@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct PersonalLoanModel {
+    var amount: Double!
+    var startDate: Date!
+    var tenure: Int!
+    var interestRate: Int!
+}
