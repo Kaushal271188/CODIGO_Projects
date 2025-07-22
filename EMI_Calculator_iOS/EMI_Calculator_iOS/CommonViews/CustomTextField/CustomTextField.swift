@@ -126,7 +126,7 @@ extension CustomTextField: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-        var textFieldType: TextFieldType = .Default
+        let textFieldType: TextFieldType = self.textFieldInfo?.textFieldType ?? .Default
         
         return self.isValidValue(textFieldType: textFieldType,
                                  textField: textField,
@@ -140,6 +140,10 @@ extension CustomTextField: UITextFieldDelegate {
                       string: String) -> Bool {
         
         self.customTextFieldDelegate?.didChangeValue(textField: self)
+        
+        if string == "" {
+            return true
+        }
         
         // Handle paste or multi-character input
         let currentText = textField.text ?? ""

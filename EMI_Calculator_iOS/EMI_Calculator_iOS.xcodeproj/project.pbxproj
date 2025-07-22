@@ -60,6 +60,7 @@
 		D8BFF7C12E238F49009B7206 /* IntroductionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BFF7C02E238F49009B7206 /* IntroductionViewModel.swift */; };
 		D8BFF7C32E23AEEC009B7206 /* PageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BFF7C22E23AEEC009B7206 /* PageController.swift */; };
 		D8C173882E2E1890005E8734 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C173872E2E1890005E8734 /* StringExtension.swift */; };
+		D8CD4D732E2FBB7C0090DEDE /* PersonalLoanDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD4D722E2FBB7B0090DEDE /* PersonalLoanDetailVC.swift */; };
 		D8D497D92E210124008EABCB /* CollectionViewOfDashboardOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D497D82E210124008EABCB /* CollectionViewOfDashboardOptions.swift */; };
 		D8D497DD2E21015B008EABCB /* DashboardOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D497DB2E21015B008EABCB /* DashboardOptionCell.swift */; };
 		D8D497DE2E21015B008EABCB /* DashboardOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8D497DC2E21015B008EABCB /* DashboardOptionCell.xib */; };
@@ -163,6 +164,7 @@
 		D8BFF7C02E238F49009B7206 /* IntroductionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewModel.swift; sourceTree = "<group>"; };
 		D8BFF7C22E23AEEC009B7206 /* PageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageController.swift; sourceTree = "<group>"; };
 		D8C173872E2E1890005E8734 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		D8CD4D722E2FBB7B0090DEDE /* PersonalLoanDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalLoanDetailVC.swift; sourceTree = "<group>"; };
 		D8D497D82E210124008EABCB /* CollectionViewOfDashboardOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewOfDashboardOptions.swift; sourceTree = "<group>"; };
 		D8D497DB2E21015B008EABCB /* DashboardOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardOptionCell.swift; sourceTree = "<group>"; };
 		D8D497DC2E21015B008EABCB /* DashboardOptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardOptionCell.xib; sourceTree = "<group>"; };
@@ -225,37 +227,6 @@
 				ED9BD11DD279F46A110D4DFC /* Pods_EMI_Calculator_iOS.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CDAC17C62E2B950F005BA9EE /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		CDAC17C72E2B950F005BA9EE /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		CDAC17C82E2B950F005BA9EE /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		CDAC17C92E2B950F005BA9EE /* GSTCalculator */ = {
-			isa = PBXGroup;
-			children = (
-				CDAC17C62E2B950F005BA9EE /* Model */,
-				CDAC17C72E2B950F005BA9EE /* View */,
-				CDAC17C82E2B950F005BA9EE /* ViewModel */,
-			);
-			path = GSTCalculator;
 			sourceTree = "<group>";
 		};
 		D83F84552E16D7D300CC18F4 = {
@@ -442,46 +413,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		D8BC99312E2171D000065B65 /* TabBarController */ = {
-			isa = PBXGroup;
-			children = (
-				D8BC99322E2171D000065B65 /* ViewModel */,
-				D8BC99332E2171D000065B65 /* Model */,
-				D8BC99342E2171D000065B65 /* View */,
-			);
-			path = TabBarController;
-			sourceTree = "<group>";
-		};
-		D8BC99322E2171D000065B65 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		D8BC99332E2171D000065B65 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		D8BC99342E2171D000065B65 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		D8BE4A412E1904190012166C /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
 				D8ED81F02E2E2E45001521D1 /* LoanView */,
-				CDAC17C92E2B950F005BA9EE /* GSTCalculator */,
+				D8CD4D772E2FBC240090DEDE /* GSTCalculator */,
 				D8D644252E253ACA00B46F78 /* TimeZoneExchange */,
 				D8D644132E25286400B46F78 /* ToolsView */,
 				D8BFF7B02E2381C2009B7206 /* IntroductionView */,
-				D8BC99312E2171D000065B65 /* TabBarController */,
 				D8D74ED72E1FB91D00A7F70B /* LeftMenu */,
 				D8B2797D2E1EDDB700CE334F /* Dashboard */,
 				D8B2796C2E1EAB7100CE334F /* CurrencySelection */,
@@ -578,6 +517,45 @@
 				D8BFF7BB2E2384DA009B7206 /* IntroductionInfoCell.xib */,
 			);
 			path = IntroductionInfoCell;
+			sourceTree = "<group>";
+		};
+		D8CD4D6E2E2FBB7B0090DEDE /* PersonalLoanDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D8CD4D702E2FBB7B0090DEDE /* Model */,
+				D8CD4D712E2FBB7B0090DEDE /* View */,
+				D8CD4D6F2E2FBB7B0090DEDE /* ViewModel */,
+			);
+			path = PersonalLoanDetail;
+			sourceTree = "<group>";
+		};
+		D8CD4D6F2E2FBB7B0090DEDE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D8CD4D702E2FBB7B0090DEDE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D8CD4D712E2FBB7B0090DEDE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D8CD4D722E2FBB7B0090DEDE /* PersonalLoanDetailVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D8CD4D772E2FBC240090DEDE /* GSTCalculator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GSTCalculator;
 			sourceTree = "<group>";
 		};
 		D8D497DA2E21014A008EABCB /* DashboardOptionCell */ = {
@@ -768,6 +746,7 @@
 		D8ED81F02E2E2E45001521D1 /* LoanView */ = {
 			isa = PBXGroup;
 			children = (
+				D8CD4D6E2E2FBB7B0090DEDE /* PersonalLoanDetail */,
 				D8ED81F12E2E2E45001521D1 /* PersonalLoan */,
 			);
 			path = LoanView;
@@ -776,8 +755,8 @@
 		D8ED81F12E2E2E45001521D1 /* PersonalLoan */ = {
 			isa = PBXGroup;
 			children = (
-				D8ED81F42E2E2E45001521D1 /* View */,
 				D8ED81F32E2E2E45001521D1 /* Model */,
+				D8ED81F42E2E2E45001521D1 /* View */,
 				D8ED81F22E2E2E45001521D1 /* ViewModel */,
 			);
 			path = PersonalLoan;
@@ -1035,6 +1014,7 @@
 				D8D644202E2529B100B46F78 /* ToolsOptionsModel.swift in Sources */,
 				D8ED81FC2E2E2F56001521D1 /* TableViewOfDashboardOptions.swift in Sources */,
 				D8BFF7C32E23AEEC009B7206 /* PageController.swift in Sources */,
+				D8CD4D732E2FBB7C0090DEDE /* PersonalLoanDetailVC.swift in Sources */,
 				D83F84942E16D8AF00CC18F4 /* CustomOTPView.swift in Sources */,
 				D83F84642E16D7D300CC18F4 /* SceneDelegate.swift in Sources */,
 				D83F849A2E16D8AF00CC18F4 /* Button.swift in Sources */,
