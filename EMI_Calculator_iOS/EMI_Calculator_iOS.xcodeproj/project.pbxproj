@@ -90,6 +90,7 @@
 		D8E1795E2E2E76E2005529E7 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E1795D2E2E76E2005529E7 /* CustomTextField.swift */; };
 		D8E179602E2E76F3005529E7 /* CustomTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8E1795F2E2E76F3005529E7 /* CustomTextField.xib */; };
 		D8E179622E2E8183005529E7 /* PersonalLoanVCNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E179612E2E8183005529E7 /* PersonalLoanVCNew.swift */; };
+		D8E203F02E2FE2FE002371C3 /* CustomApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E203EF2E2FE2FE002371C3 /* CustomApplication.swift */; };
 		D8EADCF72E1829FE00207E5C /* EMICalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EADCF62E1829FE00207E5C /* EMICalculation.swift */; };
 		D8ED81EF2E2E2D89001521D1 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8ED81EE2E2E2D89001521D1 /* Dashboard.storyboard */; };
 		D8ED81F62E2E2E9C001521D1 /* PersonalLoanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ED81F52E2E2E9C001521D1 /* PersonalLoanVC.swift */; };
@@ -194,6 +195,7 @@
 		D8E1795D2E2E76E2005529E7 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		D8E1795F2E2E76F3005529E7 /* CustomTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextField.xib; sourceTree = "<group>"; };
 		D8E179612E2E8183005529E7 /* PersonalLoanVCNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalLoanVCNew.swift; sourceTree = "<group>"; };
+		D8E203EF2E2FE2FE002371C3 /* CustomApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomApplication.swift; sourceTree = "<group>"; };
 		D8EADCF62E1829FE00207E5C /* EMICalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMICalculation.swift; sourceTree = "<group>"; };
 		D8ED81EE2E2E2D89001521D1 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		D8ED81F52E2E2E9C001521D1 /* PersonalLoanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalLoanVC.swift; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				D83F847C2E16D8AE00CC18F4 /* View.swift */,
+				D8E203EF2E2FE2FE002371C3 /* CustomApplication.swift */,
 				D8BFF7C22E23AEEC009B7206 /* PageController.swift */,
 				D8BC992F2E216E6600065B65 /* TabBarController.swift */,
 				D896F6022E195B1D00DCEFFE /* BaseViewController.swift */,
@@ -417,7 +420,6 @@
 			isa = PBXGroup;
 			children = (
 				D8ED81F02E2E2E45001521D1 /* LoanView */,
-				D8CD4D772E2FBC240090DEDE /* GSTCalculator */,
 				D8D644252E253ACA00B46F78 /* TimeZoneExchange */,
 				D8D644132E25286400B46F78 /* ToolsView */,
 				D8BFF7B02E2381C2009B7206 /* IntroductionView */,
@@ -549,13 +551,6 @@
 				D8CD4D722E2FBB7B0090DEDE /* PersonalLoanDetailVC.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		D8CD4D772E2FBC240090DEDE /* GSTCalculator */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = GSTCalculator;
 			sourceTree = "<group>";
 		};
 		D8D497DA2E21014A008EABCB /* DashboardOptionCell */ = {
@@ -958,6 +953,7 @@
 			files = (
 				D8D6442A2E253AFE00B46F78 /* TimeZoneExchangeVC.swift in Sources */,
 				CDAC17C32E2B69A6005BA9EE /* Bundle.swift in Sources */,
+				D8E203F02E2FE2FE002371C3 /* CustomApplication.swift in Sources */,
 				CDC7688E2E2A378F0099DCC5 /* TimeZone.swift in Sources */,
 				D8B279752E1EBD3A00CE334F /* CurrencyListTableView.swift in Sources */,
 				D8D497D92E210124008EABCB /* CollectionViewOfDashboardOptions.swift in Sources */,

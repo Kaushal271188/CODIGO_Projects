@@ -14,6 +14,8 @@ class PersonalLoanVC: UIViewController {
     @IBOutlet weak var txtOfTenure: CustomTextField!
     @IBOutlet weak var txtOfStartLoanDate: CustomTextField!
     
+    @IBOutlet weak var btnOfGetResult: UIButton!
+    
     var viewModel = PersonalLoanViewModel()
     
     override func viewDidLoad() {
@@ -82,8 +84,47 @@ extension PersonalLoanVC {
 }
 
 extension PersonalLoanVC {
+    @IBAction func btnOfGetResultAction() {
+        if self.checkValidValue() == true {
+            print("amount : \(self.viewModel.model.amount)")
+            print("interestRate : \(self.viewModel.model.interestRate)")
+            print("tenure : \(self.viewModel.model.tenure)")
+            print("startDate : \(self.viewModel.model.startDate)")
+            print("emiPayment : \(self.viewModel.model.emiPayment)")
+        }
+    }
+    
     @IBAction func btnOfBackAction() {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    func checkValidValue() -> Bool {
+        
+        self.hideKeyBoard()
+        
+        var message: String? = nil
+        
+        if self.txtOfAmount?.textField?.text?.trimmed.count == 0 {
+            message = StaticContents.Constants.AmountPlaceHolder
+        }else if self.txtOfInterestRate?.textField?.text?.trimmed.count == 0 {
+            message = StaticContents.Constants.InterestRatePlaceHolder
+        }else if self.txtOfTenure?.textField?.text?.trimmed.count == 0 {
+            message = StaticContents.Constants.TenurePlaceHolder
+        }else if self.txtOfStartLoanDate?.textField?.text?.trimmed.count == 0 {
+            message = StaticContents.Constants.StartDatePlaceHolder
+        }
+        
+        if let message = message {
+            
+            self.showAlertWith(alertMessage: message,
+                               buttonArray: [StaticContents.Constants.OK]) { buttonIndex in
+                //Do some action here
+            }
+            
+            return false
+        }
+        
+        return true
     }
 }
 

@@ -64,10 +64,10 @@
 "PHOTO_LIBRARY" = "ફોટો લાઇબ્રેરી";
 "VIDEO_LIBRARY" = "વિડિઓ લાઇબ્રેરી";
 
-"PLACEHOLDER_LOAN_AMOUNT" = "લોનની રકમ";
-"PLACEHOLDER_INTEREST_RATE" = "વ્યાજ દર";
-"PLACEHOLDER_TENURE_IN_YEAR" = "કાળગાળ (વર્ષ)";
-"PLACEHOLDER_TENURE_IN_MONTH" = "કાળગાળ (મહિના)";
+//"PLACEHOLDER_LOAN_AMOUNT" = "લોનની રકમ";
+//"PLACEHOLDER_INTEREST_RATE" = "વ્યાજ દર";
+//"PLACEHOLDER_TENURE_IN_YEAR" = "કાળગાળ (વર્ષ)";
+//"PLACEHOLDER_TENURE_IN_MONTH" = "કાળગાળ (મહિના)";
 
 "MSG_IS_REQUIRE" = "જરૂરી છે.";
 "MSG_MUST_VALID" = "માન્ય નંબર હોવો જરૂરી છે.";

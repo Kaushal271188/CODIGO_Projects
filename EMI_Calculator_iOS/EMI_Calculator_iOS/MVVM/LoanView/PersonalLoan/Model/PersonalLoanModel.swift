@@ -8,8 +8,9 @@
 import Foundation
 
 struct PersonalLoanModel {
-    var amount: Double!
-    var startDate: Date!
-    var tenure: Int!
-    var interestRate: Int!
+    var amount: Double = 0.0
+    var startDate: Date = Date()
+    var tenure: Int = 0
+    var interestRate: Double = 0.0
+    var emiPayment: String = ""
 }

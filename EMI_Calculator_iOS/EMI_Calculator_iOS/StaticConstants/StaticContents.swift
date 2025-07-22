@@ -166,10 +166,10 @@ class StaticContents {
         static let IntroPage4Description = Localizable.shared.value(for: .INTRO_PAGE_4_DESCRIPTION)
         
         //Place holder
-        static let PlaceHolderOfLoanAmount = Localizable.shared.value(for: .PLACEHOLDER_LOAN_AMOUNT)
-        static let PlaceHolderOfInterestRate = Localizable.shared.value(for: .PLACEHOLDER_INTEREST_RATE)
-        static let PlaceHolderOfTenureInYears = Localizable.shared.value(for: .PLACEHOLDER_TENURE_IN_YEAR)
-        static let PlaceHolderOfTenureInMonths = Localizable.shared.value(for: .PLACEHOLDER_TENURE_IN_MONTH)
+//        static let PlaceHolderOfLoanAmount = Localizable.shared.value(for: .PLACEHOLDER_LOAN_AMOUNT)
+//        static let PlaceHolderOfInterestRate = Localizable.shared.value(for: .PLACEHOLDER_INTEREST_RATE)
+//        static let PlaceHolderOfTenureInYears = Localizable.shared.value(for: .PLACEHOLDER_TENURE_IN_YEAR)
+//        static let PlaceHolderOfTenureInMonths = Localizable.shared.value(for: .PLACEHOLDER_TENURE_IN_MONTH)
         
         //General validation message
         static let GeneralMessageForRequire = Localizable.shared.value(for: .MSG_IS_REQUIRE)
@@ -208,10 +208,30 @@ class StaticContents {
         static let PercentageDefferenceCalculatorDescripion = Localizable.shared.value(for: .PERCENTAGE_DIFFERENCE_CALCULATOR_DESCRIPTION)
         
         
+        static var Currency: String {
+            self.getCurrentCurrency()
+        }
         
-        
-        
-        
+        private static func getCurrentCurrency() -> String {
+            
+            var selectedInfo: CurrencyListModel? = {
+                do {
+                    let currentInfo = try UserPreference.getObject(forKey: .SelectedCurrencyInfo,
+                                                                           castTo: CurrencyListModel.self)
+                    return
+                } catch {
+                    print("1.1 : Error while trying to get default selected country")
+                    return nil
+                }
+            }()
+            
+            if let symbol = selectedInfo?.currency.symbol {
+                return symbol
+            }else {
+                return ""
+            }
+            
+        }
         
         
         

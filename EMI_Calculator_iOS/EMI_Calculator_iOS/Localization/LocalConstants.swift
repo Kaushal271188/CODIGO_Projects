@@ -256,15 +256,14 @@ enum LocalConstant: String {
     case INTRO_PAGE_4_TITLE                       = "INTRO_PAGE_4_TITLE"
     case INTRO_PAGE_4_DESCRIPTION                 = "INTRO_PAGE_4_DESCRIPTION"
     
-    case PLACEHOLDER_LOAN_AMOUNT                  = "PLACEHOLDER_LOAN_AMOUNT"
-    case PLACEHOLDER_INTEREST_RATE                = "PLACEHOLDER_INTEREST_RATE"
-    case PLACEHOLDER_TENURE_IN_YEAR               = "PLACEHOLDER_TENURE_IN_YEAR"
-    case PLACEHOLDER_TENURE_IN_MONTH              = "PLACEHOLDER_TENURE_IN_MONTH"
+//    case PLACEHOLDER_LOAN_AMOUNT                  = "PLACEHOLDER_LOAN_AMOUNT"
+//    case PLACEHOLDER_INTEREST_RATE                = "PLACEHOLDER_INTEREST_RATE"
+//    case PLACEHOLDER_TENURE_IN_YEAR               = "PLACEHOLDER_TENURE_IN_YEAR"
+//    case PLACEHOLDER_TENURE_IN_MONTH              = "PLACEHOLDER_TENURE_IN_MONTH"
     
     case MSG_IS_REQUIRE                           = "MSG_IS_REQUIRE"
     case MSG_MUST_VALID                           = "MSG_MUST_VALID"
     case MSG_NOT_VALID                            = "MSG_NOT_VALID"
     case MSG_CAN_NOT_BE_NEGATIVE                  = "MSG_CAN_NOT_BE_NEGATIVE"
-    
     
 }

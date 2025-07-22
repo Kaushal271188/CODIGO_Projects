@@ -72,10 +72,10 @@
 "MSG_ENTER_FEEDBACK_TYPE"       = "Please Select Feedback Type!";
 
 //Static constats and validation messages use in application
-"PLACEHOLDER_LOAN_AMOUNT"       = "Loan Amount";
-"PLACEHOLDER_INTEREST_RATE"     = "Interest Rate";
-"PLACEHOLDER_TENURE_IN_YEAR"    = "Tenure (Years)";
-"PLACEHOLDER_TENURE_IN_MONTH"   = "Tenure (Months)";
+//"PLACEHOLDER_LOAN_AMOUNT"       = "Loan Amount";
+//"PLACEHOLDER_INTEREST_RATE"     = "Interest Rate";
+//"PLACEHOLDER_TENURE_IN_YEAR"    = "Tenure (Years)";
+//"PLACEHOLDER_TENURE_IN_MONTH"   = "Tenure (Months)";
 
 "MSG_IS_REQUIRE"                = "is required.";
 "MSG_MUST_VALID"                = "must be a valid number.";

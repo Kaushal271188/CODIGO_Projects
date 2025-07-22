@@ -65,10 +65,10 @@
 "VIDEO_LIBRARY" = "वीडियो लाइब्रेरी";
 
 // Static constants and validation messages
-"PLACEHOLDER_LOAN_AMOUNT" = "ऋण राशि";
-"PLACEHOLDER_INTEREST_RATE" = "ब्याज दर";
-"PLACEHOLDER_TENURE_IN_YEAR" = "कार्यकाल (वर्षों में)";
-"PLACEHOLDER_TENURE_IN_MONTH" = "कार्यकाल (महीनों में)";
+//"PLACEHOLDER_LOAN_AMOUNT" = "ऋण राशि";
+//"PLACEHOLDER_INTEREST_RATE" = "ब्याज दर";
+//"PLACEHOLDER_TENURE_IN_YEAR" = "कार्यकाल (वर्षों में)";
+//"PLACEHOLDER_TENURE_IN_MONTH" = "कार्यकाल (महीनों में)";
 
 "MSG_IS_REQUIRE" = "आवश्यक है।";
 "MSG_MUST_VALID" = "एक मान्य संख्या होनी चाहिए।";

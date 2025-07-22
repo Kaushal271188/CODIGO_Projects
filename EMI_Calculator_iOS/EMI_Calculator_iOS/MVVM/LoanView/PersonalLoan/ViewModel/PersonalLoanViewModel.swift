@@ -13,10 +13,8 @@ class PersonalLoanViewModel {
     
     init() {
         let todayDate = Date()
-        var model = PersonalLoanModel(amount: nil,
-                                      startDate: todayDate,
-                                      tenure: nil,
-                                      interestRate: nil)
+        let currencySymbol = "\(StaticContents.Constants.Currency) "
+        let model = PersonalLoanModel(startDate: todayDate, emiPayment: "\(currencySymbol)0")
         self.model = model
     }
     
@@ -29,6 +27,37 @@ class PersonalLoanViewModel {
         dateFormatter.dateFormat = "d,MMM-YYYY"
         dateFormatter.timeZone = TimeZone.CurrentTimeZone
         return dateFormatter.string(from: self.model.startDate)
+    }
+    
+    func calculateEMI(completionHandler: @escaping(_ isSuccess: Bool) -> Void) {
+        
+        let principal = self.model.amount
+        let annualInterestRate = self.model.interestRate
+        let tenureInMonths = self.model.tenure
+        
+        
+        let monthlyInterestRate = annualInterestRate / 12 / 100
+
+        self.model.emiPayment = {
+            
+            let currencySymbol = "\(StaticContents.Constants.Currency) "
+            
+            if monthlyInterestRate == 0 {
+                // No interest case
+                completionHandler(true)
+                return "\(currencySymbol)\(principal / Double(tenureInMonths))"
+                
+            }
+            
+            let numerator = principal * monthlyInterestRate * pow(1 + monthlyInterestRate, Double(tenureInMonths))
+            let denominator = pow(1 + monthlyInterestRate, Double(tenureInMonths)) - 1
+            
+            let emi = numerator / denominator
+            
+            completionHandler(true)
+            return "\(currencySymbol) \(emi)"
+            
+        }()
     }
     
 }
