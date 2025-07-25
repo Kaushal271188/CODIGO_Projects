@@ -63,7 +63,7 @@ extension PersonalLoanVC {
         self.setTextFieldFormate(textField: self.txtOfTenure)
         self.setTextFieldFormate(textField: self.txtOfStartLoanDate)
         
-        self.txtOfStartLoanDate?.textField.text = self.viewModel.startDate
+        self.txtOfStartLoanDate?.setText(self.viewModel.startDate)
         
     }
     
@@ -74,9 +74,9 @@ extension PersonalLoanVC {
     
     func hideKeyBoard() {
         DispatchQueue.main.async {
-            self.txtOfAmount?.textField.resignFirstResponder()
+            self.txtOfAmount?.lossFocuss()
 //            self.txtOfTenure?.textField.resignFirstResponder()
-            self.txtOfInterestRate?.textField.resignFirstResponder()
+            self.txtOfInterestRate?.lossFocuss()
 //            self.txtOfStartLoanDate?.textField.resignFirstResponder()
         }
     }
@@ -86,11 +86,19 @@ extension PersonalLoanVC {
 extension PersonalLoanVC {
     @IBAction func btnOfGetResultAction() {
         if self.checkValidValue() == true {
-            print("amount : \(self.viewModel.model.amount)")
-            print("interestRate : \(self.viewModel.model.interestRate)")
-            print("tenure : \(self.viewModel.model.tenure)")
-            print("startDate : \(self.viewModel.model.startDate)")
-            print("emiPayment : \(self.viewModel.model.emiPayment)")
+            self.viewModel.calculateEMI { Bool in
+                print("amount : \(self.viewModel.model.amount)")
+                print("interestRate : \(self.viewModel.model.interestRate)")
+                print("tenure : \(self.viewModel.model.tenure)")
+                print("startDate : \(self.viewModel.model.startDate)")
+                print("emiPayment : \(self.viewModel.model.emiPayment)")
+                
+                
+                print("totalPayback : \(self.viewModel.model.totalPayback)")
+                print("totalInterestPayment : \(self.viewModel.model.totalInterestPayment)")
+                print("payOffDate : \(self.viewModel.model.payOffDate)")
+            }
+            
         }
     }
     
@@ -104,13 +112,13 @@ extension PersonalLoanVC {
         
         var message: String? = nil
         
-        if self.txtOfAmount?.textField?.text?.trimmed.count == 0 {
+        if self.txtOfAmount?.getText()?.trimmed.count == 0 {
             message = StaticContents.Constants.AmountPlaceHolder
-        }else if self.txtOfInterestRate?.textField?.text?.trimmed.count == 0 {
+        }else if self.txtOfInterestRate?.getText()?.trimmed.count == 0 {
             message = StaticContents.Constants.InterestRatePlaceHolder
-        }else if self.txtOfTenure?.textField?.text?.trimmed.count == 0 {
+        }else if self.txtOfTenure?.getText()?.trimmed.count == 0 {
             message = StaticContents.Constants.TenurePlaceHolder
-        }else if self.txtOfStartLoanDate?.textField?.text?.trimmed.count == 0 {
+        }else if self.txtOfStartLoanDate?.getText()?.trimmed.count == 0 {
             message = StaticContents.Constants.StartDatePlaceHolder
         }
         
@@ -122,6 +130,10 @@ extension PersonalLoanVC {
             }
             
             return false
+        }else {
+            self.viewModel.model.amount =  self.txtOfAmount.getText() ?? "0.0"
+            self.viewModel.model.interestRate = self.txtOfInterestRate.getText() ?? "0.0"
+            self.viewModel.model.tenure = self.txtOfTenure.getText() ?? "0"
         }
         
         return true
@@ -143,12 +155,14 @@ extension PersonalLoanVC: CustomTextFieldDelegate {
             
             let todayDate = Date()
             
-            self.showDatePicker(currentDate: self.viewModel.model.startDate,
+            let currentDate = Date.shared.getDate(fromDate: self.viewModel.model.startDate).midnightDate
+            
+            self.showDatePicker(currentDate: currentDate,
                                 minDate: todayDate) { isSuccess, selectedDate in
                 if let selectedDate = selectedDate {
                     DispatchQueue.main.async {
-                        self.viewModel.model.startDate = selectedDate
-                        self.txtOfStartLoanDate?.textField.text = self.viewModel.startDate
+                        self.viewModel.model.startDate = selectedDate.midnightDate.getString(fromDate: selectedDate.getString())
+                        self.txtOfStartLoanDate?.setText(selectedDate.midnightDate.getString())
                     }
                 }
             }
@@ -157,14 +171,14 @@ extension PersonalLoanVC: CustomTextFieldDelegate {
         if textField == self.txtOfTenure {
             
             let tenureTime = stride(from: 0, through: 360, by: 1).map({"\($0)"})
-            let selectedTime = (self.txtOfTenure?.textField.text?.count ?? 0) > 0 ? self.txtOfTenure?.textField.text?.trimmed : nil
+            let selectedTime = (self.txtOfTenure?.getText()?.count ?? 0) > 0 ? self.txtOfTenure?.getText()?.trimmed : nil
             
-            self.showDataPicker(fromSourceView: self.txtOfTenure.textField,
+            self.showDataPicker(fromSourceView: self.txtOfTenure,
                                 items: tenureTime,
                                 item: selectedTime) { isSuccess, selectedValue, selectedIndex in
                 if let selectedValue = selectedValue {
                     DispatchQueue.main.async {
-                        self.txtOfTenure?.textField.text = selectedValue
+                        self.txtOfTenure?.setText(selectedValue)
                     }
                 }
             }

@@ -47,10 +47,31 @@ class CustomTextField: UIView {
     
     var textFieldInfo: CustomTextFieldInfo? = nil
     
-    @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var lblOfTitle: UILabel!
-    @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var btnOfRightValue: UIButton!
+    @IBOutlet private weak var contentView: UIView!
+    @IBOutlet private weak var lblOfTitle: UILabel!
+    @IBOutlet private weak var textField: UITextField!
+    @IBOutlet private weak var btnOfRightValue: UIButton!
+    
+    // MARK: - Public Closures for Set and Get
+    lazy var setText: (String) -> Void = { [weak self] value in
+        self?.textField.text = value
+    }
+    
+    lazy var getText: () -> String? = { [weak self] in
+        return self?.textField.text
+    }
+    
+    lazy var getFocuss: () -> Void = { [weak self] in
+        self?.textField?.becomeFirstResponder()
+    }
+    
+    lazy var lossFocuss: () -> Void = { [weak self] in
+        self?.textField?.resignFirstResponder()
+    }
+    
+    lazy var clearText: () -> Void = { [weak self] in
+        self?.textField?.text = ""
+    }
     
     /*
     // Only override draw() if you perform custom drawing.

@@ -12,52 +12,62 @@ class PersonalLoanViewModel {
     var model: PersonalLoanModel!
     
     init() {
-        let todayDate = Date()
+        let todayDate = Date().midnightDate
         let currencySymbol = "\(StaticContents.Constants.Currency) "
-        let model = PersonalLoanModel(startDate: todayDate, emiPayment: "\(currencySymbol)0")
+        
+        let model = PersonalLoanModel(startDate: todayDate.dateInString, emiPayment: "\(currencySymbol)0")
         self.model = model
     }
     
     var startDate: String {
-        self.getStartDateValue()
-    }
-    
-    private func getStartDateValue() -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "d,MMM-YYYY"
-        dateFormatter.timeZone = TimeZone.CurrentTimeZone
-        return dateFormatter.string(from: self.model.startDate)
+        return Date.shared.getString(fromDate: self.model.startDate)
     }
     
     func calculateEMI(completionHandler: @escaping(_ isSuccess: Bool) -> Void) {
         
-        let principal = self.model.amount
-        let annualInterestRate = self.model.interestRate
-        let tenureInMonths = self.model.tenure
+        guard let principal = Double(self.model.amount) else {
+            completionHandler(false)
+            return
+        }
+        
+        guard let annualInterestRate = Double(self.model.interestRate) else {
+            completionHandler(false)
+            return
+        }
+        
+        guard let tenureInMonths = Int(self.model.tenure) else {
+            completionHandler(false)
+            return
+        }
         
         
         let monthlyInterestRate = annualInterestRate / 12 / 100
 
-        self.model.emiPayment = {
-            
-            let currencySymbol = "\(StaticContents.Constants.Currency) "
-            
-            if monthlyInterestRate == 0 {
-                // No interest case
-                completionHandler(true)
-                return "\(currencySymbol)\(principal / Double(tenureInMonths))"
-                
-            }
+        //Claculate the EMI Payment.
+        var emiPayment: Double = 0.0
+        
+        if monthlyInterestRate == 0 {
+            // No interest case
+            emiPayment = (principal / Double(tenureInMonths))
+        }else {
             
             let numerator = principal * monthlyInterestRate * pow(1 + monthlyInterestRate, Double(tenureInMonths))
             let denominator = pow(1 + monthlyInterestRate, Double(tenureInMonths)) - 1
             
             let emi = numerator / denominator
             
+            emiPayment = emi
+        }
+        //End
+        let currency = "\(StaticContents.Constants.Currency) "
+        self.model.emiPayment = "\(currency) \(emiPayment)"
+        self.model.totalInterestPayment = "\(currency) \(emiPayment * Double(tenureInMonths))"
+        self.model.totalPayback = "\(currency) \(Double((emiPayment * Double(tenureInMonths))) - principal)"
+        
+        DispatchQueue.main.asyncAfter(wallDeadline: .now() + 0.1) {
             completionHandler(true)
-            return "\(currencySymbol) \(emi)"
-            
-        }()
+        }
+        
     }
     
 }

@@ -218,7 +218,7 @@ class StaticContents {
                 do {
                     let currentInfo = try UserPreference.getObject(forKey: .SelectedCurrencyInfo,
                                                                            castTo: CurrencyListModel.self)
-                    return
+                    return currentInfo
                 } catch {
                     print("1.1 : Error while trying to get default selected country")
                     return nil
