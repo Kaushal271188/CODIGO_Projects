@@ -9,14 +9,21 @@ import Foundation
 
 class PersonalLoanViewModel {
     
-    var model: PersonalLoanModel!
+//    var model: PersonalLoanModel!
+    var model: LoanInfo!
     
     init() {
         let todayDate = Date().midnightDate
         let currencySymbol = "\(StaticContents.Constants.Currency) "
         
-        let model = PersonalLoanModel(startDate: todayDate.dateInString, emiPayment: "\(currencySymbol)0")
-        self.model = model
+        self.model = PersonalLoanModel(amount: "0.0",
+                                       startDate: todayDate.dateInString,
+                                       tenure: "0",
+                                       interestRate: "0",
+                                       totalInterestPayment: "\(currencySymbol)0",
+                                       totalPayback: "\(currencySymbol)0",
+                                       emiPayment: "\(currencySymbol)0",
+                                       payOffDate: "0.0")
     }
     
     var startDate: String {
@@ -40,6 +47,7 @@ class PersonalLoanViewModel {
             return
         }
         
+        self.model.amount = "\(principal.rounded(toPlaces: 2))"
         
         let monthlyInterestRate = annualInterestRate / 12 / 100
 
@@ -60,9 +68,11 @@ class PersonalLoanViewModel {
         }
         //End
         let currency = "\(StaticContents.Constants.Currency) "
-        self.model.emiPayment = "\(currency) \(emiPayment)"
-        self.model.totalInterestPayment = "\(currency) \(emiPayment * Double(tenureInMonths))"
-        self.model.totalPayback = "\(currency) \(Double((emiPayment * Double(tenureInMonths))) - principal)"
+        self.model.emiPayment = "\(currency) \(emiPayment.rounded(toPlaces: 2))"
+        self.model.totalPayback = "\(currency) \((emiPayment * Double(tenureInMonths)).rounded(toPlaces: 2))"
+        self.model.totalInterestPayment = "\(currency) \((Double((emiPayment * Double(tenureInMonths))) - principal).rounded(toPlaces: 2))"
+//        self.model.totalPayback = "\(currency) \(Double((emiPayment * Double(tenureInMonths))) - principal)"
+        
         
         DispatchQueue.main.asyncAfter(wallDeadline: .now() + 0.1) {
             completionHandler(true)

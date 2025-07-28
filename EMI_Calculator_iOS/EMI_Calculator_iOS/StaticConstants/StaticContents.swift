@@ -146,6 +146,16 @@ class StaticContents {
         static let TenureTitle = Localizable.shared.value(for: .TENURE_TITLE)
         static let StartDateTitle = Localizable.shared.value(for: .STARTDATE_TITLE)
         
+        //Personal loan plan view
+//        static let AmountTitle = Localizable.shared.value(for: .AMOUNT_TITLE)
+        static let MonthlyPayBackEMITitle = Localizable.shared.value(for: .MONTHLY_PAY_BACK_EMI_TITLE)
+        static let LoanTenureLoanTermTitle = Localizable.shared.value(for: .LOAN_TENURE_LOAN_TERM_TITLE)
+//        static let InterestRateTitle = Localizable.shared.value(for: .INTERESTRATE_TITLE)
+        static let PayOffDateTitle = Localizable.shared.value(for: .PAY_OFF_DATE_TITLE)
+        static let TotalInterestTitle = Localizable.shared.value(for: .TOTAL_INTEREST_TITLE)
+        static let TotalPayBackAmountTitle = Localizable.shared.value(for: .TOTALPAYBACKAMOUNTTITLE)
+        
+        
         static let AmountPlaceHolder = Localizable.shared.value(for: .AMOUNT_PLACEHOLDER)
         static let InterestRatePlaceHolder = Localizable.shared.value(for: .INTERESTRATE_PLACEHOLDER)
         static let TenurePlaceHolder = Localizable.shared.value(for: .TENURE_PLACEHOLDER)

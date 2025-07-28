@@ -200,6 +200,15 @@
 "TENURE_PLACEHOLDER" = "Enter Tenure(in months)";
 "STARTDATE_PLACEHOLDER" = "Start Date";
 
+//Personal loan plan
+//"AMOUNT_TITLE" = "Amount";
+"MONTHLY_PAY_BACK_EMI_TITLE" = "Monthly Pay Back - EMI";
+"LOAN_TENURE_LOAN_TERM_TITLE" = "Loan Tenure (Loan Term)";
+//"INTERESTRATE_TITLE"
+"PAY_OFF_DATE_TITLE" = "Payoff Date";
+"TOTAL_INTEREST_TITLE" = "Total Interest";
+"TOTALPAYBACKAMOUNTTITLE" = "Total Pay Back Amount";
+
 //Introduction view
 "INTRO_PAGE_1_TITLE"            = "All Your Loan Covered";
 "INTRO_PAGE_1_DESCRIPTION"      = "From personal to business loans, calcuate payments easily in opne place.";

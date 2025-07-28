@@ -97,6 +97,12 @@ extension PersonalLoanVC {
                 print("totalPayback : \(self.viewModel.model.totalPayback)")
                 print("totalInterestPayment : \(self.viewModel.model.totalInterestPayment)")
                 print("payOffDate : \(self.viewModel.model.payOffDate)")
+                
+                
+                let vc: PersonalLoanPlanVC = UIStoryboard.instantiateViewController(storyBorad: .Dashboard, controller: .PersonalLoanPlanVC)
+                vc.loanDetails = self.viewModel.model
+                UIViewController.tabBatVC?.navigationController?.pushViewController(vc, animated: true)
+                
             }
             
         }

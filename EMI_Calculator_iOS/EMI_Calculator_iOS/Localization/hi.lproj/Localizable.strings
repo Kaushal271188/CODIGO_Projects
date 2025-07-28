@@ -189,6 +189,16 @@
 "STARTDATE_PLACEHOLDER" = "प्रारंभ तिथि";
 
 
+//Personal loan plan
+//"AMOUNT_TITLE" = "Amount";
+"MONTHLY_PAY_BACK_EMI_TITLE" = "मासिक भुगतान - ईएमआई";
+"LOAN_TENURE_LOAN_TERM_TITLE" = "ऋण अवधि (लोन टर्म)";
+//"INTERESTRATE_TITLE"
+"PAY_OFF_DATE_TITLE" = "भुगतान तिथि";
+"TOTAL_INTEREST_TITLE" = "कुल ब्याज";
+"TOTALPAYBACKAMOUNTTITLE" = "कुल चुकता राशि";
+
+
 //Introduction view
 "INTRO_PAGE_1_TITLE" = "आपके सभी ऋण शामिल";
 "INTRO_PAGE_1_DESCRIPTION" = "व्यक्तिगत से व्यापार ऋण तक, एक ही स्थान पर भुगतान की गणना आसानी से करें।";

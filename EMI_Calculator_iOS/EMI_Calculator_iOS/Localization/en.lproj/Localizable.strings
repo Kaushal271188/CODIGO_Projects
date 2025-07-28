@@ -77,8 +77,6 @@
 "MSG_NOT_VALID"                 = "is not a valid value.";
 "MSG_CAN_NOT_BE_NEGATIVE"       = "cannot be negative.";
 
-
-
 "MSG_ENTER_VALID_MOBILE_NUMBER" = "Please Enter Valid Mobile Number";
 "MSG_ENTER_VALID_MOBILE_NO"     = "Please Enter Valid Mobile No!";
 "MSG_ENTER_FEEDBACK_TYPE"       = "Please Select Feedback Type!";
@@ -194,6 +192,16 @@
 "INTERESTRATE_TITLE" = "Interest Rate";
 "TENURE_TITLE" = "Tenure(in months)";
 "STARTDATE_TITLE" = "Start Date";
+
+//Personal loan plan
+//"AMOUNT_TITLE" = "Amount";
+"MONTHLY_PAY_BACK_EMI_TITLE" = "Monthly Pay Back - EMI";
+"LOAN_TENURE_LOAN_TERM_TITLE" = "Loan Tenure (Loan Term)";
+//"INTERESTRATE_TITLE"
+"PAY_OFF_DATE_TITLE" = "Payoff Date";
+"TOTAL_INTEREST_TITLE" = "Total Interest";
+"TOTALPAYBACKAMOUNTTITLE" = "Total Pay Back Amount";
+
 
 "AMOUNT_PLACEHOLDER" = "Enter Amount";
 "INTERESTRATE_PLACEHOLDER" = "Enter Interest Rate";

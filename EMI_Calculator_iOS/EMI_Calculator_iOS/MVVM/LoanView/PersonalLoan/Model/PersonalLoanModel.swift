@@ -7,15 +7,26 @@
 
 import Foundation
 
-struct PersonalLoanModel {
-    var amount: String = "0.0"
-    var startDate: String = ""
-    var tenure: String = "0"
-    var interestRate: String = "0.0"
+protocol LoanInfo {
+    var amount: String { get set }
+    var startDate: String { get set }
+    var tenure: String { get set }
+    var interestRate: String { get set }
     
     
-    var totalInterestPayment: String = "0.0"
-    var totalPayback: String = "0.0"
-    var emiPayment: String = "0.0"
-    var payOffDate: String = ""
+    var totalInterestPayment: String { get set }
+    var totalPayback: String { get set }
+    var emiPayment: String { get set }
+    var payOffDate: String { get set }
+}
+
+struct PersonalLoanModel: LoanInfo {
+    var amount: String
+    var startDate: String
+    var tenure: String
+    var interestRate: String
+    var totalInterestPayment: String
+    var totalPayback: String
+    var emiPayment: String
+    var payOffDate: String
 }

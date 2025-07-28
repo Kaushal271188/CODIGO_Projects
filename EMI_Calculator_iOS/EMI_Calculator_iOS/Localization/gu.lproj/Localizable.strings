@@ -180,6 +180,13 @@
 "TENURE_PLACEHOLDER" = "અવધિ દાખલ કરો (મહિનાઓમાં)";
 "STARTDATE_PLACEHOLDER" = "શરૂઆતની તારીખ";
 
+//Personal loan plan view
+"MONTHLY_PAY_BACK_EMI_TITLE" = "માસિક ચુકવણી - EMI";
+"LOAN_TENURE_LOAN_TERM_TITLE" = "લોન અવધિ (લોન ટર્મ)";
+"PAY_OFF_DATE_TITLE" = "ચુકવણીની તારીખ";
+"TOTAL_INTEREST_TITLE" = "કુલ વ્યાજ";
+"TOTALPAYBACKAMOUNTTITLE" = "કુલ ચુકવણી રકમ";
+
 // Introduction view
 "INTRO_PAGE_1_TITLE" = "તમારા બધા લોનનો સમાવેશ થાય છે";
 "INTRO_PAGE_1_DESCRIPTION" = "વ્યક્તિગત થી વેપાર લોન સુધી, ચુકવણીને સરળતાથી એક જગ્યાએ ગણો.";
