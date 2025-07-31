@@ -55,14 +55,20 @@ extension CurrencyListVC {
             }
             
             self.btnOfGoNextView?.isHidden = (self.tableOfCurrencyList?.viewModel.selectedCurrency == nil)
-            
 //            self.navigationController?.pushViewController(UIViewController.slideMenuVC!, animated: true)
-            self.navigationController?.pushViewController(UIViewController.tabBatVC!, animated: true)
+            
         }
     }
     
     @IBAction func btnOfGoNextViewAction() {
         
+        guard let _ = self.selectedCorrency else {
+            return
+        }
+        
+        if let tabBarController = self.tabBarController {
+            self.navigationController?.pushViewController(tabBarController, animated: true)
+        }
     }
     
 }

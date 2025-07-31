@@ -101,7 +101,7 @@ extension PersonalLoanVC {
                 
                 let vc: PersonalLoanPlanVC = UIStoryboard.instantiateViewController(storyBorad: .Dashboard, controller: .PersonalLoanPlanVC)
                 vc.loanDetails = self.viewModel.model
-                UIViewController.tabBatVC?.navigationController?.pushViewController(vc, animated: true)
+                self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
                 
             }
             
@@ -130,7 +130,7 @@ extension PersonalLoanVC {
         
         if let message = message {
             
-            self.showAlertWith(alertMessage: message,
+            AlertView.showAlertWith(alertMessage: message,
                                buttonArray: [StaticContents.Constants.OK]) { buttonIndex in
                 //Do some action here
             }

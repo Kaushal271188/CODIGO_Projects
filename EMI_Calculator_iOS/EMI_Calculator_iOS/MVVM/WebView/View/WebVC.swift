@@ -17,11 +17,18 @@ class WebVC: UIViewController {
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var activityView: UIActivityIndicatorView!
     
-    var viewModel: WebInfoViewModel!
+    var viewTitle: String!
+    var content: String!
+    
+    private var viewModel = WebInfoViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        let model = WebInfoModel(content: self.content)
+        self.viewModel.model = model
+        
         self.setViewFormate()
     }
     
@@ -42,6 +49,12 @@ extension WebVC {
     
     func setViewFormate() {
         
+        //set navigation title and subtitle content
+        self.lblOfNavTitle?.text = self.viewTitle
+        self.lblOfNavTitle?.isHidden = !(self.viewTitle.count > 0)
+        self.lblOfNavSubTitle?.isHidden = true
+        
+        //Set web view content
         if let tempURL = URL(string: self.viewModel.model.content),
             UIApplication.shared.canOpenURL(tempURL) {
             
@@ -54,6 +67,7 @@ extension WebVC {
             self.webView?.loadHTMLString(self.viewModel.model.content, baseURL: nil)
         }
         
+        self.webView?.navigationDelegate = self
         self.activityView?.startAnimating()
         
     }

@@ -298,4 +298,10 @@ class StaticContents {
         static let AdUnitID_RewardedInterstitial   = "\(AdsInformation.AppID)/6978759866"//Testing Rewarded Interstitial ID
     }
     
+    struct AppConfig {
+        
+        static let AppStoreURL = "https://apps.apple.com/app/id0123456789?action=write-review"
+        
+    }
+    
 }

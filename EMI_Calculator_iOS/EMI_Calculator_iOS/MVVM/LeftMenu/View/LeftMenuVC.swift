@@ -40,9 +40,29 @@ extension LeftMenuVC {
         self.lblOfNavTitle?.text = StaticContents.Constants.AppFullName
         self.lblOfNavSubTitle?.text = StaticContents.Constants.AppShortName
         
-        self.tableViewOfLeftMenu?.didSelectOption = { languageInfo in
+        self.tableViewOfLeftMenu?.didSelectOption = { selectedOption in
             //Do some action here
-            self.slideMenu(slideMenuStatus: .CloseLeftMenu)
+//            self.slideMenu(slideMenuStatus: .CloseLeftMenu)
+            
+            var vc: UIViewController? = nil
+            
+            if selectedOption.optionTitle == StaticContents.Constants.RemoveAds {
+                
+            }else if selectedOption.optionTitle == StaticContents.Constants.AboutUs {
+                vc = UIStoryboard.instantiateViewController(storyBorad: .Settings, controller: .WebVC) as! WebVC
+                (vc as! WebVC).content = "https://www.google.com"
+                (vc as! WebVC).viewTitle = selectedOption.optionTitle
+            }else if selectedOption.optionTitle == StaticContents.Constants.RateUs {
+                AppReview.setAppReviews()
+            }else if selectedOption.optionTitle == StaticContents.Constants.Share {
+                let sharingData = SharingData(text: StaticContents.AppConfig.AppStoreURL)
+                self.shareData(sharingData: sharingData)
+            }
+            
+            if let vc = vc {
+                self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
+            }
+            
         }
     }
     

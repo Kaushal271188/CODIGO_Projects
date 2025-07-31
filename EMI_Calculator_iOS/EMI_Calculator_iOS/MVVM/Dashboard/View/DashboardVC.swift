@@ -47,7 +47,7 @@ extension DashboardVC {
         
         self.tableViewOfDashboardOptions?.didSelectOption = { optionInfo in
             let vc = UIStoryboard.instantiateViewController(storyBorad: .Dashboard, controller: .PersonalLoanVC)
-            UIViewController.tabBatVC?.navigationController?.pushViewController(vc, animated: true)
+            self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
         }
         
     }

@@ -26,6 +26,12 @@ protocol LanguageDelegate {
 
 var isAppLoaded: Bool = false
 
+struct SharingData {
+    var text: String? = nil
+    var image: UIImage? = nil
+    var fileURLs: [URL]? = nil
+}
+
 extension UIViewController {
     
     enum SlideMenuStatus: String {
@@ -39,6 +45,28 @@ extension UIViewController {
 //    var slidemenuDelegate: SlidemenuDelegate? {
 //        nil
 //    }
+    
+    var selectedLanguage: LanguageListModel? {
+        do {
+            let currentLanguageInfo = try UserPreference.getObject(forKey: .SelectedLanguageInfo,
+                                                                   castTo: LanguageListModel.self)
+            return currentLanguageInfo
+        } catch {
+            print("1.1 : Error while trying to get default selected country")
+            return nil
+        }
+    }
+    
+    var selectedCorrency: CurrencyListModel? {
+        do {
+            let currentLanguageInfo = try UserPreference.getObject(forKey: .SelectedCurrencyInfo,
+                                                                   castTo: CurrencyListModel.self)
+            return currentLanguageInfo
+        } catch {
+            print("2.1 : Error while trying to get default selected currency")
+            return nil
+        }
+    }
     
     var homeVC: UIViewController {
         get { UIStoryboard.instantiateViewController(storyBorad: .Central, controller: .DashboardVC) }
@@ -75,7 +103,11 @@ extension UIViewController {
     static var slideMenuVC: SlideMenuController?
     static var centeralNavigationView: UINavigationController?
     
-    static var tabBatVC: UITabBarController?
+    fileprivate static var tabBatVC: UITabBarController?
+    
+    var tabBarController: UITabBarController? {
+        UIViewController.tabBatVC
+    }
     
     func showInterstitial(from viewController: UIViewController) {
         AdsManager.shared.showInterstitial(from: self,
@@ -218,52 +250,43 @@ extension UIViewController {
         
     }
     
-    /// To display native alert in entire
-    /// - Parameters:
-    ///   - alertTitle: Title of alert view.
-    ///   - alertMessage: Message to be display.
-    ///   - buttonArray: Buttons which is use to instruct user to select based on condition of alert message types : Error, instruction, question etc..
-    ///   - completion: Get the response to the location from where alert was display and give the user's button selection, based on that the next action will be take,
-    func showAlertWith(alertTitle:String? = nil,
-                       alertMessage:String,
-                       buttonArray:[String],
-                       completion:@escaping ((_ buttonIndex : Int) -> ())) {
+    func shareData(sharingData: SharingData) {
         
-        let alertController = UIAlertController(title: alertTitle,
-                                                message: alertMessage,
-                                                preferredStyle: .alert)
-        
-        for i in 0..<buttonArray.count {
-            
-            //Create button to do some actions
-            let alertButton = UIAlertAction(title: (buttonArray[i]), style: .default, handler: { UIAlertAction in
-                
-                //Return Button Index which selected by User
-                completion(i)
-                
-                //Dismis the alert view after select the action.
-                alertController.dismiss(animated: true, completion: {
-                    
-                })
-            })
-            
-            //Add action button to the alert
-            alertController.addAction(alertButton)
+        guard let viewController = UIApplication.shared.keyWindow_?.rootViewController else {
+            return
         }
         
+        var itemsToShare = [Any]()
         
-        DispatchQueue.main.async {
-            //Present alert viewcontroller in visibled view controller.
-            if let tempWindow = UIApplication.shared.currentWindow {
-                let visibleVC = tempWindow.rootViewController
-                visibleVC?.present(alertController, animated: true, completion: nil)
-            }
-            
-            //Present alert viewcontroller in visibled view controller.
-//            let visibleVC = UIApplication.shared.keyWindow?.rootViewController
-//            visibleVC?.present(alertController, animated: true, completion: nil)
+        if let text = sharingData.text {
+            itemsToShare.append(text)
         }
+
+        if let image = sharingData.image {
+            itemsToShare.append(image)
+        }
+
+        if let files = sharingData.fileURLs {
+            itemsToShare.append(contentsOf: files)
+        }
+
+        guard !itemsToShare.isEmpty else {
+            print("No items to share")
+            return
+        }
+
+        let activityVC = UIActivityViewController(activityItems: itemsToShare, applicationActivities: nil)
+        
+        // iPad Support
+        if let popover = activityVC.popoverPresentationController {
+            popover.sourceView = self.view
+            popover.sourceRect = CGRect(x: viewController.view.bounds.midX, y: viewController.view.bounds.midY, width: 0, height: 0)
+            popover.permittedArrowDirections = []
+        }
+
+        viewController.present(activityVC, animated: true)
     }
+    
     
     @objc func showDatePicker(fromSourceView: UIView? = nil,
                               title: String? = nil,
@@ -330,7 +353,7 @@ extension UIViewController {
         
         
         if let items = items {
-            var pickerView = UIPickerView()
+            let pickerView = UIPickerView()
             pickerView.frame = CGRect(x: 0, y: 15, width: alert.view.bounds.width - 20, height: 200)
             
             let preselectedIndex: Int = (item != nil ? items.firstIndex(of: item!) : 0)!

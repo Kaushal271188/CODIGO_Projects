@@ -22,7 +22,7 @@ class TableViewOfLeftMenu: UITableView {
     var arrayOfOptions: [LeftMenuModel]?
     
     //Closure action of select Language
-    var didSelectOption: ((_ leftMenuOpton: LeftMenuModel) -> Void)? = nil
+    var didSelectOption: ((_ selectedOption: LeftMenuModel) -> Void)? = nil
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -54,17 +54,17 @@ extension TableViewOfLeftMenu: UITableViewDelegate, UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: LeftMenuCell.cellId, for: indexPath) as! LeftMenuCell
         
-        if let languageInfo = self.arrayOfOptions?[indexPath.row] {
-            cell.getNewCell(menuInfo: languageInfo)
+        if let selectedOption = self.arrayOfOptions?[indexPath.row] {
+            cell.getNewCell(menuInfo: selectedOption)
         }
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let languageInfo = self.arrayOfOptions?[indexPath.row] {
+        if let selectedOption = self.arrayOfOptions?[indexPath.row] {
             if let didSelectOption = self.didSelectOption {
-                didSelectOption(languageInfo)
+                didSelectOption(selectedOption)
             }
         }
     }

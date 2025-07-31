@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 extension UIApplication {
-    var currentWindow: UIWindow? {
+    var keyWindow_: UIWindow? {
         // Loop through connected scenes
         return self
             .connectedScenes
@@ -17,5 +17,10 @@ extension UIApplication {
             .first(where: { $0.activationState == .foregroundActive })?
             .windows
             .first(where: { $0.isKeyWindow })
+    }
+    
+    var scene: UIWindowScene? {
+        return UIApplication.shared.connectedScenes
+            .first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene
     }
 }

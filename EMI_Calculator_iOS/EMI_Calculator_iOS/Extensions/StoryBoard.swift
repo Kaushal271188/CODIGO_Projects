@@ -16,6 +16,7 @@ extension UIStoryboard {
         case Dashboard = "Dashboard"
         case Central = "Central"
         case Tools = "Tools"
+        case Settings = "Settings"
     }
     
     enum Controller: String {
@@ -33,6 +34,8 @@ extension UIStoryboard {
         
         case DashboardVC = "DashboardVC"
         case LeftMenuVC = "LeftMenuVC"
+        
+        case WebVC = "WebVC"
     }
     
     static func instantiateViewController<T: UIViewController>(storyBorad: StoryBoard, controller: Controller) -> T {

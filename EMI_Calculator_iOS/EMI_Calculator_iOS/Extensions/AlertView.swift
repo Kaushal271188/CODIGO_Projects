@@ -10,7 +10,7 @@ import UIKit
 
 class AlertView: NSObject {
     
-    static let shared = AlertView()
+//    static let shared = AlertView()
     
     var arrayOfPickerData = [String]()
     
@@ -20,10 +20,10 @@ class AlertView: NSObject {
     ///   - alertMessage: Message to be display.
     ///   - buttonArray: Buttons which is use to instruct user to select based on condition of alert message types : Error, instruction, question etc..
     ///   - completion: Get the response to the location from where alert was display and give the user's button selection, based on that the next action will be take,
-    func showAlertWith(alertTitle:String,
-                       alertMessage:String,
-                       buttonArray:[String],
-                       completion:@escaping ((_ buttonIndex : Int) -> ())) {
+    static func showAlertWith(alertTitle:String? = nil,
+                              alertMessage:String,
+                              buttonArray:[String],
+                              completion:@escaping ((_ buttonIndex : Int) -> ())) {
         
         let alertController = UIAlertController(title: alertTitle,
                                                 message: alertMessage,
@@ -49,11 +49,17 @@ class AlertView: NSObject {
         
         
         DispatchQueue.main.async {
+            //Present alert viewcontroller in visibled view controller.
+            if let tempWindow = UIApplication.shared.keyWindow_ {
+                let visibleVC = tempWindow.rootViewController
+                visibleVC?.present(alertController, animated: true, completion: nil)
+            }
             
             //Present alert viewcontroller in visibled view controller.
-            let visibleVC = UIApplication.shared.keyWindow?.rootViewController
-            visibleVC?.present(alertController, animated: true, completion: nil)
+//            let visibleVC = UIApplication.shared.keyWindow?.rootViewController
+//            visibleVC?.present(alertController, animated: true, completion: nil)
         }
     }
+    
     
 }

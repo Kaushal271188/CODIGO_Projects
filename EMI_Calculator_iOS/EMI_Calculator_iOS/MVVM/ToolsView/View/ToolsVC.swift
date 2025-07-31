@@ -47,7 +47,7 @@ extension ToolsVC {
             //Do some action here
 //            self.slideMenu(slideMenuStatus: .CloseLeftMenu)
             let vc = UIStoryboard.instantiateViewController(storyBorad: .Tools, controller: .TimeZoneExchangeVC)
-            UIViewController.tabBatVC?.navigationController?.pushViewController(vc, animated: true)
+            self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
