@@ -254,14 +254,14 @@ extension UIViewController {
         
         DispatchQueue.main.async {
             //Present alert viewcontroller in visibled view controller.
-//            if let tempWindow = UIApplication.shared.currentWindow {
-//                let visibleVC = tempWindow.rootViewController
-//                visibleVC?.present(alertController, animated: true, completion: nil)
-//            }
+            if let tempWindow = UIApplication.shared.currentWindow {
+                let visibleVC = tempWindow.rootViewController
+                visibleVC?.present(alertController, animated: true, completion: nil)
+            }
             
             //Present alert viewcontroller in visibled view controller.
-            let visibleVC = UIApplication.shared.keyWindow?.rootViewController
-            visibleVC?.present(alertController, animated: true, completion: nil)
+//            let visibleVC = UIApplication.shared.keyWindow?.rootViewController
+//            visibleVC?.present(alertController, animated: true, completion: nil)
         }
     }
     

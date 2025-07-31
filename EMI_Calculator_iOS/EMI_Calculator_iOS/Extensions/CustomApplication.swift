@@ -9,13 +9,13 @@ import Foundation
 import UIKit
 
 extension UIApplication {
-//    var currentWindow: UIWindow? {
-//        // Loop through connected scenes
-//        return self
-//            .connectedScenes
-//            .compactMap { $0 as? UIWindowScene }
-//            .first(where: { $0.activationState == .foregroundActive })?
-//            .windows
-//            .first(where: { $0.isKeyWindow })
-//    }()
+    var currentWindow: UIWindow? {
+        // Loop through connected scenes
+        return self
+            .connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .first(where: { $0.activationState == .foregroundActive })?
+            .windows
+            .first(where: { $0.isKeyWindow })
+    }
 }

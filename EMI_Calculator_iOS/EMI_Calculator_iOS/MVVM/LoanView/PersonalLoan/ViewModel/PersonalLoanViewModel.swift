@@ -68,10 +68,62 @@ class PersonalLoanViewModel {
         }
         //End
         let currency = "\(StaticContents.Constants.Currency) "
-        self.model.emiPayment = "\(currency) \(emiPayment.rounded(toPlaces: 2))"
-        self.model.totalPayback = "\(currency) \((emiPayment * Double(tenureInMonths)).rounded(toPlaces: 2))"
-        self.model.totalInterestPayment = "\(currency) \((Double((emiPayment * Double(tenureInMonths))) - principal).rounded(toPlaces: 2))"
-//        self.model.totalPayback = "\(currency) \(Double((emiPayment * Double(tenureInMonths))) - principal)"
+//        self.model.emiPayment = "\(currency) \(emiPayment.rounded(toPlaces: 2))"
+//        self.model.totalPayback = "\(currency) \((emiPayment * Double(tenureInMonths)).rounded(toPlaces: 2))"
+//        self.model.totalInterestPayment = "\(currency) \((Double((emiPayment * Double(tenureInMonths))) - principal).rounded(toPlaces: 2))"
+////        self.model.totalPayback = "\(currency) \(Double((emiPayment * Double(tenureInMonths))) - principal)"
+        
+        
+        
+        let selectedCurrencyInfo: CurrencyListModel? = {
+            do {
+                let currentInfo = try UserPreference.getObject(forKey: .SelectedCurrencyInfo,
+                                                                       castTo: CurrencyListModel.self)
+                return currentInfo
+            } catch {
+                print("1.1 : Error while trying to get default selected country")
+                return nil
+            }
+        }()
+        
+//        self.model.amount = "\(principal.rounded(toPlaces: 2))"
+        
+        self.model.amount = {
+           if let selectedCurrencyInfo = selectedCurrencyInfo {
+               return CurrencyFormatter.shared.format(amount: principal.rounded(toPlaces: 2),
+                                                      currencyCode: selectedCurrencyInfo.currency.code)
+           }else {
+               return "\(currency) \(principal.rounded(toPlaces: 2))"
+           }
+       }()
+        
+        self.model.emiPayment = {
+            if let selectedCurrencyInfo = selectedCurrencyInfo {
+                return CurrencyFormatter.shared.format(amount: emiPayment.rounded(toPlaces: 2),
+                                                       currencyCode: selectedCurrencyInfo.currency.code)
+            }else {
+                return "\(currency) \(emiPayment.rounded(toPlaces: 2))"
+            }
+        }()
+        
+        
+        self.model.totalPayback = {
+            if let selectedCurrencyInfo = selectedCurrencyInfo {
+                return CurrencyFormatter.shared.format(amount: ((emiPayment * Double(tenureInMonths)).rounded(toPlaces: 2)),
+                                                       currencyCode: selectedCurrencyInfo.currency.code)
+            }else {
+                return "\(currency) \((emiPayment * Double(tenureInMonths)).rounded(toPlaces: 2))"
+            }
+        }()
+        
+        self.model.totalInterestPayment = {
+            if let selectedCurrencyInfo = selectedCurrencyInfo {
+                return CurrencyFormatter.shared.format(amount: (Double((emiPayment * Double(tenureInMonths))) - principal).rounded(toPlaces: 2),
+                                                       currencyCode: selectedCurrencyInfo.currency.code)
+            }else {
+                return "\(currency) \((Double((emiPayment * Double(tenureInMonths))) - principal).rounded(toPlaces: 2))"
+            }
+        }()
         
         
         DispatchQueue.main.asyncAfter(wallDeadline: .now() + 0.1) {

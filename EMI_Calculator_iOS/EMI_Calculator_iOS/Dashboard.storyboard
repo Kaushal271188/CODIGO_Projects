@@ -90,10 +90,10 @@
                                         <rect key="frame" x="0.0" y="70" width="393" height="674"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="OZg-LM-Hyo">
-                                                <rect key="frame" x="9.6666666666666572" y="15" width="373.66666666666674" height="441"/>
+                                                <rect key="frame" x="9.6666666666666572" y="15" width="373.66666666666674" height="569"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="Wwq-Gf-gjc">
-                                                        <rect key="frame" x="0.0" y="0.0" width="373.66666666666669" height="441"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="373.66666666666669" height="569"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HiJ-XP-IOZ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="373.66666666666669" height="441"/>
@@ -308,6 +308,10 @@
                                                                         <real key="value" value="10"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oKs-y7-oxG">
+                                                                <rect key="frame" x="0.0" y="441" width="373.66666666666669" height="128"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </view>
                                                         </subviews>
                                                     </stackView>
