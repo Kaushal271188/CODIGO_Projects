@@ -65,7 +65,7 @@ class CustomTextField: UIView {
         self?.textField?.becomeFirstResponder()
     }
     
-    lazy var lossFocuss: () -> Void = { [weak self] in
+    lazy var lostFocuss: () -> Void = { [weak self] in
         self?.textField?.resignFirstResponder()
     }
     

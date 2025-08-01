@@ -103,6 +103,9 @@
 		D8E179602E2E76F3005529E7 /* CustomTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8E1795F2E2E76F3005529E7 /* CustomTextField.xib */; };
 		D8E179622E2E8183005529E7 /* PersonalLoanVCNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E179612E2E8183005529E7 /* PersonalLoanVCNew.swift */; };
 		D8E203F02E2FE2FE002371C3 /* CustomApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E203EF2E2FE2FE002371C3 /* CustomApplication.swift */; };
+		D8E6DA3E2E3CEBF100A01DA6 /* MortgageLoanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E6DA3D2E3CEBF100A01DA6 /* MortgageLoanVC.swift */; };
+		D8E6DA402E3CF34D00A01DA6 /* MortgageLoanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E6DA3F2E3CF34D00A01DA6 /* MortgageLoanModel.swift */; };
+		D8E6DA422E3CF58E00A01DA6 /* MortgageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E6DA412E3CF58E00A01DA6 /* MortgageViewModel.swift */; };
 		D8EADCF72E1829FE00207E5C /* EMICalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EADCF62E1829FE00207E5C /* EMICalculation.swift */; };
 		D8ED81EF2E2E2D89001521D1 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8ED81EE2E2E2D89001521D1 /* Dashboard.storyboard */; };
 		D8ED81F62E2E2E9C001521D1 /* PersonalLoanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ED81F52E2E2E9C001521D1 /* PersonalLoanVC.swift */; };
@@ -220,6 +223,9 @@
 		D8E1795F2E2E76F3005529E7 /* CustomTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextField.xib; sourceTree = "<group>"; };
 		D8E179612E2E8183005529E7 /* PersonalLoanVCNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalLoanVCNew.swift; sourceTree = "<group>"; };
 		D8E203EF2E2FE2FE002371C3 /* CustomApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomApplication.swift; sourceTree = "<group>"; };
+		D8E6DA3D2E3CEBF100A01DA6 /* MortgageLoanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageLoanVC.swift; sourceTree = "<group>"; };
+		D8E6DA3F2E3CF34D00A01DA6 /* MortgageLoanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageLoanModel.swift; sourceTree = "<group>"; };
+		D8E6DA412E3CF58E00A01DA6 /* MortgageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageViewModel.swift; sourceTree = "<group>"; };
 		D8EADCF62E1829FE00207E5C /* EMICalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMICalculation.swift; sourceTree = "<group>"; };
 		D8ED81EE2E2E2D89001521D1 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		D8ED81F52E2E2E9C001521D1 /* PersonalLoanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalLoanVC.swift; sourceTree = "<group>"; };
@@ -814,9 +820,44 @@
 			path = CustomTextField;
 			sourceTree = "<group>";
 		};
+		D8E6DA392E3CEBC000A01DA6 /* MortgageLoan */ = {
+			isa = PBXGroup;
+			children = (
+				D8E6DA3B2E3CEBC000A01DA6 /* Model */,
+				D8E6DA3C2E3CEBC000A01DA6 /* View */,
+				D8E6DA3A2E3CEBC000A01DA6 /* ViewModel */,
+			);
+			path = MortgageLoan;
+			sourceTree = "<group>";
+		};
+		D8E6DA3A2E3CEBC000A01DA6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D8E6DA412E3CF58E00A01DA6 /* MortgageViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D8E6DA3B2E3CEBC000A01DA6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D8E6DA3F2E3CF34D00A01DA6 /* MortgageLoanModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D8E6DA3C2E3CEBC000A01DA6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D8E6DA3D2E3CEBF100A01DA6 /* MortgageLoanVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D8ED81F02E2E2E45001521D1 /* LoanView */ = {
 			isa = PBXGroup;
 			children = (
+				D8E6DA392E3CEBC000A01DA6 /* MortgageLoan */,
 				D8CD4D6E2E2FBB7B0090DEDE /* PersonalLoanPlan */,
 				D8ED81F12E2E2E45001521D1 /* PersonalLoan */,
 			);
@@ -1043,6 +1084,7 @@
 				D8D73AAB2E19254B00C1B515 /* CountryLanguageInfoCell.swift in Sources */,
 				D896F6032E195B1D00DCEFFE /* BaseViewController.swift in Sources */,
 				D83F849C2E16D8AF00CC18F4 /* Environments.swift in Sources */,
+				D8E6DA3E2E3CEBF100A01DA6 /* MortgageLoanVC.swift in Sources */,
 				D8D74EDC2E1FB98B00A7F70B /* LeftMenuVC.swift in Sources */,
 				D8B279712E1EABFE00CE334F /* CurrencyListViewModel.swift in Sources */,
 				D83F84662E16D7D300CC18F4 /* ViewController.swift in Sources */,
@@ -1075,6 +1117,7 @@
 				D8D74EE02E1FB9DC00A7F70B /* LeftMenuModel.swift in Sources */,
 				D8C173882E2E1890005E8734 /* StringExtension.swift in Sources */,
 				D8BE4A492E19041A0012166C /* SplashScreenVC.swift in Sources */,
+				D8E6DA402E3CF34D00A01DA6 /* MortgageLoanModel.swift in Sources */,
 				D875832C2E3A659300606975 /* WebVC.swift in Sources */,
 				D8D74EE22E1FBA8900A7F70B /* LeftMenuViewModel.swift in Sources */,
 				D8ED81F62E2E2E9C001521D1 /* PersonalLoanVC.swift in Sources */,
@@ -1091,6 +1134,7 @@
 				D83F84A02E16D8AF00CC18F4 /* LocalConstants.swift in Sources */,
 				D8B279732E1EAC8800CE334F /* CurrencyListModel.swift in Sources */,
 				D8CC917D2E3498A400E54516 /* PersonalLoanPlanModel.swift in Sources */,
+				D8E6DA422E3CF58E00A01DA6 /* MortgageViewModel.swift in Sources */,
 				CDC768922E2A447A0099DCC5 /* PickerView.swift in Sources */,
 				D83F849B2E16D8AF00CC18F4 /* Color.swift in Sources */,
 				D8D644202E2529B100B46F78 /* ToolsOptionsModel.swift in Sources */,

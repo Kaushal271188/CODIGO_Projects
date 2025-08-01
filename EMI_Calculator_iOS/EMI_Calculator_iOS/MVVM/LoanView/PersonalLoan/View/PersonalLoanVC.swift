@@ -43,19 +43,19 @@ extension PersonalLoanVC {
     func setViewFormate() {
         
         self.txtOfAmount?.textFieldInfo = CustomTextField.CustomTextFieldInfo(title: StaticContents.Constants.AmountTitle,
-                                                                              placeHolder: StaticContents.Constants.AmountPlaceHolder,
+                                                                              placeHolder: StaticContents.Constants.AmountPlaceholder,
                                                                               textFieldType: .Amount)
         
         self.txtOfInterestRate?.textFieldInfo = CustomTextField.CustomTextFieldInfo(title: StaticContents.Constants.InterestRateTitle,
-                                                                                    placeHolder: StaticContents.Constants.InterestRatePlaceHolder,
+                                                                                    placeHolder: StaticContents.Constants.InterestRatePlaceholder,
                                                                                     textFieldType: .Percentage)
         
         self.txtOfTenure?.textFieldInfo = CustomTextField.CustomTextFieldInfo(title: StaticContents.Constants.TenureTitle,
-                                                                              placeHolder: StaticContents.Constants.TenurePlaceHolder,
+                                                                              placeHolder: StaticContents.Constants.TenurePlaceholder,
                                                                               textFieldType: .Tenure)
         
         self.txtOfStartLoanDate?.textFieldInfo = CustomTextField.CustomTextFieldInfo(title: StaticContents.Constants.StartDateTitle,
-                                                                                     placeHolder: StaticContents.Constants.StartDatePlaceHolder,
+                                                                                     placeHolder: StaticContents.Constants.StartDatePlaceholder,
                                                                                      textFieldType: .Date)
         
         self.setTextFieldFormate(textField: self.txtOfAmount)
@@ -74,9 +74,9 @@ extension PersonalLoanVC {
     
     func hideKeyBoard() {
         DispatchQueue.main.async {
-            self.txtOfAmount?.lossFocuss()
+            self.txtOfAmount?.lostFocuss()
 //            self.txtOfTenure?.textField.resignFirstResponder()
-            self.txtOfInterestRate?.lossFocuss()
+            self.txtOfInterestRate?.lostFocuss()
 //            self.txtOfStartLoanDate?.textField.resignFirstResponder()
         }
     }
@@ -87,6 +87,7 @@ extension PersonalLoanVC {
     @IBAction func btnOfGetResultAction() {
         if self.checkValidValue() == true {
             self.viewModel.calculateEMI { Bool in
+                
                 print("amount : \(self.viewModel.model.amount)")
                 print("interestRate : \(self.viewModel.model.interestRate)")
                 print("tenure : \(self.viewModel.model.tenure)")
@@ -104,7 +105,6 @@ extension PersonalLoanVC {
                 self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
                 
             }
-            
         }
     }
     
@@ -119,13 +119,13 @@ extension PersonalLoanVC {
         var message: String? = nil
         
         if self.txtOfAmount?.getText()?.trimmed.count == 0 {
-            message = StaticContents.Constants.AmountPlaceHolder
+            message = StaticContents.Constants.AmountPlaceholder
         }else if self.txtOfInterestRate?.getText()?.trimmed.count == 0 {
-            message = StaticContents.Constants.InterestRatePlaceHolder
+            message = StaticContents.Constants.InterestRatePlaceholder
         }else if self.txtOfTenure?.getText()?.trimmed.count == 0 {
-            message = StaticContents.Constants.TenurePlaceHolder
+            message = StaticContents.Constants.TenurePlaceholder
         }else if self.txtOfStartLoanDate?.getText()?.trimmed.count == 0 {
-            message = StaticContents.Constants.StartDatePlaceHolder
+            message = StaticContents.Constants.StartDatePlaceholder
         }
         
         if let message = message {
@@ -136,10 +136,6 @@ extension PersonalLoanVC {
             }
             
             return false
-        }else {
-            self.viewModel.model.amount =  self.txtOfAmount.getText() ?? "0.0"
-            self.viewModel.model.interestRate = self.txtOfInterestRate.getText() ?? "0.0"
-            self.viewModel.model.tenure = self.txtOfTenure.getText() ?? "0"
         }
         
         return true
@@ -176,13 +172,14 @@ extension PersonalLoanVC: CustomTextFieldDelegate {
         
         if textField == self.txtOfTenure {
             
-            let tenureTime = stride(from: 0, through: 360, by: 1).map({"\($0)"})
-            let selectedTime = (self.txtOfTenure?.getText()?.count ?? 0) > 0 ? self.txtOfTenure?.getText()?.trimmed : nil
+            let tenureTime = stride(from: 1, through: 360, by: 1).map({"\($0)"})
+            let selectedTime = self.viewModel.model.tenure.trimmed.count > 0 ? self.viewModel.model.tenure.trimmed : nil
             
-            self.showDataPicker(fromSourceView: self.txtOfTenure,
+            self.showDataPicker(fromSourceView: self.viewModel.model.tenure,
                                 items: tenureTime,
                                 item: selectedTime) { isSuccess, selectedValue, selectedIndex in
                 if let selectedValue = selectedValue {
+                    self.viewModel.model.tenure = selectedValue
                     DispatchQueue.main.async {
                         self.txtOfTenure?.setText(selectedValue)
                     }

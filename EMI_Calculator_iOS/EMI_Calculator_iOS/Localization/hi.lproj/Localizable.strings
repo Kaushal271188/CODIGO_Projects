@@ -188,6 +188,25 @@
 "TENURE_PLACEHOLDER" = "कार्यकाल दर्ज करें (महीनों में)";
 "STARTDATE_PLACEHOLDER" = "प्रारंभ तिथि";
 
+//Mortgage Loan
+"HOME_PRICE_TITLE" = "घर की कीमत";
+"DOWN_PAYMENT_TITLE" = "डाउन पेमेंट";
+//"INTERESTRATE_TITLE" = "कार्यकाल (महीनों में)";
+//"TENURE_TITLE" = "ब्याज दर";
+"PROPERTY_TAX_TITLE" = "संपत्ति कर";
+"PMI_TITLE" = "पीएमआई";
+"HOMEOWNER_INSURANCE_TITLE" = "मकान मालिक बीमा";
+"HOA_FEE_TITLE" = "एचओए शुल्क";
+
+"HOME_PRICE_PLACEHOLDER" = "घर की कीमत दर्ज करें";
+"DOWN_PAYMENT_PLACEHOLDER" = "डाउन पेमेंट दर्ज करें";
+//"INTERESTRATE_PLACEHOLDER" = "कार्यकाल दर्ज करें (महीनों में)";
+//"TENURE_PLACEHOLDER" = "ब्याज दर दर्ज करें";
+"PROPERTY_TAX_PLACEHOLDER" = "संपत्ति कर दर्ज करें";
+"PMI_PLACEHOLDER" = "पीएमआई दर्ज करें";
+"HOMEOWNER_INSURANCE_PLACEHOLDER" = "मकान मालिक बीमा दर्ज करें";
+"HOA_FEE_PLACEHOLDER" = "एचओए शुल्क दर्ज करें";
+
 
 //Personal loan plan
 //"AMOUNT_TITLE" = "Amount";

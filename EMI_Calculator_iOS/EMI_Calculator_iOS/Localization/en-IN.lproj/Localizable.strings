@@ -200,6 +200,26 @@
 "TENURE_PLACEHOLDER" = "Enter Tenure(in months)";
 "STARTDATE_PLACEHOLDER" = "Start Date";
 
+//Mortgage Loan
+"HOME_PRICE_TITLE" = "Home Price";
+"DOWN_PAYMENT_TITLE" = "Down Payment";
+//"INTERESTRATE_TITLE" = "Tenure(in months)";
+//"TENURE_TITLE" = "Interest Rate";
+"PROPERTY_TAX_TITLE" = "Property Tax";
+"PMI_TITLE" = "PMI";
+"HOMEOWNER_INSURANCE_TITLE" = "Homeowner's insurance";
+"HOA_FEE_TITLE" = "HOA Fee";
+
+
+"HOME_PRICE_PLACEHOLDER" = "Enter Home Price";
+"DOWN_PAYMENT_PLACEHOLDER" = "Enter Down Payment";
+//"INTERESTRATE_PLACEHOLDER" = "Enter Tenure(in months)";
+//"TENURE_PLACEHOLDER" = "Enter Interest Rate";
+"PROPERTY_TAX_PLACEHOLDER" = "Enter Property Tax";
+"PMI_PLACEHOLDER" = "Enter PMI";
+"HOMEOWNER_INSURANCE_PLACEHOLDER" = "Enter Homeowner's insurance";
+"HOA_FEE_PLACEHOLDER" = "Enter HOA Fee";
+
 //Personal loan plan
 //"AMOUNT_TITLE" = "Amount";
 "MONTHLY_PAY_BACK_EMI_TITLE" = "Monthly Pay Back - EMI";

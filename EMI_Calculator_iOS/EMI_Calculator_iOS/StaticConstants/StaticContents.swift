@@ -156,10 +156,30 @@ class StaticContents {
         static let TotalPayBackAmountTitle = Localizable.shared.value(for: .TOTALPAYBACKAMOUNTTITLE)
         
         
-        static let AmountPlaceHolder = Localizable.shared.value(for: .AMOUNT_PLACEHOLDER)
-        static let InterestRatePlaceHolder = Localizable.shared.value(for: .INTERESTRATE_PLACEHOLDER)
-        static let TenurePlaceHolder = Localizable.shared.value(for: .TENURE_PLACEHOLDER)
-        static let StartDatePlaceHolder = Localizable.shared.value(for: .STARTDATE_PLACEHOLDER)
+        static let AmountPlaceholder = Localizable.shared.value(for: .AMOUNT_PLACEHOLDER)
+        static let InterestRatePlaceholder = Localizable.shared.value(for: .INTERESTRATE_PLACEHOLDER)
+        static let TenurePlaceholder = Localizable.shared.value(for: .TENURE_PLACEHOLDER)
+        static let StartDatePlaceholder = Localizable.shared.value(for: .STARTDATE_PLACEHOLDER)
+        
+        //Mortgage loan view
+        static let HomePriceTitle   = Localizable.shared.value(for: .HOME_PRICE_TITLE)
+        static let DownPaymentTitle   = Localizable.shared.value(for: .DOWN_PAYMENT_TITLE)
+//        static let InterestRateTitle   = Localizable.shared.value(for: .INTERESTRATE_TITLE)
+//        static let TenureTitle   = Localizable.shared.value(for: .TENURE_TITLE)
+        static let PropertyTaxTitle   = Localizable.shared.value(for: .PROPERTY_TAX_TITLE)
+        static let PmiTitle   = Localizable.shared.value(for: .PMI_TITLE)
+        static let HomeownerInsuranceTitle   = Localizable.shared.value(for: .HOMEOWNER_INSURANCE_TITLE)
+        static let HoaFeeTitle   = Localizable.shared.value(for: .HOA_FEE_TITLE)
+        
+        
+        static let HomePricePlaceholder   = Localizable.shared.value(for: .HOME_PRICE_PLACEHOLDER)
+        static let DownPaymentPlaceholder   = Localizable.shared.value(for: .DOWN_PAYMENT_PLACEHOLDER)
+//        static let InterestRatePlaceholder   = Localizable.shared.value(for: .INTERESTRATE_PLACEHOLDER)
+//        static let TenurePlaceholder   = Localizable.shared.value(for: .TENURE_PLACEHOLDER)
+        static let PropertyTaxPlaceholder   = Localizable.shared.value(for: .PROPERTY_TAX_PLACEHOLDER)
+        static let PmiPlaceholder   = Localizable.shared.value(for: .PMI_PLACEHOLDER)
+        static let HomeownerInsurancePlaceholder   = Localizable.shared.value(for: .HOMEOWNER_INSURANCE_PLACEHOLDER)
+        static let HoaFeePlaceholder   = Localizable.shared.value(for: .HOA_FEE_PLACEHOLDER)
         
         
         //Introduction view

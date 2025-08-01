@@ -180,6 +180,25 @@
 "TENURE_PLACEHOLDER" = "અવધિ દાખલ કરો (મહિનાઓમાં)";
 "STARTDATE_PLACEHOLDER" = "શરૂઆતની તારીખ";
 
+//Mortgage Loan
+"HOME_PRICE_TITLE" = "મકાનની કિંમત";
+"DOWN_PAYMENT_TITLE" = "ડાઉન પેમેન્ટ";
+//"INTERESTRATE_TITLE" = "સમયગાળો (મહિનોમાં)";
+//"TENURE_TITLE" = "વ્યાજ દર";
+"PROPERTY_TAX_TITLE" = "મિલ્કત ટેક્સ";
+"PMI_TITLE" = "PMI";
+"HOMEOWNER_INSURANCE_TITLE" = "મકાનમાલિકની ઇન્શ્યોરન્સ";
+"HOA_FEE_TITLE" = "HOA ફી";
+
+"HOME_PRICE_PLACEHOLDER" = "મકાનની કિંમત દાખલ કરો";
+"DOWN_PAYMENT_PLACEHOLDER" = "ડાઉન પેમેન્ટ દાખલ કરો";
+//"INTERESTRATE_PLACEHOLDER" = "સમયગાળો (મહિનોમાં) દાખલ કરો";
+//"TENURE_PLACEHOLDER" = "વ્યાજ દર દાખલ કરો";
+"PROPERTY_TAX_PLACEHOLDER" = "મિલ્કત ટેક્સ દાખલ કરો";
+"PMI_PLACEHOLDER" = "PMI દાખલ કરો";
+"HOMEOWNER_INSURANCE_PLACEHOLDER" = "મકાનમાલિકની ઇન્શ્યોરન્સ દાખલ કરો";
+"HOA_FEE_PLACEHOLDER" = "HOA ફી દાખલ કરો";
+
 //Personal loan plan view
 "MONTHLY_PAY_BACK_EMI_TITLE" = "માસિક ચુકવણી - EMI";
 "LOAN_TENURE_LOAN_TERM_TITLE" = "લોન અવધિ (લોન ટર્મ)";
