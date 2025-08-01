@@ -20,7 +20,7 @@ protocol LoanInfo {
     var payOffDate: String { get set }
 }
 
-struct PersonalLoanModel: LoanInfo {
+struct PersonalLoanInput: LoanInfo {
     var amount: String
     var startDate: String
     var tenure: String
@@ -30,3 +30,15 @@ struct PersonalLoanModel: LoanInfo {
     var emiPayment: String
     var payOffDate: String
 }
+
+struct PersonalLoanOutput: LoanInfo {
+    var amount: String
+    var startDate: String
+    var tenure: String
+    var interestRate: String
+    var totalInterestPayment: String
+    var totalPayback: String
+    var emiPayment: String
+    var payOffDate: String
+}
+

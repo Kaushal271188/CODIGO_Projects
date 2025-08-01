@@ -123,10 +123,6 @@ extension MortgageLoanVC {
             }
             
             return false
-        }else {
-            self.viewModel.model.amount =  self.txtOfAmount.getText() ?? "0.0"
-            self.viewModel.model.interestRate = self.txtOfInterestRate.getText() ?? "0.0"
-            self.viewModel.model.tenure = self.txtOfTenure.getText() ?? "0"
         }
         
         return true

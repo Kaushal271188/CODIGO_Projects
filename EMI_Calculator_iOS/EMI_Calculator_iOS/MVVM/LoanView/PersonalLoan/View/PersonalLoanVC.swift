@@ -145,6 +145,15 @@ extension PersonalLoanVC {
 extension PersonalLoanVC: CustomTextFieldDelegate {
     func didChangeValue(textField: CustomTextField) {
         
+        switch textField {
+            case self.txtOfAmount:
+                break
+            case self.txtOfTenure:
+                break
+            default:
+                break
+        }
+        
     }
     
     func didGetFocused(textField: CustomTextField) {
